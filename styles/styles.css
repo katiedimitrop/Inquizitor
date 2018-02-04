@@ -21,7 +21,15 @@ html {
 
 .topnav img {
     float: left;
-    padding: 5px 150px;
+    padding: 5px 0px 5px 150px;
+}
+
+.topnav header {
+    font-size: 250%;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 17px 10px;
 }
 
 /* Change color on hover */
