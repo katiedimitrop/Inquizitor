@@ -19,6 +19,11 @@ html {
     text-decoration: none;
 }
 
+.topnav img {
+    float: left;
+    padding: 5px 150px;
+}
+
 /* Change color on hover */
 .topnav a:hover {
     background-color: #ddd;
@@ -65,6 +70,14 @@ html {
   margin: 0;
   position: absolute;
   top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo{
+  margin: 0;
+  position: absolute;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
