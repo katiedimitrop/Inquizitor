@@ -11,21 +11,23 @@ html {
 
 /* Style the topnav links */
 .topnav a {
+    font-family: 'Roboto', sans-serif;
     float: right;
     display: block;
     color: #FFC107;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
 }
 
 .topnav img {
     float: left;
-    padding: 5px 0px 5px 150px;
+    padding: 5px 0px 5px 130px;
 }
 
 .topnav header {
-    font-size: 250%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 270%;
     color: white;
     float: left;
     text-align: center;
@@ -42,6 +44,7 @@ html {
 }
 
 #title{
+  font-family: 'Roboto', sans-serif;
   color: white;
   margin: 0;
   position: absolute;
@@ -51,6 +54,7 @@ html {
 }
 
 #description{
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   color: white;
   margin: 0;
