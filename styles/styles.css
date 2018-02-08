@@ -78,7 +78,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#button3 {
+#button3 {<button type="button" onclick="takeInput()">Submit</button>
   margin: 0;
   position: absolute;
   top: 90%;
@@ -101,4 +101,3 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-

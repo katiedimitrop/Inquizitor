@@ -13,77 +13,88 @@
 
 <!--Viewport so mobile devices render correctly-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <html>
-  <head>
+
+<head>
   <link href="styles\styles.css" rel="stylesheet" type="text/css">
   <style>
  .demo-list-item {
-    width: 300px;
-    display: block;
-    margin: 0 auto;
-  }
+                   width: 300px;
+                   display: block;
+                   margin: 0 auto;
+                 }
  .mdl-textfield {
-   width: 300px;
- }
+                  width: 300px;
+                }
   </style>
- </head>
- <body>
-     <div class="topnav">
-        <a href="#">Contact</a>
-        <a href="#">Log in</a>
-	      <a href="#">Connect</a>
-        <a href="#">Host</a>
-        <a href="#">Create</a>
-        <a href="index.html">Home</a>
-        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
-       <header href="#">InnQUIZitor</header>
-     </div>
+</head>
 
-     <!-- Simple list -->
-    <ul class="demo-list-item mdl-list">
-    <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <span class="mdl-list__item-primary-content">
-        <!-- Floating Multiline Textfield -->
-<form action="#">>
+<body>
+<div class="topnav">
+  <a href="#">Contact</a>
+  <a href="#">Log in</a>
+	<a href="#">Connect</a>
+  <a href="#">Host</a>
+  <a href="#">Create</a>
+  <a href="index.html">Home</a>
+  <img id="logo2" width="100px" height="50px" src="images\Logo2.png"/>
+  <header href="#">InnQUIZitor</header>
+</div>
+
+<!-- Simple list -->
+<ul class="demo-list-item mdl-list">
+ <li class="mdl-list__item">
+  <span class="mdl-list__item-primary-content">
+  <span class="mdl-list__item-primary-content">
+
+  <!-- Floating Multiline Textfield -->
+  <form action="#">
   <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="question1">
+    </textarea>
     <label class="mdl-textfield__label" for="sample5">Question 1...</label>
   </div>
-</input>
-</form>
-        </span>
-        </span>
-    </li>
-    <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <span class="mdl-list__item-primary-content">
+  </form>
+  </span>
+  </span>
 
-        <!-- Simple Textfield -->
-        <form action="#">
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="question1">
-          <label class="mdl-textfield__label" for="question1"> Question...</label>
+ </li>
+ <li><button type="button" onclick="takeInput()">
+  Submit
+</button>
+</li>
+ <li class="mdl-list__item">
+  <span class="mdl-list__item-primary-content">
+  <span class="mdl-list__item-primary-content">
+
+  <!-- Simple Textfield -->
+  <form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="question2">
+          <label class="mdl-textfield__label" for="question1">Question 2...</label>
         </div>
+
       </form>
+
       </span>
      </span>
-  </li>
-  <li class="mdl-list__item">
+ </li>
+ <li class="mdl-list__item">
     <span class="mdl-list__item-primary-content">
+
       <!-- Simple Textfield -->
       <!-- Floating Multiline Textfield -->
    <form action="#">
      <div class="mdl-textfield mdl-js-textfield">
-       <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+       <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5"></textarea>
        <label class="mdl-textfield__label" for="sample5">Question 2...</label>
      </div>
    </form>
-   </li>
-   <li class="mdl-list__item">
+ </li>
+ <li class="mdl-list__item">
        <span class="mdl-list__item-primary-content">
        <span class="mdl-list__item-primary-content">
+
        <!-- Simple Textfield -->
        <form action="#">
        <div class="mdl-textfield mdl-js-textfield">
@@ -93,10 +104,11 @@
        </form>
        </span>
        </span>
-   </li>
-   <li class="mdl-list__item">
+ </li>
+ <li class="mdl-list__item">
        <span class="mdl-list__item-primary-content">
        <span class="mdl-list__item-primary-content">
+
        <!-- Floating Multiline Textfield -->
   <form action="#">
     <div class="mdl-textfield mdl-js-textfield">
@@ -109,18 +121,29 @@
  </li>
  <li class="mdl-list__item">
    <span class="mdl-list__item-primary-content">
+
      <!-- Simple Textfield -->
   <form action="#">
-     <div class="mdl-textfield mdl-js-textfield">
-       <input class="mdl-textfield__input" type="text" id="sample1">
-       <label class="mdl-textfield__label" for="sample1">Answer...</label>
-     </div>
-     </form>
+  <div class="mdl-textfield mdl-js-textfield">
+   <input class="mdl-textfield__input" type="text" id="sample1">
+   <label class="mdl-textfield__label" for="sample1">Answer...</label>
+  </div>
+  </form>
+
   </span>
-  </li>
-   </ul>
-     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      Add Question
-     </button>
-  </body>
+ </li>
+ <li>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+   More Questions
+  </button>
+</li>
+
+<li>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" onclick="takeInput()">
+   Submit
+  </button>
+</li>
+
+</ul>
+</body>
 </html>
