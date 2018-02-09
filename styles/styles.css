@@ -2,7 +2,6 @@ html {
    background-color: #1565C0
 }
 
-
 /* Style the top navigation bar */
 .topnav {
     overflow:hidden;
@@ -94,10 +93,19 @@ html {
   transform: translate(-50%, -50%);
 }
 
-#logo{
-  margin: 0;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
