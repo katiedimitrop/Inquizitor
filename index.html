@@ -11,47 +11,25 @@
 <html>
   <head>
   <link href="styles\styles.css" rel="stylesheet" type="text/css">
-  <style>
-      .pc {
-	       display: block;
-           margin:0 auto ;
-      }
-
-	  .tablet {
-	       display: block;
-           margin:0 auto;
-      }
-
-      img {
-	        display: block;
-	        margin: 0 auto;
-      }
-
-      .mdl-button{
-         width:250px;
-      }
-  </style>
  </head>
   <body>
      <div class="topnav">
-       <a href="#">Contact</a>
+       <a href="contactPage.html">Contact</a>
        <a href="loginPage.html">Log in</a>
-       <a href="#">Connect</a>
-       <a href="#">Host</a>
+       <a href="connectPage.html">Connect</a>
+       <a href="hostPage.html">Host</a>
        <a href="create-page.html">Create</a>
        <a href="index.html">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
-       <header href="#">InnQUIZitor</header>
+       <header>InnQUIZitor</header>
      </div>
-    <!--<img src="images\homepage-logo.png" alt="Homepage logo">-->
-    <!-- Accent-colored raised button with ripple -->
 
     <svg class="logo" width="300" height="200">
      <img id="logo" width="30%" height="30%" src="images\Logo.png"/>
        <!--Sorry, your browser doesn't support svg graphics.-->
     </svg>
 
-    <h1 id="title" style="font-size:100px;" color="white">InnQUIZitor</h1>
+    <h1 id="title" style="font-size:100px;">Inn<a id="QUIZ">QUIZ</a>itor </h1>
 
     <h2 id="description" > PUB QUIZZES MADE SIMPLE </h2>
 
@@ -60,12 +38,12 @@
         CREATE A QUIZ
        </button>
     </a>
-    <a href="#">
+    <a href="hostPage.html">
        <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         HOST A SESSION
        </button>
     </a>
-    <a href="#">
+    <a href="connectPage.html">
        <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         CONNECT TO A SESSION
        </button>

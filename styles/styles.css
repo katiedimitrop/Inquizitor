@@ -40,8 +40,13 @@ html {
 }
 .mdl-button {
   display: block;
+  width:300px;
+  height:40px;
 }
 
+#QUIZ{
+  color: #FFC107
+}
 #title{
   font-family: 'Roboto', sans-serif;
   color: white;
