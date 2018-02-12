@@ -1,20 +1,26 @@
 //Create array to hold questions
-//var questions[10] =  [];
-
+var questions = new Array(10);
+var answers = new Array(10);
 function takeInput()
 {
-  //Array not working so far..
-  /*for (questionId = 1; questionId <= 10; questionId++)
+  for (questionId = 1; questionId <= 10; questionId++)
   {
-    //Create string that refers to Id
-    var question = "q"+ questionId;
-
     //Insert new question into array
-    questions[questionId - 1] = document.getElementById("question").value;
+    questions[questionId - 1] = (document.getElementById("q"+questionId).value);
+    answers[questionId - 1] = (document.getElementById("a"+questionId).value);
+  }
+}
 
-    //var answer1 = document.getElementById("a1").value;
-  }*/
-  //Takes input of first text area and displays on screen when submit is pressed
-  var question1 = document.getElementById("q1").value;
-  window.alert(question1);
+//Output list on screen after defining a paragraphs in the html with
+//corresponding ids
+function outputQuestions()
+{
+  document.getElementById("demo").innerHTML = questions;
+}
+
+//Output list on screen after defining a paragraph in the html with
+//corresponding id
+function output outputAnswers()
+{
+  document.getElementById("demo2").innerHTML = answers;
 }
