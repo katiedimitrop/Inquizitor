@@ -24,7 +24,7 @@ function outputQuestions()
 
 //Output list on screen after defining a paragraph in the html with
 //corresponding id
-function output outputAnswers()
+function outputAnswers()
 {
   document.getElementById("demo2").innerHTML = answers;
 }
