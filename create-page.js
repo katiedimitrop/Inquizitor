@@ -1,5 +1,7 @@
 //Create array to hold questions
 var questions = new Array(10);
+
+//Create array to hold answers
 var answers = new Array(10);
 function takeInput()
 {
@@ -7,6 +9,8 @@ function takeInput()
   {
     //Insert new question into array
     questions[questionId - 1] = (document.getElementById("q"+questionId).value);
+
+    //Insert new answer into array
     answers[questionId - 1] = (document.getElementById("a"+questionId).value);
   }
 }
