@@ -28,3 +28,12 @@ function outputAnswers()
 {
   document.getElementById("demo2").innerHTML = answers;
 }
+
+//Connect to database
+var mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "",
+  user "master",
+  password:"master123",
+  database:"mydb"
+});
