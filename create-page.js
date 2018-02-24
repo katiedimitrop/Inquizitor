@@ -1,4 +1,5 @@
-/*Quiz id is users last quizId + 1
+
+//Quiz id is users last quizId + 1
 var quizId = 1;
 
 //Username does not Change
@@ -18,7 +19,6 @@ var questionId = 1;
 
 var answerId = 1;
 
-
 //question type will initially be same for all questions
 var qType = 1;
 
@@ -36,35 +36,66 @@ function takeInput()
     answers[questionId - 1] = (document.getElementById("a"+questionId).value);
   }
 }
-*/
+
+//Nodes mysql module must be installled for this to work
+//Write Hello world if someone e.q a web browser tries to access this computer on port 8080
+//Include http module
+var http = require('http');
+
+//Create server
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello World!');
+}).listen(8080);
 
 //Connect to database
 var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com",
   user: "master4",
-  password:"master123"
+  password:"master123",
+  database: "projectdatabase3"
                                  });
+//Create a connection object, this has methods to query a database
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-                          });
-  //Insert a quiz, a question and an Answer
-  /*con.connect(function(err) {
+
+  //Insert a Quiz into the Quiz table, idQuiz column holds the users number of
+  //quizzes Name holds the title of the quizzes
+  var sql = "INSERT INTO Quiz (idQuiz,Name) VALUES (1,'Test Quiz')";
+
+  //Query the database
+  con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Connected!");
-    var sql = "INSERT INTO Quiz(idQuiz,Name) VALUES (quizId,quizTitle)";
-    //qText
-    var sql = "INSERT INTO Question(idQuestion,questionText,type) VALUES (questionId,'Who was the first US president?',1)";
-    //aText
-    var sql = "INSERT INTO Answer(idAnswer,answerText,isTrue) VALUES (answerId,'George Washington',1);"
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-                                           });//con.query
+    console.log("1 record inserted");
+                                        });
+  //Insert Questions for that quiz
+  var sql = "INSERT INTO Question (idQuestion,questionText,type) VALUES (1,'Who was the first US president?',1)";
+
+  //Query the database
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+                                         });
+  //Insert Answers to those questions
+  var sql = "INSERT INTO Answer (idAnswer,answerText,isTrue) VALUES (1,'George Washington',1)";
+
+  //Query the database
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+                                        });
+
+                           });
+  /*var sql = "INSERT INTO Question(idQuestion,questionText,type) VALUES (questionId,qText,qId)";
+
+  var sql = "INSERT INTO Answer(idAnswer,answerText,isTrue) VALUES (answerId,aText,1);"
+*/
+
   //Change users latest quiz id variable
-});//con.connect*/
-//}//takeInput
+                          //con.connect*/
+//End connection
 
 
 /*
