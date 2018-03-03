@@ -46,7 +46,7 @@ var http = require('http');
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.end('Hello World!');
-}).listen(8080);
+                                      }).listen(8080);
 
 //Connect to database
 var mysql = require('mysql');
@@ -63,7 +63,7 @@ con.connect(function(err) {
 
   //Insert a Quiz into the Quiz table, idQuiz column holds the users number of
   //quizzes Name holds the title of the quizzes
-  var sql = "INSERT INTO Quiz (idQuiz,Name) VALUES (1,'Test Quiz')";
+  var sql = "INSERT INTO Quiz (idQuiz,Name,userKey) VALUES (2,'Test Quiz no.2',katie)";
 
   //Query the database
   con.query(sql, function (err, result) {
