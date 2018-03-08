@@ -40,7 +40,11 @@ $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to
 
 # accessing the quizmasters quiz
 
-$quiz = "SELECT questionText FROM Question WHERE idQuiz = '$quizidfromQuizmaster'";
+# query will select all questions from Question table 
+$questions = "SELECT fk_Question_Quiz_idx FROM Question";
+
+# storing the results of the query
+$result = mysql_query($connect, $questions);
 
 ?>
 
