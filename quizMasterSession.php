@@ -40,11 +40,17 @@ $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to
 
 # accessing the quizmasters quiz
 
-# query will select all questions from Question table 
+# query will select all questions from Question table
 $questionQuery = "SELECT fk_Question_Quiz_idx FROM Question";
 
 # storing the results of the query
-$result = mysql_query($connect, $questionQuery);
+$result = mysqli_query($connect, $questionQuery);
+
+# Transferring result to play.php
+$_SESSION['result'] = $result;
+
+# close connection
+mysqli_close($connect);
 
 ?>
 
