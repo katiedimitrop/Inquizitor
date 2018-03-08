@@ -29,6 +29,21 @@
 </body>
 
 <?php
+# starting the session
+session_start();
+
+# displaying the questions
+if (mysql_num_rows($_SESSION['result']) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($_SESSION['result'])) {
+        echo "Question: " . $row["fk_Question_Quiz_idx"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+# testing out session variables
+print_r($_SESSION['result']);
 
 ?>
 
