@@ -29,6 +29,9 @@
 </body>
 
 <?php
+# starting the Session
+session_start();
+
 # connecting to the database
 
 $dbuser = 'master5';
