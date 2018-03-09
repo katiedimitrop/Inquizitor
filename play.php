@@ -32,8 +32,17 @@
 # starting the session
 session_start();
 
+# connecting to the database
+
+$dbuser = 'master5';
+$dbpass = 'master123';
+$dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
+
+$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+
+
 # displaying the questions
-if (mysql_num_rows($_SESSION['result']) > 0) {
+if (mysqli_num_rows($_SESSION['result']) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($_SESSION['result'])) {
         echo "Question: " . $row["fk_Question_Quiz_idx"]. "<br>";
