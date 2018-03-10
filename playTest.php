@@ -41,10 +41,19 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 
+# storing the session variable in a variable
 $result = $_SESSION['result'];
 
 #displaying the questions
-var_dump($result);
+
+# outputing the values in the array
+foreach($result as $value) {
+  echo implode("<br>",$value);
+  echo "<br>";
+} # foreach
+
+# testing the variable
+#var_dump($result);
 
 ?>
 

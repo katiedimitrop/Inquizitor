@@ -49,18 +49,18 @@ $result_array = array();
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
 
-while ($row = mysqli_fetch_array($result_array, MYSQL_NUM){
+while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
   $result_array[] = $row;
 }
 
 # Transferring result to play.php
-$_SESSION['result'] = $result;
+$_SESSION['result'] = $result_array;
 
 # close connection
 mysqli_close($connect);
 
 ?>
 
-<input name='buttonNext' class ='nextButton' type = 'button' onclick="window.open('playTest.php','_self')"/>
+<input name='buttonNext' class ='nextButton' type = 'button' value = 'BEGIN QUIZ' onclick="window.open('playTest.php','_self')"/>
 
 </html>
