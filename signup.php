@@ -119,7 +119,10 @@
       {*/
       	$idValue = 0;
       	$idValue = $mysqli->query("SELECT MAX(idUser) FROM User") + 1;
+      	$idValue = $idValue + 1;
+      	echo $idValue;
         $sql = "INSERT INTO User (idUser,firstname,lastname,password,email) "
+
               . "VALUES (".$idValue.",".$firstname."', '".$lastname."','".$pass."','".$email."')";
         if ($mysqli->query($sql))
         {
