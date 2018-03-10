@@ -42,7 +42,7 @@ $dbname = "projectdatabase3";
 $connect = mysql_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 
 # query will select all questions from Question table
-$questionQuery = "SELECT * FROM Question";
+$questionQuery = "SELECT questionText FROM Question";
 
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
@@ -54,7 +54,7 @@ $_SESSION['result'] = $result;
 if (mysqli_num_rows($_SESSION['result']) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($_SESSION['result'])) {
-        echo "Question: " . $row["fk_Question_Quiz_idx"]. "<br>";
+        echo "Question: " . $row["questionText"]. "<br>";
     }
 } else {
     echo "0 results";
