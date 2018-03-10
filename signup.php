@@ -3,6 +3,8 @@
 <?php
   //example of validation form found on w3schools updated 
   // to the requirements.
+	echo "this page bloody works";
+	echo "<br/>";
   require_once('config.php');
   $mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
   if($mysqli->connect_error)
@@ -10,9 +12,8 @@
      die("Connection failed: ". $mysqli->connect_error);
   }
 
-  $firstnameErr = $lastnameErr =$passwordErr = $emailErr = "";
   $firstname = $lastname =$password = $email = "";
-
+/*
   if ($_SERVER["REQUEST_METHOD"] == "POST") 
   {
     if (empty($_POST["firstname"])) 
@@ -96,13 +97,13 @@
       }
 
     if($passwordErr == "" && $emailErr == "" && $firstnameErr == "" && $lastnameErr == "")
-    { 
+    { */
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];
       $pass = $_POST['password'];
       $email = $_POST['email'];
     
-      $sel = "SELECT email FROM form WHERE password = '$pass'";
+      $sel = "SELECT email FROM User";
      
       if($result = $mysqli->query($sel)){
         while($row = $result->fetch_assoc()) {
@@ -110,8 +111,8 @@
             echo "You are already registered";
       else
       {
-        $sql = "INSERT INTO User (firstname,lastname,email,password) "
-              . "VALUES ('".$firstname."', '".$lastname."','".$email."','".$password."')";
+        $sql = "INSERT INTO User (idUser,firstname,lastname,email,password) "
+              . "VALUES (2,'".$firstname."', '".$lastname."','".$email."','".$password."')";
         if ($mysqli->query($sql))
         {
           echo "<br/>";
