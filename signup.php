@@ -117,8 +117,8 @@
       }
       else
       {
-        $sql = "INSERT INTO User (idUser,firstname,lastname,email,password) "
-              . "VALUES (2,'".$firstname."', '".$lastname."','".$email."','".$password."')";
+        $sql = "INSERT INTO User (idUser,firstname,lastname,password,email) "
+              . "VALUES (2,'".$firstname."', '".$lastname."','".$password."','".$email."')";
         if ($mysqli->query($sql))
         {
           echo "<br/>";
