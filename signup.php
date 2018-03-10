@@ -118,7 +118,7 @@
       else
       {*/
         $sql = "INSERT INTO User (idUser,firstname,lastname,password,email) "
-              . "VALUES (2,'".$firstname."', '".$lastname."','".$password."','".$email."')";
+              . "VALUES (2,'".$firstname."', '".$lastname."','".$pass."','".$email."')";
         if ($mysqli->query($sql))
         {
           echo "<br/>";
@@ -131,6 +131,8 @@
      	//}
     }
     $mysqli->close();
+    header("loginPage.html");
+		die();
  ?>
     </body>
 </html>
