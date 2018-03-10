@@ -41,19 +41,17 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 
+$result = $_SESSION['result'];
 
 # displaying the questions
-if (mysqli_num_rows($_SESSION['result']) > 0) {
+if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($_SESSION['result'])) {
+    while($row = mysqli_fetch_assoc($result)) {
         echo "Question: " . $row["questionText"]. "<br>";
     }
 } else {
     echo "0 results";
 }
-
-# testing out session variables
-print_r($_SESSION['result']);
 
 ?>
 
