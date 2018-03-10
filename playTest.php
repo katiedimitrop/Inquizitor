@@ -43,15 +43,8 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 
 $result = $_SESSION['result'];
 
-# displaying the questions
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "Question: " . $row["questionText"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
+#displaying the questions
+var_dump($result);
 
 ?>
 

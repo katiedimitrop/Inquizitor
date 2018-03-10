@@ -38,7 +38,7 @@ $dbuser = 'master5';
 $dbpass = 'master123';
 $dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
 
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+$connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
 # accessing the quizmasters quiz

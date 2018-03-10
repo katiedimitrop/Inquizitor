@@ -45,8 +45,13 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 # query will select all questions from Question table
 $questionQuery = "SELECT questionText FROM projectdatabase3.Question";
 
+$result_array = array();
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
+
+while ($row = mysqli_fetch_array($result_array, MYSQL_NUM){
+  $result_array[] = $row;
+}
 
 # Transferring result to play.php
 $_SESSION['result'] = $result;
