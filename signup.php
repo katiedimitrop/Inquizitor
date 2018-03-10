@@ -13,7 +13,7 @@
   }
 
   $firstname = $lastname =$password = $email = "";
-/*
+  /*
   if ($_SERVER["REQUEST_METHOD"] == "POST") 
   {
     if (empty($_POST["firstname"])) 
@@ -98,6 +98,8 @@
 
     if($passwordErr == "" && $emailErr == "" && $firstnameErr == "" && $lastnameErr == "")
     { */
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];
       $pass = $_POST['password'];
@@ -105,10 +107,14 @@
     
       $sel = "SELECT email FROM User";
      
-      if($result = $mysqli->query($sel)){
-        while($row = $result->fetch_assoc()) {
+      if($result = $mysqli->query($sel))
+      {
+        while($row = $result->fetch_assoc()) 
+        {
           if($email == $row["email"])
             echo "You are already registered";
+        }
+      }
       else
       {
         $sql = "INSERT INTO User (idUser,firstname,lastname,email,password) "
@@ -118,17 +124,13 @@
           echo "<br/>";
           echo "Registration succesful! Added $firstname to the database!";
         }
-       else 
-       {
-        echo "User could not be added to the database!";
-       }
-     }
+        else 
+        {
+        	echo "User could not be added to the database!";
+       	}
+     	}
     }
-  }
     $mysqli->close();
-   }         
-     
-  }
  ?>
     </body>
 </html>
