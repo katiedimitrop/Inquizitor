@@ -39,7 +39,7 @@ $dbpass = 'master123';
 $dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
 $dbname = "projectdatabase3";
 
-$connect = mysql_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
+$connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
 # query will select all questions from Question table
