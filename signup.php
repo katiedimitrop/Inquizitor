@@ -106,7 +106,7 @@
       $email = $_POST['email'];
     
       $sel = "SELECT email FROM User";
-     
+     /*
       if($result = $mysqli->query($sel))
       {
         while($row = $result->fetch_assoc()) 
@@ -116,7 +116,7 @@
         }
       }
       else
-      {
+      {*/
         $sql = "INSERT INTO User (idUser,firstname,lastname,password,email) "
               . "VALUES (2,'".$firstname."', '".$lastname."','".$password."','".$email."')";
         if ($mysqli->query($sql))
@@ -128,7 +128,7 @@
         {
         	echo "User could not be added to the database!";
        	}
-     	}
+     	//}
     }
     $mysqli->close();
  ?>
