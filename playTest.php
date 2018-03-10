@@ -46,7 +46,7 @@ $connect = mysql_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to C
 if (mysqli_num_rows($_SESSION['result']) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($_SESSION['result'])) {
-        echo "Question: " . $row["fk_Question_Quiz_idx"]. "<br>";
+        echo "Question: " . $row["questionText"]. "<br>";
     }
 } else {
     echo "0 results";
