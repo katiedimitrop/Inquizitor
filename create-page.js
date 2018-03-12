@@ -1,5 +1,6 @@
 //Quiz id is users last quizId + 1
 var quizId = 3;
+//SELECT MAX(idQuiz FROM Quiz) + 1
 
 //userid does not change
 var userId = 1;
@@ -59,7 +60,7 @@ function submitQuiz()
       console.log("1 quiz inserted");
     });
    */
-  /*  for (questionId = 1; questionId <= 10; questionId++)
+/*  for (questionId = 1; questionId <= 10; questionId++)
     {
       //Insert Questions for that quiz
       var sql = 'INSERT INTO Question (idQuestion,Quiz_idQuiz,questionText) VALUES ( \''+questionId+'\',1,\''+questions[questionId - 1]+'\');';
