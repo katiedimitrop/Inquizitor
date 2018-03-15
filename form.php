@@ -1,3 +1,6 @@
+<?php
+	 session_start(); 
+?>
 <html>
 <body>
 <?php
@@ -9,12 +12,12 @@
   {
      die("Connection failed: ". $mysqli->connect_error);
   }
-  echo "this is working haha";
+  //echo "this is working haha";
 
-  $passwordErr = $emailErr = "";
-  $password = $email = "";
+  //$passwordErr = $emailErr = "";
+  //$password = $email = "";
 
-  if ($_SERVER["REQUEST_METHOD"] == "POST")
+  /*if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
 
     if (empty($_POST["email"]))
@@ -39,26 +42,30 @@
       echo $passwordErr;
       echo "<br/>";
     }
-
-    if($passwordErr == "" && $emailErr == "")
-    {
-      $pass = $_POST['password'];
+*/
+    
       $email = $_POST['email'];
-      // $group = 0;
-      $sel = "SELECT email FROM form WHERE password = '$pass'";
-
+      $pass = $_POST['password'];
+      
+      //echo $email;
+       // $group = 0;
+      $_SESSION["email"] = $email;  
+      $sel = "SELECT password FROM User WHERE email = '$email'";
+	  echo 'ba ej nesimtit';
       if($result = $mysqli->query($sel))
       {
         while($row = $result->fetch_assoc())
         {
-          if($email == $row["email"])
-            echo "Redirect";
+          if($pass == $row["password"])
+			echo 'dc nu mergi';
+            header("Location: index.php"); 
+			exit;
         }
       }
+      else
+		echo 'alo';
     $mysqli->close();
-   }
 
-  }
  ?>
     </body>
 </html>

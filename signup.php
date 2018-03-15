@@ -3,8 +3,8 @@
 <?php
   //example of validation form found on w3schools updated 
   // to the requirements.
-	echo "this page bloody works";
-	echo "<br/>";
+	//echo "this page bloody works";
+	//echo "<br/>";
   require_once('config.php');
   $mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
   if($mysqli->connect_error)
@@ -105,7 +105,7 @@
       $pass = $_POST['password'];
       $email = $_POST['email'];
     
-      $sel = "SELECT email FROM User";
+     // $sel = "SELECT email FROM User";
      /*
       if($result = $mysqli->query($sel))
       {
@@ -117,17 +117,18 @@
       }
       else
       {*/
-      	$idValue = 0;
+      	/*$idValue = 0;
       	$idValue = $mysqli->query("SELECT MAX(idUser) FROM User") + 1;
       	$idValue = $idValue + 1;
-      	echo $idValue;
-        $sql = "INSERT INTO User (idUser,firstname,lastname,password,email) "
+      	//echo $idValue;
+        */
+        $sql = "INSERT INTO User (firstname,lastname,password,email) "
 
-              . "VALUES (".$idValue.",".$firstname."', '".$lastname."','".$pass."','".$email."')";
+              . "VALUES ('".$firstname."', '".$lastname."','".$pass."','".$email."')";
         if ($mysqli->query($sql))
         {
-          echo "<br/>";
-          echo "Registration succesful! Added $firstname to the database!";
+          header("Location: loginPage.html"); 
+		  exit;
         }
         else 
         {
@@ -136,7 +137,7 @@
      	//}
     }
     $mysqli->close();
-    header("loginPage.html");
+    
 		die();
  ?>
     </body>
