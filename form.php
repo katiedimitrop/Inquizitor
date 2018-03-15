@@ -50,10 +50,11 @@
     //echo $email;
      // $group = 0;
     $_SESSION["email"] = $email;  
-    $sel = "SELECT password FROM User WHERE email ='".$email."';";
+    $sel = "SELECT password FROM User WHERE email ='".$email."'";
   	echo 'ba ej nesimtit';
     if($result = $mysqli->query($sel))
     {
+    	echo 'ba ej nesimtit x2';
       while($row = $result->fetch_assoc())
       {
         if($pass == $row["password"])
