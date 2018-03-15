@@ -50,9 +50,9 @@
     	echo $email;
     	echo '<br>';
     	echo $pass;
-    	echo '<br>'
+    	echo '<br>';
     	echo 'this thing should work';
-    	echo '<br>'
+    	echo '<br>';
     }
     else
     {
