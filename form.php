@@ -45,8 +45,8 @@
 */
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-    	$email = $_POST['email'];
     	$pass = $_POST['password'];
+    	$email = $_POST['email'];
     	echo $email;
     	echo '<br>';
     	echo $pass;
