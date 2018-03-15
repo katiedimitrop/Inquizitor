@@ -43,9 +43,15 @@
       echo "<br/>";
     }
 */
-    
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+    	$email = $_POST['email'];
+    	$pass = $_POST['password'];
+    }
+    else
+    {
+    	echo 'this is not working';
+    }
     
     //echo $email;
      // $group = 0;
