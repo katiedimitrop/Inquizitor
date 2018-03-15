@@ -47,6 +47,12 @@
     {
     	$email = $_POST['email'];
     	$pass = $_POST['password'];
+    	echo $email;
+    	echo '<br>';
+    	echo $pass;
+    	echo '<br>'
+    	echo 'this thing should work';
+    	echo '<br>'
     }
     else
     {
