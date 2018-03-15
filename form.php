@@ -50,8 +50,10 @@
     //echo $email;
      // $group = 0;
     $_SESSION["email"] = $email;  
-    $sel = "SELECT password FROM User WHERE email ='".$email."'";
-  	echo 'ba ej nesimtit';
+    $sel = "SELECT password FROM User WHERE email ='".$email."' ";
+    echo $sel;
+    echo '<br>';
+    echo $email;
     if($result = $mysqli->query($sel))
     {
     	echo 'ba ej nesimtit x2';
