@@ -62,8 +62,8 @@
     //echo $email;
      // $group = 0;
     $_SESSION["email"] = $email;  
-    #$sel = "SELECT password FROM User WHERE email ='".$email."' ";
-    $sel = "SELECT password FROM User WHERE email ='malone@gmail.com' ";
+    $sel = "SELECT password FROM User WHERE email ='".$email."' ";
+   // $sel = "SELECT password FROM User WHERE email ='malone@gmail.com' ";
 
     echo $sel;
     echo '<br>';
