@@ -62,7 +62,9 @@
     //echo $email;
      // $group = 0;
     $_SESSION["email"] = $email;  
-    $sel = "SELECT password FROM User WHERE email ='".$email."' ";
+    #$sel = "SELECT password FROM User WHERE email ='".$email."' ";
+    $sel = "SELECT password FROM User WHERE email ='malone@gmail.com' ";
+
     echo $sel;
     echo '<br>';
     echo $email;
@@ -75,8 +77,8 @@
         if($pass == $row["password"])
         {
 					echo 'dc nu mergi';
-          header("Location: index.php");           																										
-					exit();
+          #header("Location: index.php");           																										
+					#exit();
 				}
       }
     }
