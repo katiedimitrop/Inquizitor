@@ -1,5 +1,5 @@
 	<?php
-	ob_start();
+	//ob_start();
     session_start();
     if(!session_is_registered(email)){
     header("location: index.html");
@@ -19,7 +19,7 @@
 	{
 		die("Connection failed: ". $mysqli->connect_error);
 	}	
-    session_start();
+ 
 	$query = mysql_query('SELECT firstname FROM User WHERE email = ' . $_SESSION['email'] . ';'); 
 	$_SESSION["myfirstname"] = $query;
 	$result = $mysqli->query($query);

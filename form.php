@@ -57,9 +57,11 @@
         while($row = $result->fetch_assoc())
         {
           if($pass == $row["password"])
-			echo 'dc nu mergi';
-            header("Location: index.php"); 
-			exit;
+          {
+						echo 'dc nu mergi';
+            header("Location: index.php");           																										
+						exit();
+					}
         }
       }
       else
