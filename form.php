@@ -44,28 +44,30 @@
     }
 */
     
-      $email = $_POST['email'];
-      $pass = $_POST['password'];
-      
-      //echo $email;
-       // $group = 0;
-      $_SESSION["email"] = $email;  
-      $sel = "SELECT password FROM User WHERE email = '$email'";
-	  echo 'ba ej nesimtit';
-      if($result = $mysqli->query($sel))
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    
+    //echo $email;
+     // $group = 0;
+    $_SESSION["email"] = $email;  
+    $sel = "SELECT password FROM User WHERE email ='".$email."';";
+  	echo 'ba ej nesimtit';
+    if($result = $mysqli->query($sel))
+    {
+      while($row = $result->fetch_assoc())
       {
-        while($row = $result->fetch_assoc())
+        if($pass == $row["password"])
         {
-          if($pass == $row["password"])
-          {
-						echo 'dc nu mergi';
-            header("Location: index.php");           																										
-						exit();
-					}
-        }
+					echo 'dc nu mergi';
+          header("Location: index.php");           																										
+					exit();
+				}
       }
-      else
-		echo 'alo';
+    }
+    else
+    {
+			echo 'alo';
+		}
     $mysqli->close();
 
  ?>
