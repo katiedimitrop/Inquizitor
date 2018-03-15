@@ -57,6 +57,7 @@
     	echo 'ba ej nesimtit x2';
       while($row = $result->fetch_assoc())
       {
+      	echo 'bleh';
         if($pass == $row["password"])
         {
 					echo 'dc nu mergi';
@@ -70,7 +71,7 @@
 			echo 'alo';
 		}
     $mysqli->close();
-
+    echo 'it inished';
  ?>
     </body>
 </html>
