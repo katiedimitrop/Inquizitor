@@ -92,6 +92,11 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
   $result_array[] = $row;
 }
 
+# Initial value for quiz array index
+$quizIndex = 0;
+# Transferring result to play.php
+$_SESSION['quizIndex'] = $quizIndex;
+
 # Transferring result to play.php
 $_SESSION['result'] = $result_array;
 
