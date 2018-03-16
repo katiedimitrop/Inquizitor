@@ -57,8 +57,9 @@ session_start();
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
           </div>
 
-        <button type="submit" class="button button-block" onclick="window.open('playTest.php','_self')"/>Start Quiz</button>
-
+        <a href="playTest.php">
+            <button type="submit" class="button button-block">Start Quiz</button>
+        </a>
           </form>
     </div>
 
