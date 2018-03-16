@@ -51,7 +51,7 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['result'];
 #displaying the questions
 
-echo $quizIndex;
+echo implode($quizIndex);
 # outputing the values in the array
 foreach($result as $value) {
   echo implode("<br>",$value);
