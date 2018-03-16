@@ -51,10 +51,20 @@ foreach($result as $value) {
   echo implode("<br>",$value);
   echo "<br>";
 } # foreach
-
-# testing the variable
-#var_dump($result);
-
 ?>
+
+<div class="form">
+
+    <div id="nextQuestion">
+      <h1>Question placeHolder</h1>
+
+        <form action="/" method="post">
+
+          <button type="submit" class="button button-block"/>Next Question</button>
+
+        </form>
+</div>
+
+
 
 </html>
