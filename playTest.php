@@ -47,6 +47,8 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 # storing the session variable in a variable
 $result = $_SESSION['result'];
 
+# storing the session variable in a variable
+$quizIndex = $_SESSION['result'];
 #displaying the questions
 
 # outputing the values in the array
@@ -59,7 +61,9 @@ foreach($result as $value) {
 <div class="form">
 
     <div id="nextQuestion">
-      <h1>Question placeHolder</h1>
+      <h1>
+        <?php implode($result[$quizIndex]) ?>
+      </h1>
 
         <form action="/" method="post">
 
