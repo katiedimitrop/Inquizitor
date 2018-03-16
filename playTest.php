@@ -48,7 +48,7 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 $result = $_SESSION['result'];
 
 # storing the session variable in a variable
-$quizIndex = $_SESSION['result'];
+$quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
 echo implode($quizIndex);
