@@ -51,6 +51,7 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['result'];
 #displaying the questions
 
+echo $quizIndex;
 # outputing the values in the array
 foreach($result as $value) {
   echo implode("<br>",$value);
@@ -62,7 +63,7 @@ foreach($result as $value) {
 
     <div id="nextQuestion">
       <h1>
-        <?php implode($result[$quizIndex]) ?>
+        <?php implode($result[$quizIndex]); ?>
       </h1>
 
         <form action="/" method="post">
