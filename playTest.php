@@ -51,28 +51,39 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
-echo implode($quizIndex);
 # outputing the values in the array
-foreach($result as $value) {
-  echo implode("<br>",$value);
-  echo "<br>";
-} # foreach
+#foreach($result as $value) {
+#  echo implode("<br>",$value);
+#  echo "<br>";
+#} # foreach
+
+#echo sizeof($result);
+
 ?>
 
 <div class="form">
 
     <div id="nextQuestion">
       <h1>
-        <?php implode($result[$quizIndex]); ?>
+        <?php echo "Question "; echo ($quizIndex + 1); echo ": ";  echo implode($result[$quizIndex]); ?>
       </h1>
 
-        <form action="/" method="post">
+        <form action="/Inquizitor/playTest.php" method="post">
 
           <button type="submit" class="button button-block"/>Next Question</button>
 
         </form>
 </div>
 
+
+<?php 
+#Updating quiz question
+if($quizIndex == sizeof($result))
+   
+else
+  $quizIndex = $quizIndex + 1; 
+$_SESSION['quizIndex'] = $quizIndex;
+?>
 
 
 </html>
