@@ -42,7 +42,7 @@ session_start();
 
           <!--<h2>Pick a quiz to host!</h2>-->
 
-          <form action="/" method="post">
+          <form action="/playTest.php" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
@@ -57,9 +57,8 @@ session_start();
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
           </div>
 
-        <a href="playTest.php">
-            <button type="submit" class="button button-block">Start Quiz</button>
-        </a>
+          <button type="submit" class="button button-block">Start Quiz</button>
+
           </form>
     </div>
 
