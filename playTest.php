@@ -1,3 +1,8 @@
+<?php
+# starting the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -29,8 +34,6 @@
 </body>
 
 <?php
-# starting the session
-session_start();
 
 # connecting to the database
 
