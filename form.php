@@ -12,82 +12,29 @@
   {
      die("Connection failed: ". $mysqli->connect_error);
   }
-  //echo "this is working haha";
-
-  //$passwordErr = $emailErr = "";
-  //$password = $email = "";
-
-  /*if ($_SERVER["REQUEST_METHOD"] == "POST")
-  {
-
-    if (empty($_POST["email"]))
-    {
-      $emailErr = "Email is required <br>";
-      echo $emailErr;
-      echo "<br/>";
-    } else
+  
+    
+      $email = $_POST['email'];
+      $pass = $_POST['password'];
+      
+      
+      $_SESSION["email"] = $email;  
+    
+      $sel = "SELECT password FROM User WHERE email = '$email'";
+      if($result = $mysqli->query($sel))
       {
-        $email = $_POST["email"];
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+        while($row = $result->fetch_assoc())
         {
-          $emailErr = "Invalid email format ";
-          echo $emailErr;
-          echo "<br/>";
+          if($pass == $row["password"])
+			{
+            header("Location: index.php"); 
+			exit;
+			}
         }
       }
-
-    if (empty($_POST["password"]))
-    {
-      $passwordErr = "Password is required ";
-      echo $passwordErr;
-      echo "<br/>";
-    }
-*/
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-    	$pass = $_POST['password'];
-    	$email = $_POST['email'];
-    	echo $email;
-    	echo '<br>';
-    	echo $pass;
-    	echo '<br>';
-    	echo 'this thing should work';
-    	echo '<br>';
-    }
-    else
-    {
-    	echo 'this is not working';
-    }
-    
-    //echo $email;
-     // $group = 0;
-    $_SESSION["email"] = $email;  
-    $sel = "SELECT password FROM User WHERE email ='".$email."' ";
-   // $sel = "SELECT password FROM User WHERE email ='malone@gmail.com' ";
-
-    echo $sel;
-    echo '<br>';
-    echo $email;
-    if($result = $mysqli->query($sel))
-    {
-    	echo 'ba ej nesimtit x2';
-      while($row = $result->fetch_assoc())
-      {
-      	echo 'bleh';
-        if($pass == $row["password"])
-        {
-					echo 'dc nu mergi';
-          #header("Location: index.php");           																										
-					#exit();
-				}
-      }
-    }
-    else
-    {
-			echo 'alo';
-		}
+      
     $mysqli->close();
-    echo 'it inished';
+
  ?>
     </body>
 </html>

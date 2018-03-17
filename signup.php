@@ -122,6 +122,7 @@
       	$idValue = $idValue + 1;
       	//echo $idValue;
         */
+         //$_SESSION["firstname"] = $firstname;  
         $sql = "INSERT INTO User (firstname,lastname,password,email) "
 
               . "VALUES ('".$firstname."', '".$lastname."','".$pass."','".$email."')";
