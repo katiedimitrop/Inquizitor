@@ -42,7 +42,7 @@ session_start();
 
           <!--<h2>Pick a quiz to host!</h2>-->
 
-          <form action="/Inquizitor/playTest.php" method="post">
+          <form action="/Inquizitor/playMaster.php" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
@@ -94,10 +94,10 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
 
 # Initial value for quiz array index
 $quizIndex = 0;
-# Transferring result to play.php
+# Transferring index to playMaster.php
 $_SESSION['quizIndex'] = $quizIndex;
 
-# Transferring result to play.php
+# Transferring result to playMaster.php
 $_SESSION['result'] = $result_array;
 
 # close connection
