@@ -1,4 +1,4 @@
-	<?php
+<?php
     session_start();
     ?>
 
@@ -14,12 +14,9 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-   <link rel='stylesheet prefetch' href='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css'>
-  <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css'>
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-
-  <link rel="stylesheet" href="styles/hostPage.css">
-   
+  <link rel="stylesheet" href="styles/contactPageStyle.css">
+  
+ 
 </head>
 
 <body>
@@ -59,36 +56,49 @@
 
      <div class="form">
 
-      <div id="hostQuiz">
-          <h1>Host a quiz!</h1>
-
-          <!--<h2>Pick a quiz to host!</h2>-->
+      <div id="sessionKey">
+          <h1>Contact Us!</h1>
 
           <form action="/" method="post">
 
-            <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-              <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
-                <option value=""></option>
-                <option value="1">Quiz 1</option>
-                <option value="2">Quiz 2</option>
-                <option value="3">Quiz 3</option>
-                <option value="4">Quiz 4</option>
-                <option value="5">Quiz 5</option>
-              </select>
+            <div class="field-wrap">
+              <label>
+                Name
+              </label>
+              <input type="text" autocomplete="off" />
+            </div>
 
-              <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
+            <div class="field-wrap">
+              <label>
+                Email
+              </label>
+              <input type="text" autocomplete="off" />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Subject</span>
+              </label>
+              <input type="text" autocomplete="off" />
+            </div>
+
+          <div class="message-section">
+            <div class="field-wrap">
+              <label>
+                Message<span class="req">*</span>
+              </label>
+              <input id="messageField" type="text"required autocomplete="off" />
+            </div>
           </div>
 
-        <button type="submit" class="button button-block"/>Start Quiz</button>
+          <button type="submit" class="button button-block"/>Send Message</button>
 
           </form>
     </div>
 
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script  src="js/index.js"></script>
-    <script src='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js'></script>
-        <script src='https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.js'></script>
-
 </body>
 
 </html>

@@ -43,6 +43,15 @@ body {
     color: black;
 }
 
+#welcome {
+    font-family: 'Roboto', sans-serif;
+    float: center;
+	display: block; 
+    color: white;
+    text-align: center;
+    background-color: #212121;
+}
+
 /* LOGIN/SIGN UP CSS */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;

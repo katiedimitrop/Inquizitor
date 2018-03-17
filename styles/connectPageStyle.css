@@ -44,7 +44,14 @@ body {
     background-color: #ddd;
     color: black;
 }
-
+#welcome {
+    font-family: 'Roboto', sans-serif;
+    float: center;
+	display: block; 
+    color: white;
+    text-align: center;
+    background-color: #212121;
+}
 /* host session CSS */
 
 a {
