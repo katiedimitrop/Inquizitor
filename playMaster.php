@@ -24,7 +24,7 @@ session_start();
        <a href="contactPage.html">Contact</a>
        <a href="loginPage.html">Log in</a>
        <a href="connectPage.html">Connect</a>
-       <a href="hostPage.html">Host</a>
+       <a href="hostPage.php">Host</a>
        <a href="create-page.html">Create</a>
        <a href="index.html">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
@@ -51,42 +51,33 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
-# outputing the values in the array
-#foreach($result as $value) {
-#  echo implode("<br>",$value);
-#  echo "<br>";
-#} # foreach
 
-#echo sizeof($result);
-
-?>
-
-
-<?php if($quizIndex == sizeof($result)) : ?>
+if($quizIndex == sizeof($result)) : ?>
 <div class="form">
   <div id="nextQuestion">
     <h1>
       <?php echo "Press to Finish Quiz" ?>
     </h1>
 
-    <form action="/Inquizitor/playTest.php" method="post">
+    <form action="/Inquizitor/playMaster.php" method="post">
       <button type="submit" class="button button-block"/>Finish Quiz</button>
     </form>
 </div>
-<?php else:
+<?php else: 
   # Updating quiz question
   $quizIndex = $quizIndex + 1;
   $_SESSION['quizIndex'] = $quizIndex;
+
 ?>
 <div class="form">
   <div id="nextQuestion">
     <h1>
-      <?php echo "Question "; echo ($quizIndex + 1); echo ": ";  echo implode($result[$quizIndex]); ?>
+      <?php echo "Question "; echo ($quizIndex); echo ": ";  echo implode($result[$quizIndex - 1]); ?>
     </h1>
 
-    <form action="/Inquizitor/playTest.php" method="post">
+    <form action="/Inquizitor/playMaster.php" method="post">
       <button type="submit" class="button button-block"/>Next Question</button>
     </form>
 </div>
-
+<?php endif; ?>
 </html>
