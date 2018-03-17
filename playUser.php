@@ -51,10 +51,11 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
+$finishQuiz = $_SESSION['finishQuiz'];
 ?>
 
 
-<?php if($quizIndex == sizeof($result)) : ?>
+<?php if($finishQuiz == 1) : ?>
 <div class="form">
   <div id="nextQuestion">
     <h1>
@@ -69,7 +70,7 @@ $quizIndex = $_SESSION['quizIndex'];
 <div class="form">
     <div id="sessionKey">
           <h1>
-            <?php echo "Question "; echo ($quizIndex); echo ": ";  echo implode($result[$quizIndex - 1]); ?>
+            <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
           </h1>
           <form action="/" method="post">
             <div class="field-wrap">
