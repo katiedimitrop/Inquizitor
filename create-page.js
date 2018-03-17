@@ -59,93 +59,106 @@ app.listen(8000, function()
 app.get('/', function(req, res)
 {
   res.sendFile(path.join(__dirname + '/create-page.html'));
+  //Find id of last quiz inserted
+  var sql = 'SELECT idQuiz FROM Quiz ORDER BY idQuiz DESC LIMIT  1;';
+  //Query the database
+  con.query(sql, function (err, result)
+  {
+    if(err)
+    {
+      throw err;
+    }
+    else
+    {
+      setIdQuiz(result[0].idQuiz);
+    }
+  });
+  //We need to set it seperately as the function that retrieves this value
+  //is asynchronous
+  function setIdQuiz(value)
+  {
+    quizPK = value;
+    console.log(quizPK);
+  }
+
+  //Find id of last question
+  var sql = 'SELECT idQuestion FROM Question ORDER BY idQuestion DESC LIMIT  1;';
+  //Query the database
+  con.query(sql, function (err, result)
+  {
+    if(err)
+    {
+      throw err;
+    }
+    else
+    {
+      setIdQuestion(result[0].idQuestion);
+    }
+  });
+  //We need to set it seperately as the function that retrieves this value
+  //is asynchronous
+  function setIdQuestion(value)
+  {
+    questionPK = value;
+    console.log(questionPK);
+  }
 });
 
 //Receive data submitted by user in POST request
 app.post('/', function(req, res)
 {
-  //console.log(req.body.quiz_title+' inserted');
-  //Insert a Quiz into the Quiz table, idQuiz column holds the users number of
-  //quizzes Name holds the title of the quizzes
+  var con = mysql.createConnection(
+  {
+    host: "projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com",
+    user: "master4",
+    password:"master123",
+    database: "projectdatabase3"
+  });
 
-  var sql = 'INSERT INTO Quiz (Name,User_idUser) VALUES ('+'\''+ req.body.quiz_title+'\','+userId+');';
+  //Create a connection object, this has methods to query a database
+  con.connect(function(err)
+  {
+    if (err) throw err;
+    console.log("Connected!");
+
+  });
+
+  ++quizPK;
+  //Insert a quiz into the database
+  var sql = 'INSERT INTO Quiz (idQuiz,Name,User_idUser) VALUES ('+quizPK+',\''+ req.body.quiz_title+'\','+userId+');';
     //Query the database
     con.query(sql, function (err, result)
     {
       if (err) throw err;
-      console.log("1 quiz inserted");
+      console.log('Inserted quiz no'+quizPK);
     });
 
-    var sql = 'SELECT idQuiz FROM Quiz ORDER BY idQuiz DESC LIMIT  1;';
-    //Query the database
-    con.query(sql, function (err, result)
-    {
-      if(err)
-      {
-        throw err;
-      }
-      else
-      {
-        setIdQuiz(result[0].idQuiz);
-      }
-    });
-
-    //We need to set it seperately as the function that retrieves this value
-    //is asynchronous
-    function setIdQuiz(value)
-    {
-      quizPK = value;
-      console.log(quizPK);
-    }
-    var sql = 'SELECT idQuestion FROM Question ORDER BY idQuestion DESC LIMIT  1;';
-    //Query the database
-    con.query(sql, function (err, result)
-    {
-      if(err)
-      {
-        throw err;
-      }
-      else
-      {
-        setIdQuestion(result[0].idQuestion);
-      }
-    });
-    //We need to set it seperately as the function that retrieves this value
-    //is asynchronous
-    function setIdQuestion(value)
-    {
-      questionPK = value + 1;
-      console.log(questionPK);
-    }
-
-    questionPK = 131;
-    quizPK = 43;
-    //We want to use the next available index
+    //Take values from form
     questions = [req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.q6,req.body.q7,req.body.q8,req.body.q9,req.body.q10]
     answers = [req.body.a1,req.body.a2,req.body.a3,req.body.a4,req.body.a5,req.body.a6,req.body.a7,req.body.a8,req.body.a9,req.body.a10]
     for (var questionId = 0;questionId < 10; questionId++)
     {
       //Insert a question
-      var sql = 'INSERT INTO Question (Quiz_idQuiz,questionText) VALUES ('+quizPK+',\''+questions[questionId]+'\');';
+      ++questionPK;
+
+      var sql = 'INSERT INTO Question (idQuestion,Quiz_idQuiz,questionText) VALUES ('+questionPK+','+quizPK+',\''+questions[questionId]+'\');';
       //Query the database
       con.query(sql, function (err, result)
       {
         if (err) throw err;
-        console.log("1 question inserted");
+        //Insert a question into the next available place
+        console.log('Inserted question');
       });
 
-      //Insert an answer
-      var sql = 'INSERT INTO Answer (answerText,isTrue,Question_idQuestion) VALUES (\''+answers[questionId]+'\',1 ,'+questionPK+');';
+      var sql = 'INSERT INTO Answer (idAnswer,answerText,isTrue,Question_idQuestion) VALUES ('+questionPK+',\''+answers[questionId]+'\',1 ,'+questionPK+');';
       //Query the database
       con.query(sql, function (err, result)
       {
         if (err) throw err;
-        console.log("1 answer inserted");
+        console.log('Inserted answer');
       });
-      questionPK++;
-      }//for
+    }//for
 
   res.redirect('/');
-  con.end();
 
-});
+});//app.post
