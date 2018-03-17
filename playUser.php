@@ -15,7 +15,7 @@ session_start();
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <link rel="stylesheet" href="styles/hostPage.css">
+  <link rel="stylesheet" href="styles/loginPageStyle.css">
 
 </head>
 
@@ -58,7 +58,7 @@ $quizIndex = $_SESSION['quizIndex'];
 <div class="form">
   <div id="nextQuestion">
     <h1>
-      <?php echo "Quiz is finish!" ?>
+      <?php echo "Quiz is finished!" ?>
     </h1>
 
     <form action="/Inquizitor/playTest.php" method="post">
@@ -67,7 +67,7 @@ $quizIndex = $_SESSION['quizIndex'];
 </div>
 <?php else: ?>
 <div class="form">
-    <div id="enterAnswer">
+    <div id="sessionKey">
           <h1>
             <?php echo "Question "; echo ($quizIndex); echo ": ";  echo implode($result[$quizIndex - 1]); ?>
           </h1>
