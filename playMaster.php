@@ -51,8 +51,22 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
+if ($quizIndex == 0) :
+  # Updating quiz question
+  $quizIndex = $quizIndex + 1;
+  $_SESSION['quizIndex'] = $quizIndex;
+?>
+<div class="form">
+  <div id="nextQuestion">
+    <h1>
+      <?php echo "Session key placeHolder"; echo session_id(); ?>
+    </h1>
 
-if($quizIndex == sizeof($result)) : ?>
+    <form action="/Inquizitor/playMaster.php" method="post">
+      <button type="submit" class="button button-block"/>Begin Quiz</button>
+    </form>
+</div>
+<?php elseif($quizIndex == sizeof($result)) : ?>
 <div class="form">
   <div id="nextQuestion">
     <h1>
@@ -63,11 +77,10 @@ if($quizIndex == sizeof($result)) : ?>
       <button type="submit" class="button button-block"/>Finish Quiz</button>
     </form>
 </div>
-<?php else: 
+<?php else:
   # Updating quiz question
   $quizIndex = $quizIndex + 1;
   $_SESSION['quizIndex'] = $quizIndex;
-
 ?>
 <div class="form">
   <div id="nextQuestion">
