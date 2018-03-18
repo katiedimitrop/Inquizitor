@@ -61,9 +61,7 @@
         $userIdq = "SELECT idUser FROM User WHERE email = '$email'";
 	      $userIdqt = $mysqli->query($userIdq);
 	      $userId = $userIdqt->fetch_assoc();
-        echo $userIdqt;
-        echo $userId;
-        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = 2";
+        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = $userId['userId']";
         $getQuiz = mysqli_query($mysqli, $selectQuiz);
 
         $quizs_array = array();
