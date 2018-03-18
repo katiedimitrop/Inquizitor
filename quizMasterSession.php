@@ -68,7 +68,7 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
 $quizID = $_POST['quizDropdown'];
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
-
+# Uses id frop dropdown to access correct quiz id from array
 echo "\nQuiz to display is"; echo implode($quizIds_array[$quizID]);
 
 # Initial value for quiz array index

@@ -67,7 +67,7 @@
         }
 
         $selectQuizId = "SELECT idQuiz FROM projectdatabase3.Quiz WHERE User_idUser = '$userId'";
-        $getQuizId = mysqli_query($mysqli, $selectQuiz);
+        $getQuizId = mysqli_query($mysqli, $selectQuizId);
         $quizIds_array = array();
         while ($row = mysqli_fetch_array($getQuizId, MYSQL_NUM)){
             $quizIds_array[] = $row;
@@ -89,7 +89,6 @@
                 <?php
                 for ($x = 0; $x < sizeof($quizs_array); $x++ ){
                    echo "<option value="; echo $x; echo '>'; echo implode($quizs_array[$x]); echo "</option>"; }
-                   #$_SESSION['quizID'] = $POST['quizDropdown'];
                    ?>
               </select>
 
