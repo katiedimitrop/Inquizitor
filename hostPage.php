@@ -59,23 +59,12 @@
      </div>
 
      <?php
-        #$userIdq = "SELECT idUser FROM User WHERE email = '$email'";
-	      #if ($userIdqt = $mysqli->query($userIdq))
-        #  {
-	      #     while($userId = $userIdqt->fetch_assoc())
-        #     {
-        #        echo 'User Id' . $userId['idUser'];
-        #     }
-        #  }
-
         $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = '$userId'";
         $getQuiz = mysqli_query($mysqli, $selectQuiz);
         $quizs_array = array();
         while ($row = mysqli_fetch_array($getQuiz, MYSQL_NUM)){
             $quizs_array[] = $row;
         }
-
-        echo implode($quizs_array[0]);
      ?>
 
      <div class="form">
