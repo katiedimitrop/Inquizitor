@@ -74,7 +74,7 @@
 
           <!--<h2>Pick a quiz to host! hello</h2>-->
 
-          <form action="/" method="post">
+          <form action="/hostPage.php" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
