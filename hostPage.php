@@ -74,14 +74,14 @@
 
           <!--<h2>Pick a quiz to host! hello</h2>-->
 
-          <form action="/hostPage.php" method="post">
+          <form action="/quizMasterSession.php" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
                 <?php
                 for ($x = 0; $x < sizeof($quizs_array); $x++ ){
                    echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; }
-                   echo $POST['quizDropdown'];
+                   $_SESSION['quizID'] = $POST['quizDropdown'];
                    ?>
               </select>
 

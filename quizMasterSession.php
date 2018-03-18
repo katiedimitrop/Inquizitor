@@ -64,6 +64,8 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
     $result_array[] = $row;
 }
 
+$quizID = $_SESSION['quizID'];
+echo $quizID;
 # Initial value for quiz array index
 $quizIndex = 0;
 # Transferring index to playMaster.php
