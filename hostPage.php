@@ -19,7 +19,7 @@
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
   <link rel="stylesheet" href="styles/hostPage.css">
-   
+
 </head>
 
 <body>
@@ -39,9 +39,9 @@
 	if($mysqli->connect_error)
 	{
 		die("Connection failed: ". $mysqli->connect_error);
-	}	
-    
-    $email = $_SESSION['email']; 
+	}
+
+    $email = $_SESSION['email'];
     //$firstname = $_SESSION['firstname'];
 	$sel = "SELECT firstname FROM User WHERE email = '$email'";
 	//echo $sel;
@@ -49,13 +49,27 @@
       {
         while($row = $result->fetch_assoc())
         {
-				echo 'Welcome ' . $row['firstname'] . '!'; 
-				//exit; 
+				echo 'Welcome ' . $row['firstname'] . '!';
+				//exit;
 				break;
         }
       }
      ?></a>
      </div>
+
+     <?php
+        $userId = "SELECT idUser FROM projectdatabase3.User WHERE email = $email";
+
+        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = $userId";
+        $getQuiz = mysqli_query($connect, $selectQuiz);
+
+        $quizs_array = array();
+        while ($row = mysqli_fetch_array($selectQuiz, MYSQL_NUM)){
+            $quizs_array[] = $row;
+        }
+
+        echo implode($quizs_array[0]);
+     ?>
 
      <div class="form">
 
