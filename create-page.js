@@ -38,7 +38,7 @@ app.use(express.static(__dirname + '/images'));
 
 //Invoking php through the shell interface
 var exec = require("child_process").exec;
-app.get('/', function(req, res){exec("php new-create-page.php", function (error, stdout, stderr) {res.send(stdout);});});
+app.get('/', function(req, res){exec("php create-page.php", function (error, stdout, stderr) {res.send(stdout);});});
 
 //Import functions for validating and sanitizing
 const { body,validationResult } = require('express-validator/check');
@@ -73,7 +73,7 @@ app.listen(8000, function()
 //Send the default form the first time user requests it
 app.get('/', function(req, res)
 {
-  res.sendFile(path.join(__dirname + '/new-create-page.php'));
+  res.sendFile(path.join(__dirname + '/create-page.php'));
   //Find id of last quiz inserted
   var sql = 'SELECT idQuiz FROM Quiz ORDER BY idQuiz DESC LIMIT  1;';
   //Query the database
