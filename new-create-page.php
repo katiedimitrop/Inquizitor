@@ -1,3 +1,6 @@
+<?php
+    session_start();
+    ?>
 <!DOCTYPE html>
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -213,7 +216,30 @@ input:focus ~ .highlight {
   <img id="logo2" width="5%" height="5%" src="/Logo2.png"/>
   <header href="#">InnQUIZitor</header>
 </div>
+<a id="welcome" style="font-size:20px;">
+<?php
+require_once('config.php');
+$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
+if($mysqli->connect_error)
+{
+die("Connection failed: ". $mysqli->connect_error);
+}
 
+$email = $_SESSION['email'];
+//$firstname = $_SESSION['firstname'];
+$sel = "SELECT firstname FROM User WHERE email = '$email'";
+//echo $sel;
+if($result = $mysqli->query($sel))
+  {
+    while($row = $result->fetch_assoc())
+    {
+    echo 'Welcome ' . $row['firstname'] . '!';
+    //exit;
+    break;
+    }
+  }
+ ?></a>
+</div>
 <div class="container">
 
 <form method ="post" >
