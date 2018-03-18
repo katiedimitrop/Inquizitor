@@ -11,6 +11,7 @@
     -ms-user-select: none;
     user-select: none;
     pointer-events: all;
+    float: center;
 }
 
 /* Hide the browser's default radio button */
@@ -204,7 +205,7 @@ textarea {
 .field-wrap {
   position: relative;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .button {
