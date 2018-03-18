@@ -33,7 +33,7 @@ session_start();
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder "; echo session_id(); ?>
+                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">
@@ -81,7 +81,6 @@ $_SESSION['quizIndex'] = 1;
 
 # close connection
 mysqli_close($connect);
-
 
 ?>
 
