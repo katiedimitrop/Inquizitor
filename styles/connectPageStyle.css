@@ -1,6 +1,6 @@
 /*  #1565C0 blue  #FFC107 yellow  */
 .container {
-    display: block;
+    float: center
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
@@ -247,6 +247,7 @@ textarea {
 .field-wrap {
   position: relative;
   margin-bottom: 40px;
+  margin-top: : 30px;
 }
 
 .top-row:after {
