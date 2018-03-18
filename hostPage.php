@@ -65,6 +65,14 @@
         while ($row = mysqli_fetch_array($getQuiz, MYSQL_NUM)){
             $quizs_array[] = $row;
         }
+
+        $selectQuizId = "SELECT idQuiz FROM projectdatabase3.Quiz WHERE User_idUser = '$userId'";
+        $getQuizId = mysqli_query($mysqli, $selectQuiz);
+        $quizIds_array = array();
+        while ($row = mysqli_fetch_array($getQuizId, MYSQL_NUM)){
+            $quizIds_array[] = $row;
+        }
+        $_SESSION['quidIds_array'] = $quizIds_array;
      ?>
 
      <div class="form">
@@ -80,7 +88,7 @@
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
                 <?php
                 for ($x = 0; $x < sizeof($quizs_array); $x++ ){
-                   echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; }
+                   echo "<option value="; echo $x; echo '>'; echo implode($quizs_array[$x]); echo "</option>"; }
                    #$_SESSION['quizID'] = $POST['quizDropdown'];
                    ?>
               </select>

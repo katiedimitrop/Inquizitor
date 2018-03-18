@@ -66,8 +66,10 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
 
 # Gets id from dropdown of previous page
 $quizID = $_POST['quizDropdown'];
-echo $quizID;
+# Gets array of quiz Ids for user
+$quizIds_array = $_SESSION['quidIds_array'];
 
+echo "\nQuiz to display is"; echo $quizIds_array[$quizID];
 
 # Initial value for quiz array index
 $quizIndex = 0;
