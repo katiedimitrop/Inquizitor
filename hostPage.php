@@ -85,9 +85,7 @@
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
                 <?php
                 for ($x = 0; $x < $quizs_array.sizeof(); $x++ ){
-                   echo "<option value=".<?php echo $x;>.<?php echo implode($quizs_array[$x])?>.<?php echo "</option>;" ?>
-                }
-                <?php } ?>
+                   echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; } ?>
                 <option value="0">Quiz 1</option>
 
               </select>
