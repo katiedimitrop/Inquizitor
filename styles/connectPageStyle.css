@@ -10,7 +10,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    pointer-events: all;
+   /* pointer-events: all; */
 }
 
 /* Hide the browser's default radio button */
