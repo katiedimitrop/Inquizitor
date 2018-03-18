@@ -56,18 +56,16 @@
 
     <div id="sessionKey">
           <h1>Join a session!</h1>
-          <div class="container">
-            <ul>
-            <li>
-              <input type="radio" id="leader" name="isLeader" value=1 checked>
-              <label for="leader">Team Leader</label>
-            </li>
-            <li>
-              <input type="radio" id="member" name="isLeader" value=0>
-              <label for="member">Team Member</label>
-            </li>
-            </ul>
-          </div>
+
+          <label class="container">Leader
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Member
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+
           <form action="/getArrayForPlayers.php" method="post">
 
             <div class="field-wrap">
