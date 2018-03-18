@@ -77,7 +77,7 @@ $_SESSION['isLeader'] = 1;
     <form action=<?php echo $_SESSION["sessionID"] . ".html"?> method="post">
       <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
-</div>
+
 <?php endif;
 $quizIndex = $quizIndex + 1;
 $_SESSION['quizIndex'] = $quizIndex;
@@ -92,9 +92,9 @@ $_SESSION['quizIndex'] = $quizIndex;
                 <button type="submit" class="button button-block"/>Next Question</button>
             </form>
         </div>
-    </div>
+
 <?php if($_SESSION['isLeader'] == 1): ?>
-<div class="form">
+
     <div id="saveAnswer">
           <h1>
             <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
