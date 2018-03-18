@@ -1,20 +1,13 @@
-	<?php
+<?php
     session_start();
     ?>
-
 <!DOCTYPE html>
-<!--The material design css and js master files from:
-    https://getmdl.io/started/index.html-->
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
       href="https://code.getmdl.io/1.3.0/material.indigo-orange.min.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-<!--external script to handle input-->
-<script src="create-page.js"></script>
-
 <!--Viewport so mobile devices render correctly-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
@@ -22,403 +15,388 @@
 <head>
   <link href="styles\styles.css" rel="stylesheet" type="text/css">
   <style>
- .demo-list-item {
-                   width: 300px;
-                   display: block;
-                   margin: 0 auto;
-                 }
- .mdl-textfield {
-                  width: 300px;
-                }
-  </style>
-  
+  .titleform {
+    display: block;
+    margin:auto;
+  }
+  html {
+     background-color: #1565C0
+  }
 
+  /* Style the top navigation bar */
+  .topnav {
+      overflow:hidden;
+      background-color: #212121;
+  }
+
+  /* Style the topnav links */
+  .topnav a {
+      font-family: 'Roboto', sans-serif;
+      float: right;
+      display: block;
+      color: #FFC107;
+      text-align: center;
+      padding: 16px 16px;
+      text-decoration: none;
+  }
+
+  .topnav img {
+      float: left;
+      padding: 5px 0px 5px 130px;
+  }
+
+  .topnav header {
+      font-family: 'Roboto', sans-serif;
+      font-size: 270%;
+      color: white;
+      float: left;
+      text-align: center;
+      padding: 17px 10px;
+  }
+
+  /* Change color on hover */
+  .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+  }
+
+
+  .mdl-button {
+    display: block;
+    width:300px;
+    height:40px;
+  }
+  hr.style13 {
+    width:50%;
+  	height: 10px;
+  	border: 0;
+  	box-shadow: 0 10px 10px -10px #1565C0 inset;
+  }
+  .vl {
+      border-left: 6px groove #1565C0;
+      height: 160px;
+  }
+  .box {
+    border-width:5px;
+    border-style:outset;
+    width:525px;
+    border-color:#ffc107;
+    margin-left:-13px;
+  }
+  * { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+/* css from:https://codepen.io/sevilayha/pen/IdGKH*/
+body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+.container 		{
+  font-family:'Roboto';
+  width:600px;
+  margin:30px auto 0;
+  display:block;
+  background:#fff;
+  padding:10px 50px 50px;
+}
+h2 		 {
+  text-align:center;
+  margin-bottom:50px;
+}
+h2 small {
+  font-weight:normal;
+  color:#888;
+  display:block;
+}
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:500px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color: #FFC107;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#5264AE;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+  </style>
 </head>
 
 <body>
 <div class="topnav">
-    <a href="contactPage.php">Contact</a>
-    <a href="Logout.php">Log out</a>
-	<a href="connectPage.php">Connect</a>
-    <a href="hostPage.php">Host</a>
-    <a href="create-page.php">Create</a>
-    <a href="index.php">Home</a>
-    <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
-    <header href="#">InnQUIZitor</header>
-    <a id="welcome" style="font-size:20px;">
-	 <?php
-	require_once('config.php');
-	$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
-	if($mysqli->connect_error)
-	{
-		die("Connection failed: ". $mysqli->connect_error);
-	}	
-    
-    $email = $_SESSION['email']; 
-    //$firstname = $_SESSION['firstname'];
-	$sel = "SELECT firstname FROM User WHERE email = '$email'";
-	//echo $sel;
-	if($result = $mysqli->query($sel))
-      {
-        while($row = $result->fetch_assoc())
-        {
-				echo 'Welcome ' . $row['firstname'] . '!'; 
-				//exit; 
-				break;
-        }
-      }
-     ?></a>
+  <a href="contactPage.html">Contact</a>
+  <a href="loginPage.html">Log in</a>
+	<a href="connectPage.html">Connect</a>
+  <a href="hostPage.html">Host</a>
+  <a href="create-page.html">Create</a>
+  <a href="index.html">Home</a>
+  <img id="logo2" width="5%" height="5%" src="/Logo2.png"/>
+  <header href="#">InnQUIZitor</header>
 </div>
+<a id="welcome" style="font-size:20px;">
+<?php
+require_once('config.php');
+$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
+if($mysqli->connect_error)
+{
+die("Connection failed: ". $mysqli->connect_error);
+}
 
-<!-- Simple list -->
-<ul class="demo-list-item mdl-list">
-  <li><h3>Enter quiz title:</h3></li>
-  <!-- Floating Multiline Textfield to take user-created title-->
-  <li class="mdl-list__item">
-   <span class="mdl-list__item-primary-content">
-   <span class="mdl-list__item-primary-content">
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="title">
-    </textarea>
-    <label class="mdl-textfield__label" for="title">Quiz title...</label>
-  </div>
-  </form>
-  </span>
-  </span>
-  </li>
+$email = $_SESSION['email'];
+//$firstname = $_SESSION['firstname'];
+$sel = "SELECT firstname FROM User WHERE email = '$email'";
+//echo $sel;
+if($result = $mysqli->query($sel))
+  {
+    while($row = $result->fetch_assoc())
+    {
+    echo 'Welcome ' . $row['firstname'] . '!';
+    //exit;
+    break;
+    }
+  }
+ ?></a>
+</div>
+<div class="container">
 
-  <li><h4>Question 1:</h4></li>
-  <li class="mdl-list__item">
-   <span class="mdl-list__item-primary-content">
-   <span class="mdl-list__item-primary-content">
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="q1">
-    </textarea>
-    <label class="mdl-textfield__label" for="q1">Question #1...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+<form method ="post" >
+  <br>
+    <input id="quiz_title" type="text" name="quiz_title" value="Enter a title for your quiz." required>
+  <br>
+  <br>
+  <div class="box">
+    <br>
+    <div class="group">
+      <input id="q1" type="text" name="q1" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 1:</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="a1" type="text" name="a1" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 1:</label>
+    </div>
 
-  <!-- Simple Textfield to take user-created answer-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-   <input class="mdl-textfield__input" type="text" id="a1">
-   <label class="mdl-textfield__label" for="question1">Answer #1...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
- <li><h4>Question 2:</h4></li>
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
 
-  <!-- Floating Multiline Textfield to take user-created question-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="q2">
-    </textarea>
-    <label class="mdl-textfield__label" for="sample5">Question #2...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="q2" type="text" name="q2" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 2</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="a2" type="text" name="a2" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 2</label>
+    </div>
+<div>
 
-  <!-- Simple Textfield to take user-created answer-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-   <input class="mdl-textfield__input" type="text" id="a2">
-   <label class="mdl-textfield__label" for="question1">Answer #2...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
- <li><h4>Question 3:</h4></li>
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+</div>
+    <div class="group">
+      <input id="q3" type="text" name="q3" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 3</label>
+    </div>
 
-  <!-- Floating Multiline Textfield to take user-created question-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="q3">
-    </textarea>
-    <label class="mdl-textfield__label" for="q3">Question #3...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a3" type="text" name="a3" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 3</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q4" type="text" name="q4" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 4</label>
+    </div>
 
-  <!-- Simple Textfield to take user-created answer-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-   <input class="mdl-textfield__input" type="text" id="a3">
-   <label class="mdl-textfield__label" for="question1">Answer #3...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a4" type="text" name="a4" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 4</label>
+    </div>
 
- <li><h4>Question 4:</h4></li>
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q5" type="text" name="q5" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 5</label>
+    </div>
 
-  <!-- Floating Multiline Textfield to take user-created question-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="q4">
-    </textarea>
-    <label class="mdl-textfield__label" for="sample5">Question #4...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a5" type="text" name="a5" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 5</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q6" type="text" name="q6" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 6</label>
+    </div>
 
-  <!-- Simple Textfield to take user-created answer-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-   <input class="mdl-textfield__input" type="text" id="a4">
-   <label class="mdl-textfield__label" for="a4">Answer #4...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a6" type="text" name="a6" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 6</label>
+    </div>
 
- <li><h4>Question 5:</h4></li>
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q7" type="text" name="q7" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 7</label>
+    </div>
 
-  <!-- Floating Multiline Textfield to take user-created question-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <textarea class="mdl-textfield__input" type="text" rows= "3" id="q5">
-    </textarea>
-    <label class="mdl-textfield__label" for="q5">Question #5...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a7" type="text" name="a7" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 7</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q8" type="text" name="q8" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 8</label>
+    </div>
 
-  <!-- Simple Textfield to take user-created answer-->
-  <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-   <input class="mdl-textfield__input" type="text" id="a5">
-   <label class="mdl-textfield__label" for="a5">Answer #5...</label>
-  </div>
-  </form>
-  </span>
-  </span>
- </li>
+    <div class="group">
+      <input id="a8" type="text" name="a8" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 8</label>
+    </div>
 
-<li><h4>Question 6:</h4></li>
+    <div class="group">
+      <input id="q9" type="text" name="q9" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 9</label>
+    </div>
 
- <li class="mdl-list__item">
-  <span class="mdl-list__item-primary-content">
-  <span class="mdl-list__item-primary-content">
- <!-- Floating Multiline Textfield to take user-created question-->
- <form action="#">
- <div class="mdl-textfield mdl-js-textfield">
-   <textarea class="mdl-textfield__input" type="text" rows= "3" id="q6">
-   </textarea>
-   <label class="mdl-textfield__label" for="q6">Question #6...</label>
- </div>
- </form>
- </span>
- </span>
-</li>
+    <div class="group">
+      <input id="a9" type="text" name="a9" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 9</label>
+    </div>
 
-<li class="mdl-list__item">
- <span class="mdl-list__item-primary-content">
- <span class="mdl-list__item-primary-content">
+    <div class="group">
+      <input id="q10" type="text" name="q10" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Question 10</label>
+    </div>
 
- <!-- Simple Textfield to take user-created answer-->
- <form action="#">
- <div class="mdl-textfield mdl-js-textfield">
-  <input class="mdl-textfield__input" type="text" id="a6">
-  <label class="mdl-textfield__label" for="q6">Answer #6...</label>
- </div>
- </form>
- </span>
- </span>
-</li>
+    <div class="group">
+      <input id="a10" type="text" name="a10" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Answer 10</label>
+    </div>
 
-<li><h4>Question 7:</h4></li>
 
-<!-- Floating Multiline Textfield to take user-created question-->
-<li class="mdl-list__item">
- <span class="mdl-list__item-primary-content">
- <span class="mdl-list__item-primary-content">
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
-  <textarea class="mdl-textfield__input" type="text" rows= "3" id="q7">
-  </textarea>
-  <label class="mdl-textfield__label" for="q7">Question #7...</label>
+<input type="submit" value="OK">
 </div>
 </form>
-</span>
-</span>
-</li>
 
-<li class="mdl-list__item">
-<span class="mdl-list__item-primary-content">
-<span class="mdl-list__item-primary-content">
 
-<!-- Simple Textfield to take user-created answer-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
- <input class="mdl-textfield__input" type="text" id="a7">
- <label class="mdl-textfield__label" for="a7">Answer #7...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li><h4>Question 8:</h4></li>
-
-<!-- Floating Multiline Textfield to take user-created question-->
-<li class="mdl-list__item">
- <span class="mdl-list__item-primary-content">
- <span class="mdl-list__item-primary-content">
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
-  <textarea class="mdl-textfield__input" type="text" rows= "3" id="q8">
-  </textarea>
-  <label class="mdl-textfield__label" for="q85">Question #8...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li class="mdl-list__item">
-<span class="mdl-list__item-primary-content">
-<span class="mdl-list__item-primary-content">
-
-<!-- Simple Textfield to take user-created answer-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
- <input class="mdl-textfield__input" type="text" id="a8">
- <label class="mdl-textfield__label" for="a8">Answer #8...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li><h4>Question 9:</h4></li>
-<li class="mdl-list__item">
- <span class="mdl-list__item-primary-content">
- <span class="mdl-list__item-primary-content">
-<!-- Floating Multiline Textfield to take user-created question-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
-  <textarea class="mdl-textfield__input" type="text" rows= "3" id="q9">
-  </textarea>
-  <label class="mdl-textfield__label" for="q9">Question #9...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li class="mdl-list__item">
-<span class="mdl-list__item-primary-content">
-<span class="mdl-list__item-primary-content">
-
-<!-- Simple Textfield to take user-created answer-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
- <input class="mdl-textfield__input" type="text" id="a9">
- <label class="mdl-textfield__label" for="a9">Answer #9...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li><h4>Question 10:</h4></li>
-
-<li class="mdl-list__item">
- <span class="mdl-list__item-primary-content">
- <span class="mdl-list__item-primary-content">
-<!-- Floating Multiline Textfield to take user-created question-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
-  <textarea class="mdl-textfield__input" type="text" rows= "3" id="q10">
-  </textarea>
-  <label class="mdl-textfield__label" for="q10">Question #10...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-
-<li class="mdl-list__item">
-<span class="mdl-list__item-primary-content">
-<span class="mdl-list__item-primary-content">
-
-<!-- Simple Textfield to take user-created answer-->
-<form action="#">
-<div class="mdl-textfield mdl-js-textfield">
- <input class="mdl-textfield__input" type="text" id="a10">
- <label class="mdl-textfield__label" for="a10">Answer #10...</label>
-</div>
-</form>
-</span>
-</span>
-</li>
-<!-- Button to generate more textfields/areas-->
- <li>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-   More Questions
-  </button>
- </li>
-
-<!--Button to submit answers-->
- <li>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" onclick="submitQuiz()">
-   Submit
-  </button>
- </li>
-
-</ul>
-<p id = "demo"> </p>
-<p id = "demo1"> </p>
-<p id = "demo2"> </p>
 </body>
 </html>

@@ -7,7 +7,7 @@ class ExecPHP {
 	*
 	*/
 	constructor() {
-		this.phpPath = '~/Desktop/Study/First_Year/Inquizitor';
+		this.phpPath = '~/Desktop/Study/First_Year/Inquizitor/php.exe';
 		this.phpFolder = '';
 	}
 	/**

@@ -22,19 +22,23 @@ var answers = new Array(10);
 var quizPK = 0 ;
 var questionPK = 0;
 
-var execPHP = require('./execphp.js')();
+/*var execPHP = require('./execphp.js')();
 
 execPHP.phpFolder = '~/Desktop/Study/First_Year/Inquizitor';
 
-app.use('*.php',function(request,response,next) {
+app.use('new-create-page.php',function(request,response,next) {
 	execPHP.parseFile(request.originalUrl,function(phpResult) {
 		response.write(phpResult);
 		response.end();
 	});
-});
+});*/
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/images'));
+
+//Invoking php through the shell interface
+var exec = require("child_process").exec;
+app.get('/', function(req, res){exec("php new-create-page.php", function (error, stdout, stderr) {res.send(stdout);});});
 
 //Import functions for validating and sanitizing
 const { body,validationResult } = require('express-validator/check');
