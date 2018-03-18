@@ -14,7 +14,7 @@ session_start();
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <link rel="stylesheet" href="styles/shostPage.css">
+  <link rel="stylesheet" href="styles/hostPage.css">
 
 </head>
 
