@@ -1,6 +1,7 @@
 /*  #1565C0 blue  #FFC107 yellow  */
 .container {
-    float: center
+    display: none;
+    /*float: center*/
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
