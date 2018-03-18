@@ -81,7 +81,7 @@
                 <?php
                 for ($x = 0; $x < sizeof($quizs_array); $x++ ){
                    echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; }
-                   $_SESSION['quizID'] = $POST['quizDropdown'];
+                   #$_SESSION['quizID'] = $POST['quizDropdown'];
                    ?>
               </select>
 

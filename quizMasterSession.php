@@ -1,3 +1,7 @@
+<?php
+# starting the Session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -10,7 +14,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/shostPage.css">
 
 </head>
 
@@ -19,9 +23,9 @@
        <a href="contactPage.html">Contact</a>
        <a href="loginPage.html">Log in</a>
        <a href="connectPage.html">Connect</a>
-       <a href="hostPage.html">Host</a>
+       <a href="hostPage.php">Host</a>
        <a href="create-page.html">Create</a>
-       <a href="index.html">Home</a>
+       <a href="index.php">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
        <header href="#">InnQUIZitor</header>
      </div>
@@ -40,10 +44,6 @@
 </body>
 
 <?php
-# starting the Session
-session_start();
-
-
 
 $dbuser = 'master5';
 $dbpass = 'master123';
@@ -64,8 +64,11 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
     $result_array[] = $row;
 }
 
-$quizID = $_SESSION['quizID'];
+# Gets id from dropdown of previous page
+$quizID = $_POST['quizDropdown'];
 echo $quizID;
+
+
 # Initial value for quiz array index
 $quizIndex = 0;
 # Transferring index to playMaster.php
