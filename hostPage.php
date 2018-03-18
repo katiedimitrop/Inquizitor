@@ -77,7 +77,7 @@
       <div id="hostQuiz">
           <h1>Host a quiz!</h1>
 
-          <!--<h2>Pick a quiz to host!</h2>-->
+          <!--<h2>Pick a quiz to host! hello</h2>-->
 
           <form action="/" method="post">
 
