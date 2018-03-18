@@ -59,10 +59,8 @@
 
      <?php
         $userIdq = "SELECT idUser FROM User WHERE email='$email'";
-	$userIdqt = $mysqli->query($userIdq);
-	$userId = $userIdqt->fetch_assoc();
-	echo $userId['userId'];
-	echo "what is going on?";
+	      $userIdqt = $mysqli->query($userIdq);
+	      $userId = $userIdqt->fetch_assoc();
         $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = 2";
         $getQuiz = mysqli_query($mysqli, $selectQuiz);
 
@@ -85,12 +83,13 @@
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
-                <option value=""></option>
-                <option value="1">Quiz 1</option>
-                <option value="2">Quiz 2</option>
-                <option value="3">Quiz 3</option>
-                <option value="4">Quiz 4</option>
-                <option value="5">Quiz 5</option>
+                <?php
+                for ($x = 0; $x < $quizs_array.sizeof(); $x++ ){ ?>
+                   <option value="0">Quiz <?php echo $x+1; ?></option>;
+                }
+                <?php } ?>
+                <!--<option value="0">Quiz 1</option> -->
+
               </select>
 
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
