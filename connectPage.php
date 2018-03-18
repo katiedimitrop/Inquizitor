@@ -56,11 +56,13 @@
 
     <div id="sessionKey">
           <h1>Join a session!</h1>
+          <div class="container">
           <div class="field-wrap">
             <form>
               <input type="radio" name="isLeader" value=1 checked> Team Leader<br>
               <input type="radio" name="isLeader" value=0> Team Member<br>
             </form>
+          </div>
           </div>
           <form action="/getArrayForPlayers.php" method="post">
 
