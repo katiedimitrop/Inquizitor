@@ -58,13 +58,16 @@
      </div>
 
      <?php
-        $userId = "SELECT idUser FROM projectdatabase3.User WHERE email = $email";
-
-        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = $userId";
-        $getQuiz = mysqli_query($connect, $selectQuiz);
+        $userIdq = "SELECT idUser FROM User WHERE email='$email'";
+	$userIdqt = $mysqli->query($userIdq);
+	$userId = $userIdqt->fetch_assoc();
+	echo $userId['userId'];
+	echo "what is going on?";
+        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = 2";
+        $getQuiz = mysqli_query($mysqli, $selectQuiz);
 
         $quizs_array = array();
-        while ($row = mysqli_fetch_array($selectQuiz, MYSQL_NUM)){
+        while ($row = mysqli_fetch_array($getQuiz, MYSQL_NUM)){
             $quizs_array[] = $row;
         }
 
