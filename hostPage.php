@@ -86,9 +86,6 @@
                 <?php
                 for ($x = 0; $x < sizeof($quizs_array); $x++ ){
                    echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; } ?>
-                <option value="0">Quiz 1</option>
-                <?#php echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; ?>
-
               </select>
 
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
