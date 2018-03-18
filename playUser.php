@@ -35,6 +35,10 @@ session_start();
 
 <?php
 
+
+
+
+
 # connecting to the database
 
 $dbuser = 'master5';
@@ -49,9 +53,15 @@ $result = $_SESSION['result'];
 
 # storing the session variable in a variable
 $quizIndex = $_SESSION['quizIndex'];
-#displaying the questions
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $_SESSION["answerArray"][$quizIndex] = $_POST["answer"];
+}
 
 $finishQuiz = $_SESSION['finishQuiz'];
+
+
 ?>
 
 
@@ -62,26 +72,46 @@ $finishQuiz = $_SESSION['finishQuiz'];
       <?php echo "Quiz is finished!" ?>
     </h1>
 
-    <form action="/Inquizitor/playTest.php" method="post">
+    <form action=<?php echo $_SESSION["sessionID"] . ".html"?> method="post">
       <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
 </div>
-<?php else: ?>
+<?php endif;
+$quizIndex = $quizIndex + 1;
+$_SESSION['quizIndex'] = $quizIndex;
+?>
+    <div class="form">
+        <div id="nextQuestion">
+            <h1>
+                <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
+            </h1>
+
+            <form action="/Inquizitor/playUser.php" method="post">
+                <button type="submit" class="button button-block"/>Next Question</button>
+            </form>
+        </div>
+    </div>
+<?php if($_SESSION['isLeader'] == 1): ?>
 <div class="form">
-    <div id="sessionKey">
+    <div id="saveAnswer">
           <h1>
             <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
           </h1>
-          <form action="/" method="post">
+          <form action="/playUser.php" method="post">
             <div class="field-wrap">
               <label>
                 Enter your answer here
               </label>
-              <input type="text" autocomplete="off"/>
+              <input type="text" name="answer" autocomplete="off"/>
             </div>
 
           <button type="submit" class="button button-block"/>Save Answer</button>
           </form>
+    </div>
+    <div id="submitAnswers">
+        <form action="/submitAnswers.php.php" method="post">
+            <button type="submit" class="button button-block"/>Submit answers</button>
+        </form>
     </div>
 </div>
 <?php endif; ?>

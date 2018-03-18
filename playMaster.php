@@ -62,7 +62,7 @@ if ($quizIndex == 0) :
 <div class="form">
   <div id="nextQuestion">
     <h1>
-      <?php echo "Session key placeHolder"; echo session_id(); ?>
+      <?php echo "Session key placeHolder "; echo session_id(); ?>
     </h1>
 
     <form action="/Inquizitor/playMaster.php" method="post">
