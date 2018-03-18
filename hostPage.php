@@ -43,13 +43,14 @@
 
     $email = $_SESSION['email'];
     //$firstname = $_SESSION['firstname'];
-	$sel = "SELECT firstname FROM User WHERE email = '$email'";
+	$sel = "SELECT firstname, idUser FROM User WHERE email = '$email'";
 	//echo $sel;
 	if($result = $mysqli->query($sel))
       {
         while($row = $result->fetch_assoc())
         {
 				echo 'Welcome ' . $row['firstname'] . '!';
+        $userId = $row['idUser'];
 				//exit;
 				break;
         }
@@ -58,18 +59,12 @@
      </div>
 
      <?php
-        $userIdq = "SELECT idUser FROM User WHERE email='$email'";
-	      $userIdqt = $mysqli->query($userIdq);
-	      $userId = $userIdqt->fetch_assoc();
-        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = 2";
+        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = '$userId'";
         $getQuiz = mysqli_query($mysqli, $selectQuiz);
-
         $quizs_array = array();
         while ($row = mysqli_fetch_array($getQuiz, MYSQL_NUM)){
             $quizs_array[] = $row;
         }
-
-        echo implode($quizs_array[0]);
      ?>
 
      <div class="form">
@@ -84,12 +79,10 @@
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
                 <?php
-                for ($x = 0; $x < $quizs_array.sizeof(); $x++ ){
-                   echo "<option value=".<?php echo $x;>.<?php echo implode($quizs_array[$x])?>.<?php echo "</option>;" ?>
-                }
-                <?php } ?>
-                <option value="0">Quiz 1</option>
-
+                for ($x = 0; $x < sizeof($quizs_array); $x++ ){
+                   echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; }
+                   echo $POST['quizDropdown'];
+                   ?>
               </select>
 
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
