@@ -5,9 +5,13 @@
   "main": "node-create-page.js",
   "dependencies": {
     "@material/form-field": "^0.32.0",
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "express-validator": "^5.0.3",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "sphp": "^0.6.2",
+    "ws": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {

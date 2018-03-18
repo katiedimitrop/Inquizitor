@@ -19,7 +19,7 @@
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
   <link rel="stylesheet" href="styles/hostPage.css">
-   
+
 </head>
 
 <body>
@@ -39,9 +39,9 @@
 	if($mysqli->connect_error)
 	{
 		die("Connection failed: ". $mysqli->connect_error);
-	}	
-    
-    $email = $_SESSION['email']; 
+	}
+
+    $email = $_SESSION['email'];
     //$firstname = $_SESSION['firstname'];
 	$sel = "SELECT firstname FROM User WHERE email = '$email'";
 	//echo $sel;
@@ -49,31 +49,47 @@
       {
         while($row = $result->fetch_assoc())
         {
-				echo 'Welcome ' . $row['firstname'] . '!'; 
-				//exit; 
+				echo 'Welcome ' . $row['firstname'] . '!';
+				//exit;
 				break;
         }
       }
      ?></a>
      </div>
 
+     <?php
+        $userIdq = "SELECT idUser FROM User WHERE email='$email'";
+	      $userIdqt = $mysqli->query($userIdq);
+	      $userId = $userIdqt->fetch_assoc();
+        $selectQuiz = "SELECT Name FROM projectdatabase3.Quiz WHERE User_idUser = 2";
+        $getQuiz = mysqli_query($mysqli, $selectQuiz);
+
+        $quizs_array = array();
+        while ($row = mysqli_fetch_array($getQuiz, MYSQL_NUM)){
+            $quizs_array[] = $row;
+        }
+
+        echo implode($quizs_array[0]);
+     ?>
+
      <div class="form">
 
       <div id="hostQuiz">
           <h1>Host a quiz!</h1>
 
-          <!--<h2>Pick a quiz to host!</h2>-->
+          <!--<h2>Pick a quiz to host! hello</h2>-->
 
           <form action="/" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
-                <option value=""></option>
-                <option value="1">Quiz 1</option>
-                <option value="2">Quiz 2</option>
-                <option value="3">Quiz 3</option>
-                <option value="4">Quiz 4</option>
-                <option value="5">Quiz 5</option>
+                <?php
+                for ($x = 0; $x < $quizs_array.sizeof(); $x++ ){ ?>
+                   <option value="0">Quiz <?php echo $x+1; ?></option>;
+                }
+                <?php } ?>
+                <!--<option value="0">Quiz 1</option> -->
+
               </select>
 
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
