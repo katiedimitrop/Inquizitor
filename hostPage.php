@@ -18,7 +18,7 @@
   <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css'>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
-  <link rel="stylesheet" href="styles/hostPage.css">
+  <link rel="stylesheet" href="styles/hostPageStyle.css">
 
 </head>
 
