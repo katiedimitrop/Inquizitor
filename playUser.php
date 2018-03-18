@@ -67,7 +67,8 @@ $_SESSION['isLeader'] = 1;
 ?>
 
 
-<?php if($finishQuiz == 1) : ?>
+<?php if($finishQuiz == 1) :
+# Tell the user that quiz has finished and give him a button to go and check the scoreboard?>
 <div class="form">
   <div id="nextQuestion">
     <h1>
@@ -77,10 +78,11 @@ $_SESSION['isLeader'] = 1;
     <form action=<?php echo $_SESSION["sessionID"] . ".html"?> method="post">
       <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
-
+</div>
 <?php endif;
 $quizIndex = $quizIndex + 1;
 $_SESSION['quizIndex'] = $quizIndex;
+#give the user a button to go to the next question
 ?>
     <div class="form">
         <div id="nextQuestion">
@@ -92,9 +94,10 @@ $_SESSION['quizIndex'] = $quizIndex;
                 <button type="submit" class="button button-block"/>Next Question</button>
             </form>
         </div>
-
-<?php if($_SESSION['isLeader'] == 1): ?>
-
+    </div>
+<?php if($_SESSION['isLeader'] == 1):
+    #Only show the save answer buttons and the text field if the player is a team leader?>
+<div class="form">
     <div id="saveAnswer">
           <h1>
             <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
