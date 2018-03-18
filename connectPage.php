@@ -51,6 +51,12 @@
       }
      ?></a>
      </div>
+
+    <div class="form">
+
+    <div id="sessionKey">
+          <h1>Join a session!</h1>
+
           <label class="container">Leader
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
@@ -59,11 +65,6 @@
             <input type="radio" name="radio">
             <span class="checkmark"></span>
           </label>
-    <div class="form">
-
-    <div id="sessionKey">
-          <h1>Join a session!</h1>
-
 
 
           <form action="/getArrayForPlayers.php" method="post">
