@@ -26,7 +26,7 @@ $result = mysqli_query($connect, $questionQuery);
 $_SESSION['result'] = $result;
 
 #Insert empty answers into the database
-for($index = 1; $index <= sizeof($result); $index++)
+for($index = 1; $index < sizeof($result); $index++)
 {
     $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','')";
     if(!($mysqli -> query($sql)))
