@@ -40,6 +40,7 @@ session_start();
                  <button type="submit" class="button button-block"/>Begin Quiz</button>
              </form>
          </div>
+     </div>
 
 </body>
 
