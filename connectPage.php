@@ -59,10 +59,12 @@
           <div class="container">
             <ul>
             <li>
-              <input type="radio" name="isLeader" value=1 checked> Team Leader<br>
+              <input type="radio" id="leader" name="isLeader" value=1 checked>
+              <label for="leader">Team Leader</label>
             </li>
             <li>
-              <input type="radio" name="isLeader" value=0> Team Member<br>
+              <input type="radio" id="member" name="isLeader" value=0>
+              <label for="member">Team Member</label>
             </li>
             </ul>
           </div>
