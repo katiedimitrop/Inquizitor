@@ -26,34 +26,57 @@
        <header href="#">InnQUIZitor</header>
      </div>
 
+     <div class="form">
+         <div id="nextQuestion">
+             <h1>
+                 <?php echo "Session key placeHolder "; echo session_id(); ?>
+             </h1>
+
+             <form action="/playMaster.php" method="post">
+                 <button type="submit" class="button button-block"/>Begin Quiz</button>
+             </form>
+         </div>
+
 </body>
 
 <?php
 # starting the Session
 session_start();
 
-# connecting to the database
+
 
 $dbuser = 'master5';
 $dbpass = 'master123';
 $dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
+$dbname = "projectdatabase3";
 
-$connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+$connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
-# accessing the quizmasters quiz
-
 # query will select all questions from Question table
-$questionQuery = "SELECT fk_Question_Quiz_idx FROM Question";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question";
 
+$result_array = array();
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
 
-# Transferring result to play.php
-$_SESSION['result'] = $result;
+while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
+    $result_array[] = $row;
+}
+
+# Initial value for quiz array index
+$quizIndex = 0;
+# Transferring index to playMaster.php
+$_SESSION['quizIndex'] = $quizIndex;
+
+# Transferring result to playMaster.php
+$_SESSION['result'] = $result_array;
+
+$_SESSION['quizIndex'] = 1;
 
 # close connection
 mysqli_close($connect);
+
 
 ?>
 

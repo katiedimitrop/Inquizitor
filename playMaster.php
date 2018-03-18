@@ -54,22 +54,11 @@ $quizIndex = $_SESSION['quizIndex'];
 $finishQuiz = 0;
  $_SESSION['finishQuiz'] = $finishQuiz;
 
-if ($quizIndex == 0) :
-  # Updating quiz question
-  $quizIndex = $quizIndex + 1;
-  $_SESSION['quizIndex'] = $quizIndex;
-?>
-<div class="form">
-  <div id="nextQuestion">
-    <h1>
-      <?php echo "Session key placeHolder "; echo session_id(); ?>
-    </h1>
 
-    <form action="/Inquizitor/playMaster.php" method="post">
-      <button type="submit" class="button button-block"/>Begin Quiz</button>
-    </form>
-</div>
-<?php elseif($quizIndex == sizeof($result) + 1) : 
+
+?>
+
+<?php if($quizIndex == sizeof($result) + 1) :
   $finishQuiz = 1;
   $_SESSION['finishQuiz'] = $finishQuiz;
 ?>
@@ -79,7 +68,7 @@ if ($quizIndex == 0) :
       <?php echo "Press to Finish Quiz" ?>
     </h1>
 
-    <form action="/Inquizitor/playMaster.php" method="post">
+    <form action="/playMaster.php" method="post">
       <button type="submit" class="button button-block"/>Finish Quiz</button>
     </form>
 </div>
@@ -94,7 +83,7 @@ if ($quizIndex == 0) :
       <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
     </h1>
 
-    <form action="/Inquizitor/playMaster.php" method="post">
+    <form action="/playMaster.php" method="post">
       <button type="submit" class="button button-block"/>Next Question</button>
     </form>
 </div>

@@ -64,7 +64,7 @@
 
           <!--<h2>Pick a quiz to host!</h2>-->
 
-          <form action="/quizMasterSession.php" method="post">
+          <form action="/" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
