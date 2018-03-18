@@ -1,5 +1,5 @@
 <?php
-	 session_start(); 
+	 session_start();
 ?>
 <html>
 <body>
@@ -12,27 +12,29 @@
   {
      die("Connection failed: ". $mysqli->connect_error);
   }
-  
-    
+
+
       $email = $_POST['email'];
       $pass = $_POST['password'];
-      
-      
-      $_SESSION["email"] = $email;  
-    
-      $sel = "SELECT password FROM User WHERE email = '$email'";
+
+
+      $_SESSION["email"] = $email;
+
+			$sel = "SELECT password, idUser FROM User WHERE email = '$email'";
       if($result = $mysqli->query($sel))
       {
         while($row = $result->fetch_assoc())
         {
           if($pass == $row["password"])
 			{
-            header("Location: index.php"); 
+			$idUser = $row['idUser'];
+			setcookie('idUser', $idUser, time() + 86400 , "/");
+            header("Location: index.php");
 			exit;
 			}
         }
       }
-      
+
     $mysqli->close();
 
  ?>
