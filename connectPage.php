@@ -72,7 +72,7 @@
               <label>
                 Session Key<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" />
+              <input type="text"required name="sessionKey" autocomplete="off" />
             </div>
 
           <button type="submit" class="button button-block"/>Join Session</button>
