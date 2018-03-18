@@ -14,7 +14,7 @@
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
   <link rel="stylesheet" href="styles/loginPageStyle.css">
-  
+
 </head>
 
 <body>
@@ -34,9 +34,9 @@
 	if($mysqli->connect_error)
 	{
 		die("Connection failed: ". $mysqli->connect_error);
-	}	
-    
-    $email = $_SESSION['email']; 
+	}
+
+    $email = $_SESSION['email'];
     //$firstname = $_SESSION['firstname'];
 	$sel = "SELECT firstname FROM User WHERE email = '$email'";
 	//echo $sel;
@@ -44,8 +44,8 @@
       {
         while($row = $result->fetch_assoc())
         {
-				echo 'Welcome ' . $row['firstname'] . '!'; 
-				//exit; 
+				echo 'Welcome ' . $row['firstname'] . '!';
+				//exit;
 				break;
         }
       }
@@ -56,7 +56,10 @@
 
     <div id="sessionKey">
           <h1>Join a session!</h1>
-
+          <form>
+              <input type="radio" name="isLeader" value=1 checked> Team Leader<br>
+              <input type="radio" name="isLeader" value=0> Team Member<br>
+          </form>
           <form action="/getArrayForPlayers.php" method="post">
 
             <div class="field-wrap">
