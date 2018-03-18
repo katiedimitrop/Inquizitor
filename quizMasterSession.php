@@ -69,7 +69,7 @@ $quizID = $_POST['quizDropdown'];
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
 
-echo "\nQuiz to display is"; echo $quizIds_array[$quizID];
+echo "\nQuiz to display is"; echo implode($quizIds_array[$quizID]);
 
 # Initial value for quiz array index
 $quizIndex = 0;
