@@ -57,7 +57,7 @@
     <div id="sessionKey">
           <h1>Join a session!</h1>
 
-          <form action="/" method="post">
+          <form action="/getArrayForPlayers.php" method="post">
 
             <div class="field-wrap">
               <label>

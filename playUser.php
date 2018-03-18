@@ -61,6 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 $finishQuiz = $_SESSION['finishQuiz'];
 
+$_SESSION['isLeader'] = 1;
+
 
 ?>
 
@@ -86,7 +88,7 @@ $_SESSION['quizIndex'] = $quizIndex;
                 <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
             </h1>
 
-            <form action="/Inquizitor/playUser.php" method="post">
+            <form action="/playUser.php" method="post">
                 <button type="submit" class="button button-block"/>Next Question</button>
             </form>
         </div>
@@ -109,7 +111,7 @@ $_SESSION['quizIndex'] = $quizIndex;
           </form>
     </div>
     <div id="submitAnswers">
-        <form action="/submitAnswers.php.php" method="post">
+        <form action="/submitAnswers.php" method="post">
             <button type="submit" class="button button-block"/>Submit answers</button>
         </form>
     </div>
