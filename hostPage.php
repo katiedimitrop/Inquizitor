@@ -84,10 +84,10 @@
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
                 <?php
-                for ($x = 0; $x < $quizs_array.sizeof(); $x++ ){
+                for ($x = 0; $x < sizeof($quizs_array); $x++ ){
                    echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; } ?>
                 <option value="0">Quiz 1</option>
-                <?php echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; ?>
+                <?#php echo "<option value="; echo $x; echo '">'; echo implode($quizs_array[$x]); echo "</option>"; ?>
 
               </select>
 
