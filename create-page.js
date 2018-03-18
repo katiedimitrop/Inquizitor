@@ -22,23 +22,8 @@ var answers = new Array(10);
 var quizPK = 0 ;
 var questionPK = 0;
 
-/*var execPHP = require('./execphp.js')();
-
-execPHP.phpFolder = '~/Desktop/Study/First_Year/Inquizitor';
-
-app.use('new-create-page.php',function(request,response,next) {
-	execPHP.parseFile(request.originalUrl,function(phpResult) {
-		response.write(phpResult);
-		response.end();
-	});
-});*/
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/images'));
-
-//Invoking php through the shell interface
-var exec = require("child_process").exec;
-app.get('/', function(req, res){exec("php create-page.php", function (error, stdout, stderr) {res.send(stdout);});});
 
 //Import functions for validating and sanitizing
 const { body,validationResult } = require('express-validator/check');
@@ -73,7 +58,7 @@ app.listen(8000, function()
 //Send the default form the first time user requests it
 app.get('/', function(req, res)
 {
-  res.sendFile(path.join(__dirname + '/create-page.php'));
+  res.sendFile(path.join(__dirname + '/create-page.html'));
   //Find id of last quiz inserted
   var sql = 'SELECT idQuiz FROM Quiz ORDER BY idQuiz DESC LIMIT  1;';
   //Query the database

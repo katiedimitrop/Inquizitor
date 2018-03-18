@@ -15,7 +15,7 @@
 <html>
   <head>
   <link href="styles\styles.css" rel="stylesheet" type="text/css">
-
+    
 
  </head>
      <div class="topnav">
@@ -23,7 +23,7 @@
        <a href="Logout.php">Log out</a>
        <a href="connectPage.php">Connect</a>
        <a href="hostPage.php">Host</a>
-       <a href="node">Create</a>
+       <a href="create-page.php">Create</a>
        <a href="index.php">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
        <header>InnQUIZitor</header>
@@ -34,9 +34,9 @@
 	if($mysqli->connect_error)
 	{
 		die("Connection failed: ". $mysqli->connect_error);
-	}
-
-    $email = $_SESSION['email'];
+	}	
+    
+    $email = $_SESSION['email']; 
     //$firstname = $_SESSION['firstname'];
 	$sel = "SELECT firstname FROM User WHERE email = '$email'";
 	//echo $sel;
@@ -44,8 +44,8 @@
       {
         while($row = $result->fetch_assoc())
         {
-				echo 'Welcome ' . $row['firstname'] . '!';
-				//exit;
+				echo 'Welcome ' . $row['firstname'] . '!'; 
+				//exit; 
 				break;
         }
       }
@@ -80,3 +80,4 @@
 
   </body>
 </html>
+
