@@ -1,5 +1,12 @@
 /*  #1565C0 blue  #FFC107 yellow  */
-
+.container{
+  display: block;
+  position: relative;
+  margin: 40px auto;
+  height: auto;
+  width: 500px;
+  padding: 20px;
+}
 html {
   overflow-y: scroll;
   background-color: #1565C0
@@ -47,7 +54,7 @@ body {
 #welcome {
     font-family: 'Roboto', sans-serif;
     float: center;
-	display: block; 
+	display: block;
     color: white;
     text-align: center;
     background-color: #212121;
