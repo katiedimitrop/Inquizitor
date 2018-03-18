@@ -7,9 +7,13 @@
  */
 
 session_start();
+#Set the quizId
+$_SESSION["sessionId"] = $_POST["sessionKey"];
 
-$_SESSION["quizId"] = $_POST["sessionKey"];
 
+#Someone needs to make a decrypt function to separate the quizId from the uniquely generated sessionID
+#Also, someone needs to make the function that generates the sessionID
+$_SESSION["quizId"] = decrypt($_SESSION["sessionId"]);
 
 $dbuser = 'master5';
 $dbpass = 'master123';

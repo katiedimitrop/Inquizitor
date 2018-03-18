@@ -29,6 +29,16 @@
        <header href="#">InnQUIZitor</header>
        <a id="welcome" style="font-size:20px;">
 	 <?php
+     #
+     #  Someone needs to add an input field (preferably on this page but it could also be implemented on getArrayForPlayers.php)
+     #  which takes the TeamName and sends it over to another script so it can be saved in the database, in the Connection Table, alongside the QuizID
+     #
+     #
+     #
+     #
+     #
+     #
+
 	require_once('config.php');
 	$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
 	if($mysqli->connect_error)
@@ -49,6 +59,7 @@
 				break;
         }
       }
+
      ?></a>
      </div>
 

@@ -46,6 +46,18 @@ session_start();
 
 <?php
 
+#
+#
+#   Add a function to create a 'preferably' unique sessionID and encrypt it in some way
+#   The sessionID then needs to be outputted on this page so that the Quiz Master can share it with the players
+#   Also, put the sessionID in a Session Variable and into the database, in the Connection table
+#   with the values (quizId, '', sessionId) --> these
+#
+#
+#
+#
+
+
 $dbuser = 'master5';
 $dbpass = 'master123';
 $dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
