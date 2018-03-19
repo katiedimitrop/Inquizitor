@@ -48,7 +48,7 @@ html {
 #welcome {
     font-family: 'Roboto', sans-serif;
     float: center;
-	display: block; 
+	display: block;
     color: white;
     text-align: center;
     background-color: #212121;
@@ -99,28 +99,3 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-#logo{
-  margin: 0;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -13,7 +13,7 @@
 <html>
 
 <head>
-  <link href="styles\styles.css" rel="stylesheet" type="text/css">
+  <!--<link href="styles\styles.css" rel="stylesheet" type="text/css">-->
   <style>
   .titleform {
     display: block;
@@ -93,6 +93,7 @@ body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
   width:600px;
   margin:30px auto 0;
   display:block;
+  background-image: url("black-paper.jpg");
   background:#fff;
   padding:10px 50px 50px;
 }
@@ -200,11 +201,27 @@ input:focus ~ .highlight {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
-
-
   </style>
 </head>
+<script>
+function readCookie(name) {
+	var cookiename = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++)
+	{
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(cookiename) == 0) return c.substring(cookiename.length,c.length);
+	}
+	return null;
+}
+document.write(readCookie('idUser'));
+var userId = readCookie('idUser');
+/*document.cookie = "username=John Doe";*/
+//var userId = readCookie('idUser');
+//var userId = readCookie('idUser');
 
+</script>
 <body onload="readCookie()">
 <div class="topnav">
   <a href="contactPage.html">Contact</a>
@@ -213,7 +230,7 @@ input:focus ~ .highlight {
   <a href="hostPage.php">Host</a>
   <a href="node">Create</a>
   <a href="index.php">Home</a>
-  <img id="logo2" width="5%" height="5%" src="/Logo2.png"/>
+  <img id="logo2" width="5%" height="5%" src="/images/Logo2.png"/>
   <header href="#">InnQUIZitor</header>
 </div>
 <a id="welcome" style="font-size:20px;">
@@ -240,9 +257,11 @@ if($result = $mysqli->query($sel))
   }
  ?></a>
 </div>
+
 <div class="container">
 
 <form method ="post" >
+  <input type="hidden" name="userid" id="hiddenInput" />
   <br>
     <input id="quiz_title" type="text" name="quiz_title" value="Enter a title for your quiz." required>
   <br>
@@ -391,29 +410,16 @@ if($result = $mysqli->query($sel))
       <span class="bar"></span>
       <label>Answer 10</label>
     </div>
-
-<p id="demo"></p>
+<p id="demo" name="demo"></p>
 <input type="submit" value="OK">
 </div>
 </form>
 <script>
-
-function readCookie(name) {
-	var cookiename = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++)
-	{
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(cookiename) == 0) return c.substring(cookiename.length,c.length);
-	}
-	return null;
-}
-document.write("n" + readCookie('idUser'));
-
-/*document.cookie = "username=John Doe";
-var x = document.cookie;*/
-
+//var userId =1
+//Target the hidden element and insert in it the userId
+var input = document.getElementById('hiddenInput');
+input.value = userId.toString();
+document.write(''+userId);
 </script>
 </body>
 </html>

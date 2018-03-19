@@ -1,6 +1,8 @@
-var userId = 1;
+//File system
+var fs = require('fs');
 
-//express and express validatoe modules must be installed
+var http = require('http');
+var url = require('url');
 var express = require('express');
 
 //Create an express application object
@@ -21,24 +23,11 @@ var answers = new Array(10);
 //Obtain id of last Quiz and last question that was inserted
 var quizPK = 0 ;
 var questionPK = 0;
-
-/*var execPHP = require('./execphp.js')();
-
-execPHP.phpFolder = '~/Desktop/Study/First_Year/Inquizitor';
-
-app.use('new-create-page.php',function(request,response,next) {
-	execPHP.parseFile(request.originalUrl,function(phpResult) {
-		response.write(phpResult);
-		response.end();
-	});
-});*/
+var userId = 0;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/images'));
-
-//Invoking php through the shell interface
-var exec = require("child_process").exec;
-app.get('/', function(req, res){exec("php create-page.php", function (error, stdout, stderr) {res.send(stdout);});});
+app.use('/Inquizitor', express.static(__dirname + "/Inquizitor"));
 
 //Import functions for validating and sanitizing
 const { body,validationResult } = require('express-validator/check');
@@ -70,10 +59,12 @@ app.listen(8000, function()
   console.log('Create quiz app listening on port 8000!');
 });
 
-//Send the default form the first time user requests it
+
+//Invoking php through the shell interface
+var exec = require("child_process").exec;
 app.get('/', function(req, res)
 {
-  res.sendFile(path.join(__dirname + '/create-page.php'));
+  exec("php create-page.php", function (error, stdout, stderr) {res.send(stdout);});
   //Find id of last quiz inserted
   var sql = 'SELECT idQuiz FROM Quiz ORDER BY idQuiz DESC LIMIT  1;';
   //Query the database
@@ -122,6 +113,8 @@ app.get('/', function(req, res)
 //Receive data submitted by user in POST request
 app.post('/', function(req, res)
 {
+  userId = req.body.userid;
+  console.log(userId);
   var con = mysql.createConnection(
   {
     host: "projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com",
@@ -148,6 +141,7 @@ app.post('/', function(req, res)
       console.log('Inserted quiz no'+quizPK);
     });
 
+
     //Take values from form
     questions = [req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.q6,req.body.q7,req.body.q8,req.body.q9,req.body.q10]
     answers = [req.body.a1,req.body.a2,req.body.a3,req.body.a4,req.body.a5,req.body.a6,req.body.a7,req.body.a8,req.body.a9,req.body.a10]
@@ -172,7 +166,7 @@ app.post('/', function(req, res)
         if (err) throw err;
         console.log('Inserted answer');
       });
-    }//for
+    }//for*/
 
   res.redirect('/');
 
