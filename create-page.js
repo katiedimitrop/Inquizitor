@@ -133,7 +133,7 @@ app.post('/', function(req, res)
 
   ++quizPK;
   //Insert a quiz into the database
-  var sql = 'INSERT INTO Quiz (idQuiz,Name,User_idUser) VALUES ('+quizPK+',\''+ req.body.quiz_title+'\','+userId+');';
+  var sql = 'INSERT INTO Quiz (idQuiz,Name,User_idUser) VALUES ('+quizPK+',\"'+ req.body.quiz_title+'\",'+userId+');';
     //Query the database
     con.query(sql, function (err, result)
     {
@@ -150,7 +150,7 @@ app.post('/', function(req, res)
       //Insert a question
       ++questionPK;
 
-      var sql = 'INSERT INTO Question (idQuestion,Quiz_idQuiz,questionText) VALUES ('+questionPK+','+quizPK+',\''+questions[questionId]+'\');';
+      var sql = 'INSERT INTO Question (idQuestion,Quiz_idQuiz,questionText) VALUES ('+questionPK+','+quizPK+',\"'+questions[questionId]+'\");';
       //Query the database
       con.query(sql, function (err, result)
       {
@@ -159,7 +159,7 @@ app.post('/', function(req, res)
         console.log('Inserted question');
       });
 
-      var sql = 'INSERT INTO Answer (idAnswer,answerText,isTrue,Question_idQuestion) VALUES ('+questionPK+',\''+answers[questionId]+'\',1 ,'+questionPK+');';
+      var sql = 'INSERT INTO Answer (idAnswer,answerText,isTrue,Question_idQuestion) VALUES ('+questionPK+',\"'+answers[questionId]+'\",1 ,'+questionPK+');';
       //Query the database
       con.query(sql, function (err, result)
       {

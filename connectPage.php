@@ -13,7 +13,11 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+<<<<<<< HEAD
   <link rel="stylesheet" href="styles/connectPageStyle.css">
+=======
+  <link rel="stylesheet" href="styles/loginPageStyle.css">
+>>>>>>> fully functional js script.Changed links in each php to lead to the correct page for it.
 
 </head>
 
@@ -23,7 +27,7 @@
 		<a href="Logout.php">Log out</a>
 		<a href="connectPage.php">Connect</a>
 		<a href="hostPage.php">Host</a>
-		<a href="create-page.php">Create</a>
+		<a href="node">Create</a>
 		<a href="index.php">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
        <header href="#">InnQUIZitor</header>

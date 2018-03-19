@@ -25,7 +25,7 @@
        <a href="loginPage.html">Log in</a>
        <a href="connectPage.html">Connect</a>
        <a href="hostPage.html">Host</a>
-       <a href="create-page.html">Create</a>
+       <a href="node">Create</a>
        <a href="index.html">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
        <header href="#">InnQUIZitor</header>

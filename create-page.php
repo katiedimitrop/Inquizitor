@@ -218,8 +218,7 @@ function readCookie(name) {
 document.write(readCookie('idUser'));
 var userId = readCookie('idUser');
 /*document.cookie = "username=John Doe";*/
-//var userId = readCookie('idUser');
-//var userId = readCookie('idUser');
+
 
 </script>
 <body onload="readCookie()">
