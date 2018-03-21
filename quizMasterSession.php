@@ -1,4 +1,3 @@
-#quizMasterSession.php
 <?php
 # starting the Session
 session_start();
