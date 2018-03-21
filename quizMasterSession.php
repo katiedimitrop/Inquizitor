@@ -87,20 +87,25 @@ echo '<br>';
 # encrypting quiz ID by adding random 3 numbers to start of string
 $encrypted = rand(000,999).$idQuiz;
 $_SESSION['sessionId'] = $encrypted;
+
+echo $idQuiz;
+echo '<br>';
+
 # Use this on users page to decrypt quiz id to display
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
-$insertSessionQuery = "INSERT INTO `projectdatabase3`.`Sessions` (`sessionId`, `CurrentQuestion`) VALUES (".$encrypted.", 1);";
+$insertSessionQuery = "INSERT INTO projectdatabase3.Sessions (sessionId, CurrentQuestion) VALUES (".$encrypted.", 1);";
+mysqli_query($connect, $questionQuery);
 echo $insertSessionQuery;
 echo '<br>';
-if($mysqli->query($insertSessionQuery))
-{
-    echo "I think it worked";
-}
-else
-{
-    echo "id didn't work";
-}
+#if($mysqli->query($insertSessionQuery))
+#{
+#    echo "I think it worked";
+#}
+#else
+#{
+#    echo "id didn't work";
+#}
 
 # close connection
 mysqli_close($connect);
