@@ -80,7 +80,10 @@ $_SESSION['sessionId'] = $encrypted;
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
 $insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES ('".$encrypted."', 1)";
-$mysqli -> query($insertSessionQuery);
+if($mysqli -> query($insertSessionQuery))
+    echo "I think it worked";
+else
+    echo "id didn't work";
 # close connection
 mysqli_close($connect);
 
