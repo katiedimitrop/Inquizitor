@@ -38,9 +38,12 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-
+# Gets id from dropdown of previous page
+$quizID = $_POST['quizDropdown'];
+# Gets array of quiz Ids for user
+$quizIds_array = $_SESSION['quidIds_array'];
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE idQuiz = '".$_SESSION['quizId']."'";
 
 $result_array = array();
 # storing the results of the query
