@@ -16,7 +16,17 @@ session_start();
     <link rel="stylesheet" href="styles/hostPage.css">
 
 </head>
-
+<body>
+<div class="topnav">
+    <a href="contactPage.html">Contact</a>
+    <a href="loginPage.html">Log in</a>
+    <a href="connectPage.html">Connect</a>
+    <a href="hostPage.php">Host</a>
+    <a href="node">Create</a>
+    <a href="index.php">Home</a>
+    <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
+    <header href="#">InnQUIZitor</header>
+</div>
 <?php
 
 #
@@ -80,7 +90,7 @@ $_SESSION['sessionId'] = $encrypted;
 # Use this on users page to decrypt quiz id to display
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
-$insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES (".$encrypted.", 1)";
+$insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES (".$encrypted.", 1);";
 echo $insertSessionQuery;
 echo '<br>';
 if($mysqli->query($insertSessionQuery))
@@ -97,17 +107,7 @@ mysqli_close($connect);
 
 ?>
 
-<body>
-<div class="topnav">
-    <a href="contactPage.html">Contact</a>
-    <a href="loginPage.html">Log in</a>
-    <a href="connectPage.html">Connect</a>
-    <a href="hostPage.php">Host</a>
-    <a href="node">Create</a>
-    <a href="index.php">Home</a>
-    <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
-    <header href="#">InnQUIZitor</header>
-</div>
+
 
 <div class="form">
     <div id="nextQuestion">
