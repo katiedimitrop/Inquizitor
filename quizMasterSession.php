@@ -67,8 +67,9 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
+$idQuiz = implode($quizIds_array[$quizID]);
 # encrypting quiz ID
-$encrypted = rand(000,999).$quizIds_array[$quizID];
+$encrypted = rand(000,999).$idQuiz;
 
 # decrypting quiz ID
 $decrypted = substr($encrypted,3);
