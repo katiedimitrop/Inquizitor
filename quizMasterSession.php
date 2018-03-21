@@ -5,7 +5,6 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" >
 
-
 <head>
   <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -17,32 +16,6 @@ session_start();
   <link rel="stylesheet" href="styles/hostPage.css">
 
 </head>
-
-<body>
-     <div class="topnav">
-       <a href="contactPage.html">Contact</a>
-       <a href="loginPage.html">Log in</a>
-       <a href="connectPage.html">Connect</a>
-       <a href="hostPage.php">Host</a>
-       <a href="node">Create</a>
-       <a href="index.php">Home</a>
-       <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
-       <header href="#">InnQUIZitor</header>
-     </div>
-
-     <div class="form">
-         <div id="nextQuestion">
-             <h1>
-                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
-             </h1>
-
-             <form action="/playMaster.php" method="post">
-                 <button type="submit" class="button button-block"/>Begin Quiz</button>
-             </form>
-         </div>
-     </div>
-
-</body>
 
 <?php
 
@@ -94,9 +67,45 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
+# encrypting quiz ID
+if (CRYPT_STD_DES == 1)
+{
+ $encryptQuizID = crypt('$quizID','st');
+}
+else
+{
+echo "Standard DES not supported.\n<br>";
+}
+
 # close connection
 mysqli_close($connect);
 
 ?>
+
+<body>
+     <div class="topnav">
+       <a href="contactPage.html">Contact</a>
+       <a href="loginPage.html">Log in</a>
+       <a href="connectPage.html">Connect</a>
+       <a href="hostPage.php">Host</a>
+       <a href="node">Create</a>
+       <a href="index.php">Home</a>
+       <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+       <header href="#">InnQUIZitor</header>
+     </div>
+
+     <div class="form">
+         <div id="nextQuestion">
+             <h1>
+                 <?php echo "Session key placeHolder " .$encryptQuizID ; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+             </h1>
+
+             <form action="/playMaster.php" method="post">
+                 <button type="submit" class="button button-block"/>Begin Quiz</button>
+             </form>
+         </div>
+     </div>
+
+</body>
 
 </html>
