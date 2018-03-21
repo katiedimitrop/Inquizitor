@@ -68,7 +68,7 @@ $_SESSION['result'] = $result_array;
 $_SESSION['quizIndex'] = 1;
 
 #$originalID = $quizID;
-$encrypted = base64_encode($quizID)
+$encrypted = base64_encode($quizID);
 #$secure = rand(10000,99999).base64_encode($originalID);
 #$unsecure = substr($secure,5);
 #$unsecure_decode = base_64_decode($unsecure);
