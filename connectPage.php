@@ -91,8 +91,15 @@
               <input type="text"required name="sessionKey" autocomplete="off" />
             </div>
 
-          <button type="submit" class="button button-block"/>Join Session</button>
+          <button onclick = "myFunction()" type="submit" class="button button-block"/>Join Session</button>
 
+					<script>
+				function myFunction()
+				{
+					alert("We do not support underage drinking!");
+					exit();
+				}
+					</script>
           </form>
     </div>
 

@@ -37,7 +37,7 @@
 
           <!--<h2>Pick a quiz to host!</h2>-->
 
-          <form action="/" method="post">
+          <form action="loginPage.html" method="post">
 
             <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
               <select class="mdl-selectfield__select" id="quizDropdown" name="quizDropdown">
@@ -52,8 +52,13 @@
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
           </div>
 
-        <button type="submit" class="button button-block"/>Start Quiz</button>
-
+        <button onclick="myFunction()" type="submit" class="button button-block"/>Start Quiz</button>
+        <script>
+    			function myFunction()
+    			{
+    				alert("Please log in before!");
+    			}
+            </script>
           </form>
     </div>
 

@@ -95,8 +95,14 @@
               <label class="mdl-selectfield__label" for="quizDropdown">Quiz list</label>
           </div>
 
-        <button type="submit" class="button button-block"/>Start Quiz</button>
-
+        <button onclick = "myFunction()" type="submit" class="button button-block"/>Start Quiz</button>
+				<script>
+			function myFunction()
+			{
+				alert("We do not support underage drinking!");
+				exit();
+			}
+				</script>
           </form>
     </div>
 
