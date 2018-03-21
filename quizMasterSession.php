@@ -98,7 +98,7 @@ mysqli_close($connect);
          <div id="nextQuestion">
              <h1>
                  <?php echo "Use this key to join the quiz! "; echo "\n"; echo "Session key is : "; ?>
-                  <bold> <?php echo $encrypted; ?> </bold>
+                  <b> <?php echo $encrypted; ?> </b>
              </h1>
 
              <form action="/playMaster.php" method="post">
