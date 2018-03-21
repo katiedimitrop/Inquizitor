@@ -67,15 +67,27 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-# encrypting quiz ID
-if (CRYPT_STD_DES == 1)
-{
- $encryptQuizID = crypt('$quizID','st');
-}
-else
-{
-echo "Standard DES not supported.\n<br>";
-}
+# encryption and decryption of quiz ID
+# key contains the quiz id that needs to be en/decrypted
+$key = $quizID;
+$string = $quizID;
+
+# ENCRYPTING quiz ID
+$iv = mcrypt_create_iv(
+    mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC),
+    MCRYPT_DEV_URANDOM
+);
+
+$encrypted = base64_encode(
+    $iv .
+    mcrypt_encrypt(
+        MCRYPT_RIJNDAEL_128,
+        hash('sha256', $key, true),
+        $string,
+        MCRYPT_MODE_CBC,
+        $iv
+    )
+);
 
 # close connection
 mysqli_close($connect);
@@ -97,7 +109,7 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder " .$encryptQuizID ; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Session key placeHolder " .$encrypted ; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">
