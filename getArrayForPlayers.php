@@ -25,7 +25,7 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect t
 # accessing the quizmasters quiz
 
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE quizId = '".$_SESSION['quizId']."'";
 
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
@@ -36,7 +36,7 @@ $_SESSION['result'] = $result;
 #Insert empty answers into the database
 for($index = 1; $index < sizeof($result); $index++)
 {
-    $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','')";
+    $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
     if(!($mysqli -> query($sql)))
     {
         $error = 1;
@@ -44,7 +44,7 @@ for($index = 1; $index < sizeof($result); $index++)
 }
 
 
-$connectionQuery = "INSERT INTO Connection (quizId, teamName) VALUES ('" . $_SESSION['quidId'] . "', '" . $_SESSION['teamName'] . "','')";
+$connectionQuery = "INSERT INTO Connection (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
 
 
 # close connection
