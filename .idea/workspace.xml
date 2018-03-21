@@ -18,17 +18,17 @@
         <entry file="file://$PROJECT_DIR$/quizMasterSession.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="84" column="12" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+              <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
               <folding>
-                <marker date="1521675261232" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
-                <marker date="1521675261232" expanded="true" signature="2424:2502" ph="INSERT INTO Sessions... " />
-                <marker date="1521675261232" expanded="true" signature="2708:2720" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3011:3071" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3011:3471" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3091:3462" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3119:3455" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3132:3291" ph="..." />
-                <marker date="1521675261232" expanded="true" signature="3346:3444" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
+                <marker date="1521675311881" expanded="true" signature="2424:2500" ph="INSERT INTO Sessions... " />
+                <marker date="1521675311881" expanded="true" signature="2706:2718" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3009:3069" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3009:3469" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3089:3460" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3117:3453" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3130:3289" ph="..." />
+                <marker date="1521675311881" expanded="true" signature="3344:3442" ph="..." />
               </folding>
             </state>
           </provider>
@@ -367,11 +367,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521674731545</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="putting values from quizMasterSession.php to the table called 'Sessions'">
+      <created>1521675270326</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1521675270326</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6132000" />
+    <option name="totallyTimeSpent" value="6184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -495,15 +502,15 @@
         <state relative-caret-position="901">
           <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
           <folding>
-            <marker date="1521675261232" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
-            <marker date="1521675261232" expanded="true" signature="2424:2502" ph="INSERT INTO Sessions... " />
-            <marker date="1521675261232" expanded="true" signature="2708:2720" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3071" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3471" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3091:3462" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3119:3455" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3132:3291" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3346:3444" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
+            <marker date="1521675311881" expanded="true" signature="2424:2500" ph="INSERT INTO Sessions... " />
+            <marker date="1521675311881" expanded="true" signature="2706:2718" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3069" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3469" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3089:3460" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3117:3453" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3130:3289" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3344:3442" ph="..." />
           </folding>
         </state>
       </provider>
@@ -596,15 +603,15 @@
         <state relative-caret-position="-410">
           <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
           <folding>
-            <marker date="1521675261232" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
-            <marker date="1521675261232" expanded="true" signature="2424:2502" ph="INSERT INTO Sessions... " />
-            <marker date="1521675261232" expanded="true" signature="2708:2720" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3071" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3471" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3091:3462" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3119:3455" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3132:3291" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3346:3444" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
+            <marker date="1521675311881" expanded="true" signature="2424:2500" ph="INSERT INTO Sessions... " />
+            <marker date="1521675311881" expanded="true" signature="2706:2718" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3069" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3469" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3089:3460" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3117:3453" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3130:3289" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3344:3442" ph="..." />
           </folding>
         </state>
       </provider>
@@ -616,15 +623,15 @@
         <state relative-caret-position="66">
           <caret line="48" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <marker date="1521675261232" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
-            <marker date="1521675261232" expanded="true" signature="2424:2502" ph="INSERT INTO Sessions... " />
-            <marker date="1521675261232" expanded="true" signature="2708:2720" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3071" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3471" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3091:3462" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3119:3455" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3132:3291" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3346:3444" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
+            <marker date="1521675311881" expanded="true" signature="2424:2500" ph="INSERT INTO Sessions... " />
+            <marker date="1521675311881" expanded="true" signature="2706:2718" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3069" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3469" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3089:3460" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3117:3453" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3130:3289" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3344:3442" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,17 +935,17 @@
     <entry file="file://$PROJECT_DIR$/quizMasterSession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="84" column="12" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+          <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
           <folding>
-            <marker date="1521675261232" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
-            <marker date="1521675261232" expanded="true" signature="2424:2502" ph="INSERT INTO Sessions... " />
-            <marker date="1521675261232" expanded="true" signature="2708:2720" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3071" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3011:3471" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3091:3462" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3119:3455" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3132:3291" ph="..." />
-            <marker date="1521675261232" expanded="true" signature="3346:3444" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="1290:1381" ph="SELECT quest... Question" />
+            <marker date="1521675311881" expanded="true" signature="2424:2500" ph="INSERT INTO Sessions... " />
+            <marker date="1521675311881" expanded="true" signature="2706:2718" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3069" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3009:3469" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3089:3460" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3117:3453" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3130:3289" ph="..." />
+            <marker date="1521675311881" expanded="true" signature="3344:3442" ph="..." />
           </folding>
         </state>
       </provider>

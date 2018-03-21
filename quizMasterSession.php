@@ -80,7 +80,7 @@ $_SESSION['sessionId'] = $encrypted;
 # Use this on users page to decrypt quiz id to display
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
-$insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES ('".$encrypted."', 1)";
+$insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES (".$encrypted.", 1)";
 echo $insertSessionQuery;
 echo '<br>';
 if($mysqli->query($insertSessionQuery))
