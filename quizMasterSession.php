@@ -1,3 +1,4 @@
+#quizMasterSession.php
 <?php
 # starting the Session
 session_start();
@@ -6,14 +7,14 @@ session_start();
 <html lang="en" >
 
 <head>
-  <link rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-orange.min.css" />
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://code.getmdl.io/1.3.0/material.indigo-orange.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <link rel="stylesheet" href="styles/hostPage.css">
+    <link rel="stylesheet" href="styles/hostPage.css">
 
 </head>
 
@@ -72,40 +73,41 @@ $idQuiz = implode($quizIds_array[$quizID]);
 
 # encrypting quiz ID by adding random 3 numbers to start of string
 $encrypted = rand(000,999).$idQuiz;
-
+$_SESSION['sessionId'] = $encrypted;
 # Use this on users page to decrypt quiz id to display
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
-
+$insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES ('".$encrypted."', 1)";
+$mysqli -> query($insertSessionQuery);
 # close connection
 mysqli_close($connect);
 
 ?>
 
 <body>
-     <div class="topnav">
-       <a href="contactPage.html">Contact</a>
-       <a href="loginPage.html">Log in</a>
-       <a href="connectPage.html">Connect</a>
-       <a href="hostPage.php">Host</a>
-       <a href="node">Create</a>
-       <a href="index.php">Home</a>
-       <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
-       <header href="#">InnQUIZitor</header>
-     </div>
+<div class="topnav">
+    <a href="contactPage.html">Contact</a>
+    <a href="loginPage.html">Log in</a>
+    <a href="connectPage.html">Connect</a>
+    <a href="hostPage.php">Host</a>
+    <a href="node">Create</a>
+    <a href="index.php">Home</a>
+    <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+    <header href="#">InnQUIZitor</header>
+</div>
 
-     <div class="form">
-         <div id="nextQuestion">
-             <h1>
-                 <?php echo "Use this key to join the quiz! "; echo "\n"; echo "Session key is : "; ?>
-                  <b> <?php echo $encrypted; ?> </b>
-             </h1>
+<div class="form">
+    <div id="nextQuestion">
+        <h1>
+            <?php echo "Use this key to join the quiz! "; echo "\n"; echo "Session key is : "; ?>
+            <b> <?php echo $encrypted; ?> </b>
+        </h1>
 
-             <form action="/playMaster.php" method="post">
-                 <button type="submit" class="button button-block"/>Begin Quiz</button>
-             </form>
-         </div>
-     </div>
+        <form action="/playMaster.php" method="post">
+            <button type="submit" class="button button-block"/>Begin Quiz</button>
+        </form>
+    </div>
+</div>
 
 </body>
 
