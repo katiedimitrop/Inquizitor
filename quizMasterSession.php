@@ -38,10 +38,7 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-# Gets id from dropdown of previous page
-$quizID = $_POST['quizDropdown'];
-# Gets array of quiz Ids for user
-$quizIds_array = $_SESSION['quidIds_array'];
+
 # query will select all questions from Question table
 $questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE idQuiz = '".$_SESSION['quizId']."'";
 
@@ -70,8 +67,11 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-# testing encryption
-var_dump($encrypted);
+$originalID = $quizID;
+$secure = rand(10000,99999).base64_encode($originalID);
+$unsecure = substr($secure,5);
+$unsecure_decode = base_64_decode($unsecure);
+#echo $unsecure; // will display 123
 
 # close connection
 mysqli_close($connect);
@@ -93,7 +93,7 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Session key placeHolder ".$unsecure; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">
