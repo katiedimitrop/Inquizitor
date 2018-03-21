@@ -10,7 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <link rel="stylesheet" href="styles/loginPageStyle.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 
@@ -26,30 +26,36 @@
        <header href="#">InnQUIZitor</header>
      </div>
 
-    <div class="form">
-
-    <div id="sessionKey">
-          <h1>Join a session!</h1>
-
-          <form action="/" method="post">
-
-            <div class="field-wrap">
-              <label>
-                Session Key<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off" />
-            </div>
-
-          <button type="submit" class="button button-block"/>Join Session</button>
-
-          </form>
-    </div>
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-  <script  src="js/index.js"></script>
-
-
 </body>
+
+<?php
+
+# connecting to the database
+
+$dbuser = 'master5';
+$dbpass = 'master123';
+$dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';
+$dbname = "projectdatabase3";
+
+$connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
+
+# query will select all questions from Question table
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question";
+
+# storing the results of the query
+$result = $connect->query($questionQuery);
+
+# displaying the questions
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Question: " . $row["questionText"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+$connection->close();
+?>
 
 </html>
