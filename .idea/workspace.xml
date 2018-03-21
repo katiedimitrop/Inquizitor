@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
+    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="more work on logos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/styles/loginPageStyle.css" afterPath="$PROJECT_DIR$/styles/loginPageStyle.css" />
+      <change beforePath="$PROJECT_DIR$/styles/connectPageStyle.css" afterPath="$PROJECT_DIR$/styles/connectPageStyle.css" />
+      <change beforePath="$PROJECT_DIR$/styles/contactPageStyle.css" afterPath="$PROJECT_DIR$/styles/contactPageStyle.css" />
+      <change beforePath="$PROJECT_DIR$/styles/hostPage.css" afterPath="$PROJECT_DIR$/styles/hostPage.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -150,11 +152,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginPageStyle.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/styles/loginPageStyle.css">
+      <file leaf-file-name="contactPageStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/contactPageStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectPageStyle.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/connectPageStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -186,6 +198,9 @@
         <option value="$PROJECT_DIR$/Questions.php" />
         <option value="$PROJECT_DIR$/quizMasterSession.php" />
         <option value="$PROJECT_DIR$/styles/loginPageStyle.css" />
+        <option value="$PROJECT_DIR$/styles/hostPage.css" />
+        <option value="$PROJECT_DIR$/styles/contactPageStyle.css" />
+        <option value="$PROJECT_DIR$/styles/connectPageStyle.css" />
       </list>
     </option>
   </component>
@@ -292,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521667843763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more work on logos">
+      <created>1521667885507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521667885507</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2940000" />
+    <option name="totallyTimeSpent" value="3154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -823,6 +845,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/loginPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contactPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -831,10 +861,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/loginPageStyle.css">
+    <entry file="file://$PROJECT_DIR$/styles/hostPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/contactPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/connectPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
           <folding />
         </state>
       </provider>
