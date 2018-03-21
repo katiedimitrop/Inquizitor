@@ -89,6 +89,9 @@ $encrypted = base64_encode(
     )
 );
 
+# testing encryption
+var_dump($encrypted);
+
 # close connection
 mysqli_close($connect);
 
