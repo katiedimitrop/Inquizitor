@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="more work on logos">
+    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/styles/connectPageStyle.css" afterPath="$PROJECT_DIR$/styles/connectPageStyle.css" />
-      <change beforePath="$PROJECT_DIR$/styles/contactPageStyle.css" afterPath="$PROJECT_DIR$/styles/contactPageStyle.css" />
-      <change beforePath="$PROJECT_DIR$/styles/hostPage.css" afterPath="$PROJECT_DIR$/styles/hostPage.css" />
+      <change beforePath="$PROJECT_DIR$/create-page.html" afterPath="$PROJECT_DIR$/create-page.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -142,31 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contactPage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contactPage.html">
+      <file leaf-file-name="create-page.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/create-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contactPageStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/contactPageStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectPageStyle.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/styles/connectPageStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+            <state relative-caret-position="612">
+              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -201,6 +179,7 @@
         <option value="$PROJECT_DIR$/styles/hostPage.css" />
         <option value="$PROJECT_DIR$/styles/contactPageStyle.css" />
         <option value="$PROJECT_DIR$/styles/connectPageStyle.css" />
+        <option value="$PROJECT_DIR$/create-page.html" />
       </list>
     </option>
   </component>
@@ -314,11 +293,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521667885507</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="the logos should work now">
+      <created>1521668106232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521668106232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3154000" />
+    <option name="totallyTimeSpent" value="3591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -366,7 +352,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hopefully fixed the logo problem" />
     <MESSAGE value="more work on logos" />
-    <option name="LAST_COMMIT_MESSAGE" value="more work on logos" />
+    <MESSAGE value="the logos should work now" />
+    <option name="LAST_COMMIT_MESSAGE" value="the logos should work now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -643,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="194" column="45" lean-forward="true" selection-start-line="194" selection-start-column="45" selection-end-line="194" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create-page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3621">
@@ -835,16 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contactPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1521667094548" expanded="true" signature="1254:1303" ph="SELECT first... User" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/loginPageStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -879,8 +848,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/connectPageStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="1309">
           <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contactPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1521667094548" expanded="true" signature="1254:1303" ph="SELECT first... User" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding />
         </state>
       </provider>
