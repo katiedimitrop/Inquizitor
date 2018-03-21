@@ -73,6 +73,7 @@ $_SESSION['quizIndex'] = 1;
 $idQuiz = implode($quizIds_array[$quizID]);
 
 echo $idQuiz;
+echo '<br>';
 # encrypting quiz ID by adding random 3 numbers to start of string
 $encrypted = rand(000,999).$idQuiz;
 $_SESSION['sessionId'] = $encrypted;
@@ -80,10 +81,17 @@ $_SESSION['sessionId'] = $encrypted;
 # decrypting quiz ID
 #$decrypted = substr($encrypted,3);
 $insertSessionQuery = "INSERT INTO Sessions (sessionId, CurrentQuestion) VALUES ('".$encrypted."', 1)";
-if($mysqli -> query($insertSessionQuery))
+echo $insertSessionQuery;
+echo '<br>';
+if($mysqli->query($insertSessionQuery))
+{
     echo "I think it worked";
+}
 else
+{
     echo "id didn't work";
+}
+
 # close connection
 mysqli_close($connect);
 
