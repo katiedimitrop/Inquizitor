@@ -48,7 +48,7 @@ body {
 #welcome {
     font-family: 'Roboto', sans-serif;
     float: center;
-	display: block; 
+	display: block;
     color: white;
     text-align: center;
     background-color: #212121;
@@ -62,7 +62,7 @@ body {
 }
 .mdl-selectfield__label{
   color:white;
-  font-size:22px
+  font-size:24px
 }
 .mdl-selectfield__select{
   width:100%;
@@ -71,6 +71,9 @@ body {
   border-bottom:1px dotted rgba(0,0,0, 0.12);
   color:rgba(0,0,0, 0.26)
   }
+
+.mdl-selectfield .mdl-selectfield__select,.mdl-selectfield.is-disabled .mdl-selectfield__select{
+  background-color:transparent;border-bottom:1px dotted rgba(0,0,0, 0.12);color:white;font-size:20px;}
 
 a {
   text-decoration: none;
