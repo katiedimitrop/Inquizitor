@@ -25,9 +25,10 @@ var quizPK = 0 ;
 var questionPK = 0;
 var userId = 0;
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/images'));
-app.use('/Inquizitor', express.static(__dirname + "/Inquizitor"));
+
+
 
 //Import functions for validating and sanitizing
 const { body,validationResult } = require('express-validator/check');
@@ -128,7 +129,6 @@ app.post('/', function(req, res)
   {
     if (err) throw err;
     console.log("Connected!");
-
   });
 
   ++quizPK;
