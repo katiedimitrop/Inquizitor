@@ -50,12 +50,11 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
     $result_array[] = $row;
 }
 
-# Gets id from dropdown of previous page
+# Gets number from dropdown of previous page
+# Which holds value of array for quiz id
 $quizID = $_POST['quizDropdown'];
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
-# Uses id frop dropdown to access correct quiz id from array
-echo "\nQuiz to display is"; echo implode($quizIds_array[$quizID]);
 
 # Initial value for quiz array index
 $quizIndex = 0;
@@ -67,12 +66,16 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
+# Using the array to get actual id of quiz in database
 $idQuiz = implode($quizIds_array[$quizID]);
-# encrypting quiz ID
+
+
+# encrypting quiz ID by adding random 3 numbers to start of string
 $encrypted = rand(000,999).$idQuiz;
 
+# Use this on users page to decrypt quiz id to display
 # decrypting quiz ID
-$decrypted = substr($encrypted,3);
+#$decrypted = substr($encrypted,3);
 
 # close connection
 mysqli_close($connect);
@@ -94,7 +97,8 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder ".$encrypted; echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Use this key to join the quiz! "; echo "\n"; echo "Session key is : "; ?>
+                  <bold> <?php echo $encrypted; ?> </bold>
              </h1>
 
              <form action="/playMaster.php" method="post">
