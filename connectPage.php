@@ -13,11 +13,11 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-<<<<<<< HEAD
+
   <link rel="stylesheet" href="styles/connectPageStyle.css">
-=======
+
   <link rel="stylesheet" href="styles/loginPageStyle.css">
->>>>>>> fully functional js script.Changed links in each php to lead to the correct page for it.
+
 
 </head>
 

@@ -38,10 +38,7 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-# Gets id from dropdown of previous page
-$quizID = $_POST['quizDropdown'];
-# Gets array of quiz Ids for user
-$quizIds_array = $_SESSION['quidIds_array'];
+
 # query will select all questions from Question table
 $questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE idQuiz = '".$_SESSION['quizId']."'";
 
@@ -53,12 +50,11 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
     $result_array[] = $row;
 }
 
-# Gets id from dropdown of previous page
+# Gets number from dropdown of previous page
+# Which holds value of array for quiz id
 $quizID = $_POST['quizDropdown'];
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
-# Uses id frop dropdown to access correct quiz id from array
-echo "\nQuiz to display is"; echo implode($quizIds_array[$quizID]);
 
 # Initial value for quiz array index
 $quizIndex = 0;
@@ -70,8 +66,16 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-# testing encryption
-var_dump($encrypted);
+# Using the array to get actual id of quiz in database
+$idQuiz = implode($quizIds_array[$quizID]);
+
+
+# encrypting quiz ID by adding random 3 numbers to start of string
+$encrypted = rand(000,999).$idQuiz;
+
+# Use this on users page to decrypt quiz id to display
+# decrypting quiz ID
+#$decrypted = substr($encrypted,3);
 
 # close connection
 mysqli_close($connect);
@@ -93,7 +97,8 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Use this key to join the quiz! "; echo "\n"; echo "Session key is : "; ?>
+                  <b> <?php echo $encrypted; ?> </b>
              </h1>
 
              <form action="/playMaster.php" method="post">
