@@ -112,7 +112,7 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder " .$encrypted ; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">
