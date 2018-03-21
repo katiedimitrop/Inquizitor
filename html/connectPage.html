@@ -16,14 +16,48 @@
 
 <body>
      <div class="topnav">
-       <a href="contactPage.html">Contact</a>
-       <a href="loginPage.html">Log in</a>
-       <a href="connectPage.html">Connect</a>
-       <a href="hostPage.html">Host</a>
-       <a href="create-page.html">Create</a>
-       <a href="index.html">Home</a>
+       <a href="html/contactPage.html">Contact</a>
+       <a href="html/loginPage.html">Log in</a>
+       <a href="html/connectPage.html">Connect</a>
+       <a href="html/hostPage.html">Host</a>
+       <a href="node">Create</a>
+       <a href="html/index.html">Home</a>
        <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
        <header href="#">InnQUIZitor</header>
+       <a id="welcome" style="font-size:20px;">
+	 <?php
+     #
+     #  Someone needs to add an input field (preferably on this page but it could also be implemented on getArrayForPlayers.php)
+     #  which takes the TeamName and sends it over to another script so it can be saved in the database, in the Connection Table, alongside the QuizID
+     #
+     #
+     #
+     #
+     #
+     #
+
+	require_once('config.php');
+	$mysqli = new mysqli($database_host, $database_user, $database_pass, $database_name);
+	if($mysqli->connect_error)
+	{
+		die("Connection failed: ". $mysqli->connect_error);
+	}
+
+    $email = $_SESSION['email'];
+    //$firstname = $_SESSION['firstname'];
+	$sel = "SELECT firstname FROM User WHERE email = '$email'";
+	//echo $sel;
+	if($result = $mysqli->query($sel))
+      {
+        while($row = $result->fetch_assoc())
+        {
+				echo 'Welcome ' . $row['firstname'] . '!';
+				//exit;
+				break;
+        }
+      }
+
+     ?></a>
      </div>
 
     <div class="form">
@@ -31,22 +65,33 @@
     <div id="sessionKey">
           <h1>Join a session!</h1>
 
-          <form action="loginPage.html" method="post">
+          <label class="container">Leader
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Member
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+
+
+          <form action="html/loginPage.html" method="post">
 
             <div class="field-wrap">
               <label>
                 Session Key<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" />
+              <input type="text"required name="sessionKey" autocomplete="off" />
             </div>
 
-          <button onclick="myFunction()" type="submit" class="button button-block"/>Join Session</button>
+          <button onclick = "myFunction()" type="submit" class="button button-block"/>Join Session</button>
+
           <script>
-			function myFunction()
-			{
-				alert("Please log in before!");
-			}
-        </script>
+          			function myFunction()
+          			{
+          				alert("Please log in before!");
+          			}
+            </script>
           </form>
     </div>
 
@@ -56,5 +101,6 @@
 
 
 </body>
+
 
 </html>
