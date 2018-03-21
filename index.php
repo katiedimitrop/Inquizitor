@@ -25,7 +25,7 @@
        <a href="hostPage.php">Host</a>
        <a href="node">Create</a>
        <a href="index.php">Home</a>
-       <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+       <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
        <header>InnQUIZitor</header>
        <a id="welcome" style="font-size:20px;">
 	 <?php

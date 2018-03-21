@@ -22,7 +22,7 @@
        <a href="hostPage.html">Host</a>
        <a href="create-page.html">Create</a>
        <a href="index.html">Home</a>
-       <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+       <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
        <header href="#">InnQUIZitor</header>
      </div>
 
@@ -50,7 +50,8 @@ $result = mysqli_query($connect, $questionQuery);
 # displaying the questions
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result) {
+    while($row = mysqli_fetch_assoc($result))
+    {
         echo "Question: " . $row["questionText"]. "<br>";
     }
 } else {

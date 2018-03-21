@@ -27,7 +27,7 @@ session_start();
        <a href="hostPage.php">Host</a>
        <a href="node">Create</a>
        <a href="index.html">Home</a>
-       <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+       <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
        <header href="#">InnQUIZitor</header>
      </div>
 
