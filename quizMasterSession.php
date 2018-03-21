@@ -53,6 +53,9 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
 # Gets number from dropdown of previous page
 # Which holds value of array for quiz id
 $quizID = $_POST['quizDropdown'];
+
+
+
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
 
@@ -69,7 +72,7 @@ $_SESSION['quizIndex'] = 1;
 # Using the array to get actual id of quiz in database
 $idQuiz = implode($quizIds_array[$quizID]);
 
-
+echo $idQuiz;
 # encrypting quiz ID by adding random 3 numbers to start of string
 $encrypted = rand(000,999).$idQuiz;
 $_SESSION['sessionId'] = $encrypted;
@@ -91,7 +94,7 @@ mysqli_close($connect);
     <a href="hostPage.php">Host</a>
     <a href="node">Create</a>
     <a href="index.php">Home</a>
-    <img id="logo2" width="5%" height="5%" src="images\Logo2.png"/>
+    <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
     <header href="#">InnQUIZitor</header>
 </div>
 
@@ -103,7 +106,7 @@ mysqli_close($connect);
         </h1>
 
         <form action="/playMaster.php" method="post">
-            <button type="submit" class="button button-block"/>Begin Quiz</button>
+            <button type="submit" class="button button-block">Begin Quiz</button>
         </form>
     </div>
 </div>
