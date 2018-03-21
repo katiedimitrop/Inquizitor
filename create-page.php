@@ -37,10 +37,10 @@
       text-decoration: none;
   }
 
-  .topnav img {
+  /*.topnav img {
       float: left;
       padding: 5px 0px 5px 5px;
-  }
+  }*/
 
   .topnav header {
       font-family: 'Roboto', sans-serif;
@@ -58,11 +58,6 @@
   }
 
 
-  .mdl-button {
-    display: block;
-    width:300px;
-    height:40px;
-  }
   hr.style13 {
     width:50%;
   	height: 10px;
@@ -242,7 +237,7 @@ var userId = readCookie('idUser');
   <a href="hostPage.php">Host</a>
   <a href="node">Create</a>
   <a href="index.php">Home</a>
-    <!-- <img width="5%" height="5%" src="/images/Logo2.png/"> -->
+  <!--<img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>-->
   <header href="#">InnQUIZitor</header>
 </div>
 <a id="welcome" style="font-size:20px;">
