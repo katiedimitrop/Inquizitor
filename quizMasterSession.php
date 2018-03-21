@@ -38,9 +38,12 @@ $dbname = "projectdatabase3";
 
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-
+# Gets id from dropdown of previous page
+$quizID = $_POST['quizDropdown'];
+# Gets array of quiz Ids for user
+$quizIds_array = $_SESSION['quidIds_array'];
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE idQuiz = '".$_SESSION['quizId']."'";
 
 $result_array = array();
 # storing the results of the query
@@ -67,27 +70,8 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-# encryption and decryption of quiz ID
-# key contains the quiz id that needs to be en/decrypted
-$key = $quizID;
-$string = $quizID;
-
-# ENCRYPTING quiz ID
-$iv = mcrypt_create_iv(
-    mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC),
-    MCRYPT_DEV_URANDOM
-);
-
-$encrypted = base64_encode(
-    $iv .
-    mcrypt_encrypt(
-        MCRYPT_RIJNDAEL_128,
-        hash('sha256', $key, true),
-        $string,
-        MCRYPT_MODE_CBC,
-        $iv
-    )
-);
+# testing encryption
+var_dump($encrypted);
 
 # close connection
 mysqli_close($connect);
@@ -109,7 +93,7 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder " .$encrypted ; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">

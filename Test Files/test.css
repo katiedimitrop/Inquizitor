@@ -1,0 +1,195 @@
+/*  #1565C0 blue  #FFC107 yellow  */
+
+html {
+  overflow-y: scroll;
+  background-color: #1565C0
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow:hidden;
+    background-color: #212121;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: right;
+    display: block;
+    color: #FFC107;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+.topnav img {
+    float: left;
+    padding: 5px 0px 5px 130px;
+}
+
+.topnav header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 270%;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 17px 10px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#welcome {
+    font-family: 'Roboto', sans-serif;
+    float: center;
+   display: block;
+    color: white;
+    text-align: center;
+    background-color: #212121;
+}
+
+/* host session CSS */
+.mdl-selectfield{
+  width:100%;
+  height:100px;
+
+}
+.mdl-selectfield__label{
+  color:white;
+  font-size:22px
+}
+.mdl-selectfield__select{
+  width:100%;
+  height:30px;
+  background-color:#1565C0;
+  border-bottom:1px dotted rgba(0,0,0, 0.12);
+  color:rgba(0,0,0, 0.26)
+  }
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+          box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 150;
+}
+
+#messageField{
+  height:180px;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #FFC107;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #1565C0;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+.mdl-selectfield{
+  position:relative;
+  font-size:16px;
+  display:inline-block;
+  box-sizing:border-box;
+  width:300px;
+  max-width:100%;
+  margin:0;
+  padding:20px 0}
+.mdl-selectfield .mdl-menu__container{
+  max-height:256px;
+  min-width:100%;
+  top:12px !important}
+.mdl-selectfield.mdl-selectfield--floating-label .mdl-menu__container{
+  top:24px !important}
+.mdl-selectfield .mdl-menu__outline{
+  max-height:256px;
+  transform-origin:50% 0}
+.mdl-selectfield .mdl-menu{
+  min-width:100%;
+  max-height:240px;
+  outline:0;
+  overflow-y:auto;width:auto !important}
+.mdl-selectfield .mdl-menu.is-animating{
+  overflow:hidden}
+.mdl-selectfield--align-right{
+  text-align:right}
+.mdl-selectfield--full-width{
+  width:100%}
+.mdl-selectfield__select{
+  display:
+  block;width:100%;padding:4px 0;margin:0;color:inherit;background-color:#1565C0;font-size:16px;text-align:left;color:inherit;border:none;border-bottom:1px solid rgba(0,0,0, 0.12);border-radius:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.mdl-selectfield.is-focused .mdl-selectfield__select{
+    outline:none}
+.mdl-selectfield.is-invalid .mdl-selectfield__select{
+  border-color:rgb(222, 50, 38);box-shadow:none}fieldset[disabled]
+.mdl-selectfield .mdl-selectfield__select,.mdl-selectfield.is-disabled .mdl-selectfield__select{
+  background-color:transparent;border-bottom:1px dotted rgba(0,0,0, 0.12);color:rgba(0,0,0, 0.26)}
+.mdl-selectfield__label{
+  bottom:0;color:rgba(0,0,0, 0.26);font-size:16px;left:0;right:0;pointer-events:none;position:absolute;display:block;top:24px;width:100%;overflow:hidden;white-space:nowrap;text-align:left}
+.mdl-selectfield.is-dirty .mdl-selectfield__label{
+  visibility:hidden}
+.mdl-selectfield--floating-label .mdl-selectfield__label{
+  transition-duration:0.2s;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}fieldset[disabled]
+.mdl-selectfield .mdl-selectfield__label,.mdl-selectfield.is-disabled.is-disabled .mdl-selectfield__label{
+  color:rgba(0,0,0, 0.26)}
+.mdl-selectfield--floating-label.is-focused .mdl-selectfield__label,.mdl-selectfield--floating-label.is-dirty .mdl-selectfield__label{
+    color:rgb(63,81,181);font-size:12px;top:4px;visibility:visible}
+.mdl-selectfield--floating-label.is-invalid .mdl-selectfield__label{color:rgb(222, 50, 38);font-size:12px}
+.mdl-selectfield__label:after{background-color:rgb(63,60,187);bottom:20px;content:'';height:2px;left:45%;position:absolute;transition-duration:0.2s;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);visibility:hidden;width:10px}
+.mdl-selectfield.is-focused .mdl-selectfield__label:after{left:0;visibility:visible;width:100%}
+.mdl-selectfield.is-invalid .mdl-selectfield__label:after{background-color:rgb(222, 50, 38)}
+.mdl-selectfield__error{color:rgb(222, 50, 38);position:absolute;font-size:12px;margin-top:3px;visibility:hidden;display:block}
+.mdl-selectfield.is-invalid .mdl-selectfield__error{visibility:visible}
+.mdl-selectfield__placeholder{bottom:20px;cursor:pointer;color:rgba(0,0,0, 0.26);left:0;padding:2px 0;position:absolute;text-align:right;top:20px;width:100%}
+.mdl-selectfield__placeholder>i{outline:0}
