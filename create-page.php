@@ -39,7 +39,7 @@
 
   .topnav img {
       float: left;
-      padding: 5px 0px 5px 130px;
+      padding: 5px 0px 5px 5px;
   }
 
   .topnav header {
