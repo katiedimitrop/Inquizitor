@@ -70,28 +70,6 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-# encryption and decryption of quiz ID
-# key contains the quiz id that needs to be en/decrypted
-$key = $quizID;
-$string = $quizID;
-
-# ENCRYPTING quiz ID
-$iv = mcrypt_create_iv(
-    mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC),
-    MCRYPT_DEV_URANDOM
-);
-
-$encrypted = base64_encode(
-    $iv .
-    mcrypt_encrypt(
-        MCRYPT_RIJNDAEL_128,
-        hash('sha256', $key, true),
-        $string,
-        MCRYPT_MODE_CBC,
-        $iv
-    )
-);
-
 # testing encryption
 var_dump($encrypted);
 
