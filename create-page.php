@@ -15,12 +15,9 @@
 <head>
   <!--<link href="styles\styles.css" rel="stylesheet" type="text/css">-->
   <style>
-  .titleform {
-    display: block;
-    margin:auto;
-  }
+
   html {
-     background-color: #1565C0
+     background-color: #1565C0;
   }
 
   /* Style the top navigation bar */
@@ -72,32 +69,46 @@
   	border: 0;
   	box-shadow: 0 10px 10px -10px #1565C0 inset;
   }
-  .vl {
-      border-left: 6px groove #1565C0;
-      height: 160px;
+  h3 {
+    position: relative;
+    width:800px;
+    color:white;
   }
-  .box {
-    border-width:5px;
-    border-style:outset;
-    width:525px;
-    border-color:#ffc107;
-    margin-left:-13px;
+
+  .submitButton {
+    width:300px;
+    color: #FFC107;
+    font-size: 30px;
+    font-family:'Roboto';
+    display:inline-block;
+   }
+
+   .addButton {
+     width:300px;
+     color: #FFC107;
+     font-size: 30px;
+     font-family:'Roboto';
+     display:inline-block;
+    }
+
+  .quiz_title{
+    color:#FFC107;
   }
   * { box-sizing:border-box; }
 
 /* basic stylings ------------------------------------------ */
 /* css from:https://codepen.io/sevilayha/pen/IdGKH*/
-body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+body 				 { }
 .container 		{
+  background: #13232f;
   font-family:'Roboto';
-  width:600px;
+  width:800px;
   margin:30px auto 0;
   display:block;
-  background-image: url("black-paper.jpg");
-  background:#fff;
   padding:10px 50px 50px;
+  border: 10px outset #FFC107;
 }
-h2 		 {
+ h2 		 {
   text-align:center;
   margin-bottom:50px;
 }
@@ -115,18 +126,20 @@ h2 small {
   margin-bottom:45px;
 }
 input 				{
+  color:white;
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:500px;
+  width:700px;
   border:none;
+  background:#13232f;
   border-bottom:1px solid #757575;
 }
 input:focus 		{ outline:none; }
 
 /* LABEL ======================================= */
 label 				 {
-  color: #FFC107;
+  color: grey;
   font-size:18px;
   font-weight:normal;
   position:absolute;
@@ -215,7 +228,7 @@ function readCookie(name) {
 	}
 	return null;
 }
-document.write(readCookie('idUser'));
+//document.write(readCookie('idUser'));
 var userId = readCookie('idUser');
 /*document.cookie = "username=John Doe";*/
 
@@ -223,13 +236,13 @@ var userId = readCookie('idUser');
 </script>
 <body onload="readCookie()">
 <div class="topnav">
-  <a href="contactPage.html">Contact</a>
+  <a href="contactPage.php">Contact</a>
   <a href="Logout.php">Log out</a>
 	<a href="connectPage.php">Connect</a>
   <a href="hostPage.php">Host</a>
   <a href="node">Create</a>
   <a href="index.php">Home</a>
-  <img id="logo2" width="5%" height="5%" src="/images/Logo2.png"/>
+  <img width="5%" height="5%" src="/public/images/Logo2.png/">
   <header href="#">InnQUIZitor</header>
 </div>
 <a id="welcome" style="font-size:20px;">
@@ -257,18 +270,19 @@ if($result = $mysqli->query($sel))
  ?></a>
 </div>
 
-<div class="container">
-
+<div class="container" >
 <form method ="post" >
+  <div id = "dynamicInput">
   <input type="hidden" name="userid" id="hiddenInput" />
   <br>
-    <input id="quiz_title" type="text" name="quiz_title" value="Enter a title for your quiz." required>
-  <br>
-  <br>
-  <div class="box">
+   <h3>Enter a title for your quiz:</h3>
+    <br>
+    <div class = "group">
+     <input id="quiz_title" type="text" name="quiz_title" required>
+    </div>
     <br>
     <div class="group">
-      <input id="q1" type="text" name="q1" required>
+      <input id="q1" type="text" name="q1" height="500px" required>
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Question 1:</label>
@@ -286,139 +300,185 @@ if($result = $mysqli->query($sel))
       <input id="q2" type="text" name="q2" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 2</label>
+      <label>Question 2:</label>
     </div>
 
     <div class="group">
       <input id="a2" type="text" name="a2" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 2</label>
+      <label>Answer 2:</label>
     </div>
-<div>
 
-</div>
     <div class="group">
       <input id="q3" type="text" name="q3" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 3</label>
+      <label>Question 3:</label>
     </div>
 
     <div class="group">
       <input id="a3" type="text" name="a3" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 3</label>
+      <label>Answer 3:</label>
     </div>
 
     <div class="group">
       <input id="q4" type="text" name="q4" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 4</label>
+      <label>Question 4:</label>
     </div>
 
     <div class="group">
       <input id="a4" type="text" name="a4" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 4</label>
+      <label>Answer 4:</label>
     </div>
 
     <div class="group">
       <input id="q5" type="text" name="q5" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 5</label>
+      <label>Question 5:</label>
     </div>
 
     <div class="group">
       <input id="a5" type="text" name="a5" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 5</label>
+      <label>Answer 5:</label>
     </div>
 
     <div class="group">
       <input id="q6" type="text" name="q6" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 6</label>
+      <label>Question 6:</label>
     </div>
 
     <div class="group">
       <input id="a6" type="text" name="a6" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 6</label>
+      <label>Answer 6:</label>
     </div>
 
     <div class="group">
       <input id="q7" type="text" name="q7" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 7</label>
+      <label>Question 7:</label>
     </div>
 
     <div class="group">
       <input id="a7" type="text" name="a7" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 7</label>
+      <label>Answer 7:</label>
     </div>
 
     <div class="group">
       <input id="q8" type="text" name="q8" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 8</label>
+      <label>Question 8:</label>
     </div>
 
     <div class="group">
       <input id="a8" type="text" name="a8" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 8</label>
+      <label>Answer 8:</label>
     </div>
 
     <div class="group">
       <input id="q9" type="text" name="q9" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 9</label>
+      <label>Question 9:</label>
     </div>
 
     <div class="group">
       <input id="a9" type="text" name="a9" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 9</label>
+      <label>Answer 9:</label>
     </div>
 
     <div class="group">
       <input id="q10" type="text" name="q10" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Question 10</label>
+      <label>Question 10:</label>
     </div>
 
     <div class="group">
       <input id="a10" type="text" name="a10" required>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Answer 10</label>
+      <label>Answer 10:</label>
     </div>
-<p id="demo" name="demo"></p>
-<input type="submit" value="OK">
 </div>
+<div class ="group">
+  <input type="submit" class="submitButton" value="Submit">
+
+  <input type="button" class="addButton" value ="+" onClick="addInput('dynamicInput');">
+</div>
+
+<p id="demo" name="demo"></p>
 </form>
+
 <script>
+//Number of questions on page
+var counter = 10;
+
+//Limit of questions per quiz
+var limit = 50;
+
+/* Scripting to handle cookies. Target the hidden element and insert in it the
+userId so that node.js can retrieve it.*/
+//Default values for testing purposes
 //var userId =1
-//Target the hidden element and insert in it the userId
+//document.write(''+userId);
 var input = document.getElementById('hiddenInput');
 input.value = userId.toString();
-document.write(''+userId);
+
+// Scripting to implement dynamically adding questions
+/*
+ Called when user hits the button to add a question. If user has reached the
+limit of 50 questions per page alert them and do nothing. Else add another
+question and answer input field.
+*/
+function addInput(divName){
+     if (counter == limit)  {
+          alert("Reached limit of " + counter + " questions.");
+     }//if
+     else {
+          //Add a question field
+          //Our new div should be a div of class group
+          var newdiv = document.createElement('div');
+
+          newdiv.setAttribute("id", "questionAnswerPair");
+          newdiv.innerHTML = '<div class="group">'+'<input id=\"q'+(counter +1)+'\" type=\"text\" name=\"q'+(counter+1)
+          +'\" required>'+
+          '<span class=\"highlight\"></span>'+
+          '<span class=\"bar\"></span>'+
+          '<label>Question '+(counter+1)+':</label></div>' +'<div class="group">'+'<input id=\"a'+(counter+1)+'\" type=\"text\" name=\"a'+(counter+1)
+          +'\" required>'+
+          '<span class=\"highlight\"></span>'+
+          '<span class=\"bar\"></span>'+
+          '<label>Answer '+(counter+1)+':</label>';
+          document.getElementById(divName).appendChild(newdiv);
+          counter = counter + 1;
+
+          //Number of question/answer pairs has increased by 1
+
+     }//else
+}
+
 </script>
 </body>
 </html>
