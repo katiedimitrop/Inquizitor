@@ -67,10 +67,11 @@ $_SESSION['result'] = $result_array;
 
 $_SESSION['quizIndex'] = 1;
 
-$originalID = $quizID;
-$secure = rand(10000,99999).base64_encode($originalID);
-$unsecure = substr($secure,5);
-$unsecure_decode = base_64_decode($unsecure);
+#$originalID = $quizID;
+$encrypted = base64_encode($quizID)
+#$secure = rand(10000,99999).base64_encode($originalID);
+#$unsecure = substr($secure,5);
+#$unsecure_decode = base_64_decode($unsecure);
 #echo $unsecure; // will display 123
 
 # close connection
@@ -93,7 +94,7 @@ mysqli_close($connect);
      <div class="form">
          <div id="nextQuestion">
              <h1>
-                 <?php echo "Session key placeHolder ".$unsecure; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
+                 <?php echo "Session key placeHolder ".$encrypted; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
              </h1>
 
              <form action="/playMaster.php" method="post">
