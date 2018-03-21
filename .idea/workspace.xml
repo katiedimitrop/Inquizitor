@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/create-page.html" afterPath="$PROJECT_DIR$/create-page.html" />
       <change beforePath="$PROJECT_DIR$/create-page.php" afterPath="$PROJECT_DIR$/create-page.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,8 +144,8 @@
       <file leaf-file-name="create-page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="194" column="51" lean-forward="true" selection-start-line="194" selection-start-column="51" selection-end-line="194" selection-end-column="51" />
+            <state relative-caret-position="238">
+              <caret line="194" column="6" lean-forward="false" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -153,10 +154,10 @@
       <file leaf-file-name="create-page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="238" column="39" lean-forward="true" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="244" column="66" lean-forward="false" selection-start-line="244" selection-start-column="66" selection-end-line="244" selection-end-column="66" />
               <folding>
-                <marker date="1521668733793" expanded="true" signature="5533:5582" ph="SELECT first... User" />
+                <marker date="1521669015221" expanded="true" signature="5544:5593" ph="SELECT first... User" />
               </folding>
             </state>
           </provider>
@@ -327,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521668635332</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="the logos should work now ...pls">
+      <created>1521668766139</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1521668766139</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3816000" />
+    <option name="totallyTimeSpent" value="4163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -380,7 +388,8 @@
     <MESSAGE value="Hopefully fixed the logo problem" />
     <MESSAGE value="more work on logos" />
     <MESSAGE value="the logos should work now" />
-    <option name="LAST_COMMIT_MESSAGE" value="the logos should work now" />
+    <MESSAGE value="the logos should work now ...pls" />
+    <option name="LAST_COMMIT_MESSAGE" value="the logos should work now ...pls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -883,18 +892,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="194" column="51" lean-forward="true" selection-start-line="194" selection-start-column="51" selection-end-line="194" selection-end-column="51" />
+        <state relative-caret-position="238">
+          <caret line="194" column="6" lean-forward="false" selection-start-line="194" selection-start-column="2" selection-end-line="194" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/create-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="238" column="39" lean-forward="true" selection-start-line="238" selection-start-column="39" selection-end-line="238" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="244" column="66" lean-forward="false" selection-start-line="244" selection-start-column="66" selection-end-line="244" selection-end-column="66" />
           <folding>
-            <marker date="1521668733793" expanded="true" signature="5533:5582" ph="SELECT first... User" />
+            <marker date="1521669015221" expanded="true" signature="5544:5593" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>
