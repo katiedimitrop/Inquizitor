@@ -81,7 +81,7 @@
                   <span class="checkmark"></span>
               </label>
               <label class="container">Member
-                  <input type="radio" name="radio" name="isLeader" value="1>
+                  <input type="radio"  name="isLeader" value="1>
                   <span class="checkmark"></span>
               </label>
             <div class="field-wrap">
@@ -101,6 +101,7 @@
 				}
 					</script> -->
           </form>
+    </div>
     </div>
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
