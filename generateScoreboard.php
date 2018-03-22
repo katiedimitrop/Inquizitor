@@ -18,7 +18,7 @@
  * rsort(correctArray);
  * generate html table from the sorted array
  */
-
+session_start();
 $dbuser = 'master5';
 $dbpass = 'master123';
 $dbhost = 'projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com';

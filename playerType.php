@@ -5,6 +5,7 @@
  * Date: 22-Mar-18
  * Time: 2:04 PM
  */
+session_start();
 $_SESSION['isLeader'] = $_POST['isLeader'];
 $_SESSION['sessionId'] = $_POST['sessionKey'];
 
@@ -12,6 +13,10 @@ if($_SESSION['isLeader'] == 0) :
 header("Location: getArrayForPlayers.php");
 exit;
 else:
+    echo $_POST['sessionKey'];
+    echo '<br>';
+    echo $_SESSION['sessionKey'];
+    echo '<br>';
 ?>
 <!DOCTYPE html>
 <html lang="en" >
