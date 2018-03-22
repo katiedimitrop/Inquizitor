@@ -21,12 +21,12 @@ session_start();
 
 <body>
      <div class="topnav">
-       <a href="contactPage.html">Contact</a>
-       <a href="loginPage.html">Log in</a>
-       <a href="connectPage.html">Connect</a>
+       <a href="contactPage.php">Contact</a>
+       <a href="loginPage.php">Log in</a>
+       <a href="connectPage.php">Connect</a>
        <a href="hostPage.php">Host</a>
        <a href="node">Create</a>
-       <a href="index.html">Home</a>
+       <a href="index.php">Home</a>
        <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
        <header href="#">InnQUIZitor</header>
      </div>
@@ -80,6 +80,14 @@ echo sizeof($result);
   $_SESSION['quizIndex'] = $quizIndex;
   $updateQuestionQuery = "UPDATE projectdatabase3.Sessions SET CurrentQuestion=".$quizIndex." WHERE sessionId='" . $_SESSION['sessionId'];
   $yes = mysqli_query($connect, $updateQuestionQuery);
+  if($yes)
+  {
+      echo "a mers";
+  }
+  else
+  {
+      echo "n-a mers";
+  }
 ?>
 <div class="form">
   <div id="nextQuestion">
