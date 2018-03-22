@@ -14,7 +14,7 @@
   <style>
 
   html {
-     background-color: #1565C0
+     background-color: #1565C0;
   }
 
   /* Style the top navigation bar */
@@ -56,21 +56,23 @@
 
 
 .inner {
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-               radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  background: #13232f;
   font-family:'Roboto';
   width:350px;
   height:300px;
   margin:30px auto 0;
   display:block;
   padding:10px 50px 50px;
-  border: 10px outset #13232f;
+  border: 5px outset #ffc107;
 }
 
 .welcome{
   background:#13232f;
 }
 
+.login{
+  background:#ffc107;
+}
 a {
   text-decoration:none;
 }
@@ -101,9 +103,11 @@ a {
 
       <p>
         <img width="100%" height="100%"class="centreLogo" src="images/Logo.png"/>
+        <div class="login">
         <hr>
-        <h2 style="color:white";>Log in</h3>
+        <h3 style="color:#13232f";>Log in</h3>
         <hr></a>
+        </div>
       </p>
     </div>
 
