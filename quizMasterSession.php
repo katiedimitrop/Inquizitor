@@ -53,22 +53,6 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 # Which holds value of array for quiz id
 $quizID = $_POST['quizDropdown'];
 
-
-# query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = ".$_SESSION['quizId'];
-
-$result_array = array();
-# storing the results of the query
-$result = mysqli_query($connect, $questionQuery);
-
-while ($row = mysqli_fetch_array($result, MYSQL_NUM))
-{
-    $result_array[] = $row;
-}
-
-
-
-
 # Gets array of quiz Ids for user
 $quizIds_array = $_SESSION['quidIds_array'];
 
@@ -84,6 +68,22 @@ $_SESSION['quizIndex'] = 1;
 
 # Using the array to get actual id of quiz in database
 $idQuiz = implode($quizIds_array[$quizID]);
+# query will select all questions from Question table
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = ".$_SESSION['quizId'];
+
+$result_array = array();
+# storing the results of the query
+$result = mysqli_query($connect, $questionQuery);
+
+while ($row = mysqli_fetch_array($result, MYSQL_NUM))
+{
+    $result_array[] = $row;
+}
+
+
+
+
+
 
 
 # encrypting quiz ID by adding random 3 numbers to start of string
