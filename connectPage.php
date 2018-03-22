@@ -91,15 +91,15 @@
               <input type="text"required name="sessionKey" autocomplete="off" />
             </div>
 
-          <button onclick = "myFunction()" type="submit" class="button button-block"/>Join Session</button>
+          <button  type="submit" class="button button-block"/>Join Session</button>
 
-					<script>
+					<!--<script>
 				function myFunction()
 				{
 					alert("Please do no consume alcohol if you are intending to drive or are under the legal drinking age");
 					exit();
 				}
-					</script>
+					</script> -->
           </form>
     </div>
 

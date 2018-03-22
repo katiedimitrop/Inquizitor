@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/playUser.php" afterPath="$PROJECT_DIR$/playUser.php" />
-      <change beforePath="$PROJECT_DIR$/quizMasterSession.php" afterPath="$PROJECT_DIR$/quizMasterSession.php" />
+      <change beforePath="$PROJECT_DIR$/connectPage.php" afterPath="$PROJECT_DIR$/connectPage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playUser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="playUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="751">
@@ -136,14 +135,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connectPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="98" column="89" lean-forward="true" selection-start-line="98" selection-start-column="89" selection-end-line="98" selection-end-column="89" />
+            <state relative-caret-position="559">
+              <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
               <folding>
                 <element signature="e#987#988#0#PHP" expanded="true" />
-                <marker date="1521728794807" expanded="true" signature="1602:1651" ph="SELECT first... User" />
+                <marker date="1521731653375" expanded="true" signature="1602:1651" ph="SELECT first... User" />
               </folding>
             </state>
           </provider>
@@ -228,12 +227,12 @@
         <option value="$PROJECT_DIR$/create-page.html" />
         <option value="$PROJECT_DIR$/create-page.php" />
         <option value="$PROJECT_DIR$/generateScoreboard.php" />
-        <option value="$PROJECT_DIR$/connectPage.php" />
         <option value="$PROJECT_DIR$/playerType.php" />
         <option value="$PROJECT_DIR$/playMaster.php" />
         <option value="$PROJECT_DIR$/getArrayForPlayers.php" />
         <option value="$PROJECT_DIR$/quizMasterSession.php" />
         <option value="$PROJECT_DIR$/playUser.php" />
+        <option value="$PROJECT_DIR$/connectPage.php" />
       </list>
     </option>
   </component>
@@ -553,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521730722274</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Work on transferring data between the player pages">
+      <created>1521731556745</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1521731556745</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19811000" />
+    <option name="totallyTimeSpent" value="19914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -717,7 +723,7 @@
           <caret line="33" column="150" lean-forward="false" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
           <folding>
             <element signature="e#987#988#0#PHP" expanded="true" />
-            <marker date="1521728794807" expanded="true" signature="1602:1651" ph="SELECT first... User" />
+            <marker date="1521731653375" expanded="true" signature="1602:1651" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>
@@ -1064,17 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="98" column="89" lean-forward="true" selection-start-line="98" selection-start-column="89" selection-end-line="98" selection-end-column="89" />
-          <folding>
-            <element signature="e#987#988#0#PHP" expanded="true" />
-            <marker date="1521728794807" expanded="true" signature="1602:1651" ph="SELECT first... User" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1157,6 +1152,17 @@
             <marker date="1521731549342" expanded="true" signature="2757:2785" ph="..." />
             <marker date="1521731549342" expanded="true" signature="3280:3304" ph="..." />
             <marker date="1521731549342" expanded="true" signature="3521:3583" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <folding>
+            <element signature="e#987#988#0#PHP" expanded="true" />
+            <marker date="1521731653375" expanded="true" signature="1602:1651" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>
