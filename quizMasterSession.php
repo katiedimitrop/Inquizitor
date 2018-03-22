@@ -49,20 +49,23 @@ $dbname = "projectdatabase3";
 $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to Connect to '$dbhost'");
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
+# Gets number from dropdown of previous page
+# Which holds value of array for quiz id
+$quizID = $_POST['quizDropdown'];
+
+
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = '".$_SESSION['quizId']."'";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = ".$_SESSION['quizId'];
 
 $result_array = array();
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
 
-while ($row = mysqli_fetch_array($result, MYSQL_NUM)){
+while ($row = mysqli_fetch_array($result, MYSQL_NUM))
+{
     $result_array[] = $row;
 }
 
-# Gets number from dropdown of previous page
-# Which holds value of array for quiz id
-$quizID = $_POST['quizDropdown'];
 
 
 
