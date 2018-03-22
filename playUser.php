@@ -69,7 +69,11 @@ if($quizIndex < $row[0])
     $_SESSION['quizIndex'] = $quizIndex;
 }
 
-
+echo $quizIndex;
+echo "<br>";
+echo (sizeof($result) + 1);
+echo "<br>";
+echo $result[0];
 ?>
 
 
