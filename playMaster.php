@@ -54,7 +54,9 @@ $quizIndex = $_SESSION['quizIndex'];
 $finishQuiz = 0;
  $_SESSION['finishQuiz'] = $finishQuiz;
 
-
+echo $quizIndex;
+echo "<br>";
+echo sizeof($result);
 
 ?>
 
