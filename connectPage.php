@@ -77,11 +77,11 @@
 
           <form action="/playerType.php" method="post">
               <label class="container">Leader
-                  <input type="radio" checked="checked" name="isLeader" value="1">
+                  <input type="radio" checked="checked" name="isLeader" value=1>
                   <span class="checkmark"></span>
               </label>
               <label class="container">Member
-                  <input type="radio"  name="isLeader" value="1>
+                  <input type="radio"  name="isLeader" value=1>
                   <span class="checkmark"></span>
               </label>
             <div class="field-wrap">
