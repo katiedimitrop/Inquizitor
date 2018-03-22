@@ -79,7 +79,7 @@ echo sizeof($result);
   # Updating quiz question
   $quizIndex = $quizIndex + 1;
   $_SESSION['quizIndex'] = $quizIndex;
-  $updateQuestionQuery = "UPDATE projectdatabase3.Sessions SET CurrentQuestion=".$quizIndex." WHERE sessionId='" . $_SESSION['sessionId'];
+  $updateQuestionQuery = "UPDATE projectdatabase3.Sessions SET CurrentQuestion=".$quizIndex." WHERE sessionId=" . $_SESSION['sessionId'];
   echo $updateQuestionQuery;
   echo "<br>";
   $yes = mysqli_query($connect, $updateQuestionQuery);
