@@ -18,9 +18,9 @@ session_start();
 </head>
 <body>
 <div class="topnav">
-    <a href="contactPage.html">Contact</a>
-    <a href="loginPage.html">Log in</a>
-    <a href="connectPage.html">Connect</a>
+    <a href="contactPage.php">Contact</a>
+    <a href="loginPage.php">Log in</a>
+    <a href="connectPage.php">Connect</a>
     <a href="hostPage.php">Host</a>
     <a href="node">Create</a>
     <a href="index.php">Home</a>
@@ -62,7 +62,7 @@ $quizIndex = 0;
 $_SESSION['quizIndex'] = $quizIndex;
 
 # Transferring result to playMaster.php
-$_SESSION['result'] = $result_array;
+
 
 $_SESSION['quizIndex'] = 1;
 
@@ -84,7 +84,7 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM))
     $result_array[] = $row;
 }
 
-
+$_SESSION['result'] = $result_array;
 
 
 
