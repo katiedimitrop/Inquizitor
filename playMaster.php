@@ -58,6 +58,7 @@ echo $quizIndex;
 echo "<br>";
 echo sizeof($result);
 
+
 ?>
 
 <?php if($quizIndex == sizeof($result) + 1) :
@@ -99,5 +100,7 @@ echo sizeof($result);
       <button type="submit" class="button button-block"/>Next Question</button>
     </form>
 </div>
-<?php endif; ?>
+<?php endif;
+mysqli_close($connect);
+?>
 </html>
