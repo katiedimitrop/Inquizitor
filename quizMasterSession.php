@@ -69,6 +69,9 @@ $_SESSION['quizIndex'] = 1;
 # Using the array to get actual id of quiz in database
 $idQuiz = implode($quizIds_array[$quizID]);
 $_SESSION['quizId'] = $idQuiz;
+echo $_SESSION['quizId'];
+echo "<br>";
+echo $result_array['0'];
 # query will select all questions from Question table
 $questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = ".$_SESSION['quizId'];
 
