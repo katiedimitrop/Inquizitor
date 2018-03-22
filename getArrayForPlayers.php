@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://code.getmdl.io/1.3.0/material.indigo-orange.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="styles/loginPageStyle.css">
+
+</head>
+
+<body>
+
 <?php
 /**
  * Created by PhpStorm.
