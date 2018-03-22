@@ -35,7 +35,6 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM))
 }
 # Transferring result to playUser.php
 $_SESSION['result'] = $result_array;
-
 $_SESSION['error'] = 1;
 $_SESSION['quizIndex'] = 1;
 #Insert empty answers into the database
@@ -53,15 +52,16 @@ $putTeamInTeamsTable = mysqli_query($connect, $connectionQuery);
 # close connection
 mysqli_close($connect);
 #check for errors
-if($error == 0)
-{
-    header("Location: playUser.php");
-    #exit;
-}
-else
-{
-    echo "Something went wrong with one of the queries";
-}
+
+#if($error == 0)
+#{
+#    header("Location: playUser.php");
+#    exit;
+#}
+#else
+#{
+#    echo "Something went wrong with one of the queries";
+#}
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -92,12 +92,13 @@ else
 </div>
 
 <div class="form">
+    <a href="playUser.php"> Press here for userPlay.php</a>
     <div id="nextQuestion">
         <h1>
             <?php echo "Session key placeHolder "; echo session_id(); echo "\n"; echo "Quiz id"; echo $_POST['quizDropdown']; ?>
         </h1>
 
-        <form action="/playMaster.php" method="post">
+        <form action="/playUser.php" method="post">
             <button type="submit" class="button button-block"/>Begin Quiz</button>
         </form>
     </div>
