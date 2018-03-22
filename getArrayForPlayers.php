@@ -8,12 +8,12 @@
 
 session_start();
 #Set the quizId
-$_SESSION["sessionId"] = $_POST["sessionKey"];
 
-
-#Someone needs to make a decrypt function to separate the quizId from the uniquely generated sessionID
-#Also, someone needs to make the function that generates the sessionID
-$_SESSION["quizId"] = decrypt($_SESSION["sessionId"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $_SESSION["teamName"] = $_POST['teamName'];
+}
+$_SESSION["quizId"] = substr($_SESSION['sessionId'],3);
 
 $dbuser = 'master5';
 $dbpass = 'master123';
@@ -25,27 +25,30 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect t
 # accessing the quizmasters quiz
 
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE quizId = '".$_SESSION['quizId']."'";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz= '".$_SESSION['quizId']."'";
 
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
+while ($row = mysqli_fetch_array($result, MYSQL_NUM))
+{
+    $result_array[] = $row;
+}
+# Transferring result to playUser.php
+$_SESSION['result'] = $result_array;
 
-# Transferring result to play.php
-$_SESSION['result'] = $result;
-
+$_SESSION['error'] = 1;
+$_SESSION['quizIndex'] = 1;
 #Insert empty answers into the database
-for($index = 1; $index < sizeof($result); $index++)
+for($index = 0; $index < sizeof($result); $index++)
 {
     $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
-    if(!($mysqli -> query($sql)))
-    {
-        $error = 1;
-    }
+    if($initialiseAnswers = mysqli_query($connect, $sql))
+        $_SESSION['error'] = $_SESSION['error'] + 1;
 }
 
 
-$connectionQuery = "INSERT INTO Connection (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
-
+$connectionQuery = "INSERT INTO projectdatabase3.Teams (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
+$putTeamInTeamsTable = mysqli_query($connect, $connectionQuery);
 
 # close connection
 mysqli_close($connect);

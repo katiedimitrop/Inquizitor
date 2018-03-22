@@ -51,8 +51,8 @@ $result = $_SESSION['result'];
 $quizIndex = $_SESSION['quizIndex'];
 #displaying the questions
 
-$finishQuiz = 0;
- $_SESSION['finishQuiz'] = $finishQuiz;
+#$finishQuiz = 0;
+#$_SESSION['finishQuiz'] = $finishQuiz;
 
 echo $quizIndex;
 echo "<br>";
@@ -62,8 +62,8 @@ echo sizeof($result);
 ?>
 
 <?php if($quizIndex == sizeof($result) + 1) :
-  $finishQuiz = 1;
-  $_SESSION['finishQuiz'] = $finishQuiz;
+  #$finishQuiz = 1;
+  #$_SESSION['finishQuiz'] = $finishQuiz;
 ?>
 <div class="form">
   <div id="nextQuestion">
@@ -80,17 +80,7 @@ echo sizeof($result);
   $quizIndex = $quizIndex + 1;
   $_SESSION['quizIndex'] = $quizIndex;
   $updateQuestionQuery = "UPDATE projectdatabase3.Sessions SET CurrentQuestion=".$quizIndex." WHERE sessionId=" . $_SESSION['sessionId'];
-  echo $updateQuestionQuery;
-  echo "<br>";
   $yes = mysqli_query($connect, $updateQuestionQuery);
-  if($yes)
-  {
-      echo "a mers";
-  }
-  else
-  {
-      echo "n-a mers";
-  }
 ?>
 <div class="form">
   <div id="nextQuestion">

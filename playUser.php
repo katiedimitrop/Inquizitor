@@ -61,13 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 $finishQuiz = $_SESSION['finishQuiz'];
 
-$_SESSION['isLeader'] = 1;
+
 
 
 ?>
 
 
-<?php if($finishQuiz == 1) :
+<?php if($quizIndex == sizeof($result) + 1) :
 # Tell the user that quiz has finished and give him a button to go and check the scoreboard?>
 <div class="form">
   <div id="nextQuestion">

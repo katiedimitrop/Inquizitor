@@ -72,18 +72,18 @@
     <div id="sessionKey">
           <h1>Join a session!</h1>
 
-          <label class="container">Leader
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container">Member
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
+
 
 
           <form action="/getArrayForPlayers.php" method="post">
-
+              <label class="container">Leader
+                  <input type="radio" checked="checked" name="isLeader" value="1">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="container">Member
+                  <input type="radio" name="radio" name="isLeader" value="1>
+                  <span class="checkmark"></span>
+              </label>
             <div class="field-wrap">
               <label>
                 Session Key<span class="req">*</span>
@@ -96,7 +96,7 @@
 					<script>
 				function myFunction()
 				{
-					alert("We do not support underage drinking!");
+					alert("Please do no consume alcohol if you are intending to drive or are under the legal drinking age");
 					exit();
 				}
 					</script>
