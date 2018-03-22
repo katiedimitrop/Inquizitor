@@ -50,7 +50,7 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 # mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 
 # query will select all questions from Question table
-$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE idQuiz = '".$_SESSION['quizId']."'";
+$questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz = '".$_SESSION['quizId']."'";
 
 $result_array = array();
 # storing the results of the query
