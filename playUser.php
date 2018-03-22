@@ -90,25 +90,15 @@ echo implode($result[0]);
           </form>
       </div>
     <form action=<?php echo "/".$_SESSION["sessionID"] . ".html"?> method="post">
-      <button type="submit" class="button button-block">Display quiz scores</button>
+      <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
 </div>
-<?php else:
-
-
-#give the user a button to go to the next question
-?>
+<?php else: ?>
     <div class="form">
-        <div id="nextQuestion">
-            <h1>
-                <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
-            </h1>
-
-            <form action="/playUser.php" method="post">
-                <button type="submit" class="button button-block">Next Question</button>
-            </form>
-        </div>
-<?php endif;
+        <h1>
+            <?php echo "Question "; echo ($quizIndex -1); echo ": ";  echo implode($result[$quizIndex - 2]); ?>
+        </h1>
+        <?php
 if($_SESSION['isLeader'] == 1):
     #Only show the save answer buttons and the text field if the player is a team leader?>
 
@@ -122,13 +112,25 @@ if($_SESSION['isLeader'] == 1):
               <input type="text" name="answer" autocomplete="off"/>
             </div>
 
-          <button type="submit" class="button button-block">Save Answer</button>
+          <button type="submit" class="button button-block"/>Save Answer</button>
           </form>
     </div>
 
 
 
 <?php endif; ?>
+#give the user a button to go to the next question
+?>
+
+        <div id="nextQuestion">
+
+            <form action="/playUser.php" method="post">
+                <button type="submit" class="button button-block"/>Next Question</button>
+            </form>
+        </div>
     </div>
+<?php endif; ?>
+
+
 </body>
 </html>
