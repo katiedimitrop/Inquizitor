@@ -59,9 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $_SESSION["answerArray"][$quizIndex] = $_POST["answer"];
 }
 
-$finishQuiz = $_SESSION['finishQuiz'];
-
-
+#$finishQuiz = $_SESSION['finishQuiz'];
+$updateQuestionQueryStatement = "SELECT CurrentQuestion FROM projectdatabase3.Sessions WHERE sessionId=" . $_SESSION['sessionId'];
+$currentQuestionQuery = mysqli_query($connect, $updateQuestionQueryStatement);
+$row = mysqli_fetch_array($result, MYSQLI_NUM);
+if($quizIndex < $row[0])
+{
+    $quizIndex = $quizIndex + 1;
+    $_SESSION['quizIndex'] = $quizIndex;
+}
 
 
 ?>
@@ -72,16 +78,20 @@ $finishQuiz = $_SESSION['finishQuiz'];
 <div class="form">
   <div id="nextQuestion">
     <h1>
-      <?php echo "Quiz is finished!" ?>
+      <?php echo "Quiz is finished! Submit your answers and then check out the quiz scores when they are available" ?>
     </h1>
-
-    <form action=<?php echo $_SESSION["sessionID"] . ".html"?> method="post">
+      <div id="submitAnswers">
+          <form action="/submitAnswers.php" method="post">
+              <button type="submit" class="button button-block"/>Submit answers</button>
+          </form>
+      </div>
+    <form action=<?php echo "/".$_SESSION["sessionID"] . ".html"?> method="post">
       <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
 </div>
-<?php endif;
-$quizIndex = $quizIndex + 1;
-$_SESSION['quizIndex'] = $quizIndex;
+<?php else:
+
+
 #give the user a button to go to the next question
 ?>
     <div class="form">
@@ -95,7 +105,8 @@ $_SESSION['quizIndex'] = $quizIndex;
             </form>
         </div>
     </div>
-<?php if($_SESSION['isLeader'] == 1):
+<?php endif;
+if($_SESSION['isLeader'] == 1):
     #Only show the save answer buttons and the text field if the player is a team leader?>
 <div class="form">
     <div id="saveAnswer">
@@ -113,11 +124,8 @@ $_SESSION['quizIndex'] = $quizIndex;
           <button type="submit" class="button button-block"/>Save Answer</button>
           </form>
     </div>
-    <div id="submitAnswers">
-        <form action="/submitAnswers.php" method="post">
-            <button type="submit" class="button button-block"/>Submit answers</button>
-        </form>
-    </div>
+
+
 </div>
 <?php endif; ?>
 </html>
