@@ -134,12 +134,12 @@
       <file leaf-file-name="playUser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="530">
+              <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
               <folding>
-                <marker date="1521761883759" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
-                <marker date="1521761883759" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
-                <marker date="1521761883759" expanded="true" signature="2189:2207" ph="..." />
+                <marker date="1521762805128" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
+                <marker date="1521762805128" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
+                <marker date="1521762805128" expanded="true" signature="2319:2337" ph="..." />
               </folding>
             </state>
           </provider>
@@ -642,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521759531814</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="trying to fix playUser.php">
+      <created>1521761894449</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1521761894449</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26925000" />
+    <option name="totallyTimeSpent" value="27658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -861,9 +868,9 @@
         <state relative-caret-position="561">
           <caret line="33" column="7" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
           <folding>
-            <marker date="1521761883759" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
-            <marker date="1521761883759" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
-            <marker date="1521761883759" expanded="true" signature="2189:2207" ph="..." />
+            <marker date="1521762805128" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
+            <marker date="1521762805128" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
+            <marker date="1521762805128" expanded="true" signature="2319:2337" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1240,12 +1247,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="530">
+          <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
           <folding>
-            <marker date="1521761883759" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
-            <marker date="1521761883759" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
-            <marker date="1521761883759" expanded="true" signature="2189:2207" ph="..." />
+            <marker date="1521762805128" expanded="true" signature="1557:1627" ph="SELECT Curre... Sessions" />
+            <marker date="1521762805128" expanded="true" signature="1563:1627" ph="UPDATE projectdatabase3.Sessions... " />
+            <marker date="1521762805128" expanded="true" signature="2319:2337" ph="..." />
           </folding>
         </state>
       </provider>
