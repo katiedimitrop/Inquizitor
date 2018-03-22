@@ -71,8 +71,8 @@ echo sizeof($result);
       <?php echo "Press to Finish Quiz" ?>
     </h1>
 
-    <form action="/playMaster.php" method="post">
-      <button type="submit" class="button button-block"/>Finish Quiz</button>
+    <form action="/generateScoreboard.php" method="post">
+      <button type="submit" class="button button-block"/>Finish Quiz and Generate Scoreboard</button>
     </form>
 </div>
 <?php else:

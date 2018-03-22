@@ -43,7 +43,7 @@ $questionId = intval($questionIdArray[0]);
 #Get the correct answers from the database and put them into $correct_array
 for($index = 0; $index < sizeof($_SESSION['result']); $index++)
 {
-    $answerQueryStatement = "SELECT answerText FROM projectdatabase3.Answer WHERE quizId=" . $questionId;
+    $answerQueryStatement = "SELECT answerText FROM projectdatabase3.Answer WHERE Quiz_idQuiz=" . $questionId;
     $answerQuery = mysqli_query($connect, $answerQueryStatement);
     $row = mysqli_fetch_array($answerQuery, MYSQLI_NUM);
     $correct_array[$index] = $row[0];
@@ -51,7 +51,7 @@ for($index = 0; $index < sizeof($_SESSION['result']); $index++)
 }
 
 #Get the teams from the Connection table and put them into $teamsArray
-$teamsArrayQueryStatement = "SELECT teamName FROM projectdatabase3.Connection WHERE quizId=".$_SESSION['quizId'];
+$teamsArrayQueryStatement = "SELECT teamName FROM projectdatabase3.Teams WHERE sessionId".$_SESSION['sessionId'];
 $teamsArrayQuery = mysqli_query($connect, $teamsArrayQueryStatement);
 $teamsArrayIndex = 0;
 while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
@@ -66,7 +66,7 @@ $numberOfTeams = $teamsArrayIndex - 1;
 for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamIndex++)
 {
     #Get the current team's answers from the teamAnswer table and put it into $workTeamAnswerArray
-    $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName=".$teamsArray[$currentTeamIndex];
+    $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName=".$teamsArray[$currentTeamIndex]." AND sessionId=".$_SESSION['sessionId'];
     $workTeamAnswerArrayQuery = mysqli_query($connect, $workTeamAnswerArrayQueryStatement);
     while($workTeamAnswerArrayRow = mysqli_fetch_array($workTeamAnswerArrayQuery,MYSQLI_NUM))
     {
