@@ -32,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $_SESSION["teamName"] = $_POST['teamName'];
 }
 $_SESSION["quizId"] = substr($_SESSION['sessionId'],3);
+echo "this is the session id " .$_SESSION['sessionId'] . "<br>";
+echo "this is the quiz id " .$_SESSION['quizId'] . "<br>";
 
 $dbuser = 'master5';
 $dbpass = 'master123';
@@ -64,7 +66,7 @@ for($index = 0; $index < sizeof($result); $index++)
     $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
     if($initialiseAnswers = mysqli_query($connect, $sql))
         $_SESSION['error'] = $_SESSION['error'] + 1;
-    echo $questionQuery;
+    echo sql;
     echo "<br>";
 }
 
