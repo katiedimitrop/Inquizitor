@@ -75,7 +75,7 @@
 
 
 
-          <form action="/getArrayForPlayers.php" method="post">
+          <form action="/playerType.php" method="post">
               <label class="container">Leader
                   <input type="radio" checked="checked" name="isLeader" value="1">
                   <span class="checkmark"></span>
