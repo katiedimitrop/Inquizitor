@@ -61,17 +61,17 @@
 
     <h2 id="description" > PUB QUIZZES MADE SIMPLE </h2>
 
-    <a href="create-page.html">
+    <a href="node">
        <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         CREATE A QUIZ
        </button>
     </a>
-    <a href="hostPage.html">
+    <a href="hostPage.php">
        <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         HOST A SESSION
        </button>
     </a>
-    <a href="connectPage.html">
+    <a href="connectPage.php">
        <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         CONNECT TO A SESSION
        </button>
