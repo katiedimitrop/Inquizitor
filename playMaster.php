@@ -76,6 +76,8 @@ $finishQuiz = 0;
   # Updating quiz question
   $quizIndex = $quizIndex + 1;
   $_SESSION['quizIndex'] = $quizIndex;
+  $updateQuestionQuery = "UPDATE projectdatabase3.Sessions SET CurrentQuestion=".$quizIndex." WHERE sessionId='" . $_SESSION['sessionId'];
+  $yes = mysqli_query($connect, $updateQuestionQuery);
 ?>
 <div class="form">
   <div id="nextQuestion">
