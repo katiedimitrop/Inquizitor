@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/connectPage.php" afterPath="$PROJECT_DIR$/connectPage.php" />
+      <change beforePath="$PROJECT_DIR$/connectPage.html" afterPath="$PROJECT_DIR$/connectPage.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,7 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connectPage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="559">
@@ -148,16 +148,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hostPage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hostPage.php">
+      <file leaf-file-name="connectPage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/connectPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-359">
-              <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding>
-                <marker date="1521667200818" expanded="true" signature="1605:1662" ph="SELECT first... User" />
-                <marker date="1521667200818" expanded="true" signature="1959:2027" ph="SELECT Name Quiz" />
-                <marker date="1521667200818" expanded="true" signature="2252:2322" ph="SELECT idQui... Quiz" />
-              </folding>
+            <state relative-caret-position="559">
+              <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +207,6 @@
         <option value="$PROJECT_DIR$/default-page-background.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/hostPage.html" />
-        <option value="$PROJECT_DIR$/connectPage.html" />
         <option value="$PROJECT_DIR$/contactPage.html" />
         <option value="$PROJECT_DIR$/loginPage.html" />
         <option value="$PROJECT_DIR$/loginPage.php" />
@@ -233,6 +228,7 @@
         <option value="$PROJECT_DIR$/quizMasterSession.php" />
         <option value="$PROJECT_DIR$/playUser.php" />
         <option value="$PROJECT_DIR$/connectPage.php" />
+        <option value="$PROJECT_DIR$/connectPage.html" />
       </list>
     </option>
   </component>
@@ -559,11 +555,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521731556745</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="A user doesn't have to be logged in to join a session">
+      <created>1521731678836</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1521731678836</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19914000" />
+    <option name="totallyTimeSpent" value="19999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -617,7 +620,8 @@
     <MESSAGE value="putting values from quizMasterSession.php to the table called 'Sessions'" />
     <MESSAGE value="trying to fix playMaster only showing finish quiz" />
     <MESSAGE value="Work on transferring data between the player pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on transferring data between the player pages" />
+    <MESSAGE value="A user doesn't have to be logged in to join a session" />
+    <option name="LAST_COMMIT_MESSAGE" value="A user doesn't have to be logged in to join a session" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -866,14 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-818">
           <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -1164,6 +1160,14 @@
             <element signature="e#987#988#0#PHP" expanded="true" />
             <marker date="1521731653375" expanded="true" signature="1602:1651" ph="SELECT first... User" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
