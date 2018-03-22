@@ -81,7 +81,7 @@
                   <span class="checkmark"></span>
               </label>
               <label class="container">Member
-                  <input type="radio"  name="isLeader" value=1>
+                  <input type="radio"  name="isLeader" value=0>
                   <span class="checkmark"></span>
               </label>
             <div class="field-wrap">

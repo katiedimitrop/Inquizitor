@@ -43,6 +43,7 @@ else:
     <a href="index.php">Home</a>
     <img id="logo2" width="5%" height="5%" src="images/Logo2.png"/>
     <header href="#">InnQUIZitor</header>
+</div>
         <div class="form">
 
             <div id="sessionKey">
@@ -66,7 +67,7 @@ else:
             <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
             <script  src="js/index.js"></script>
-
+        </div>
 
 </body>
 
