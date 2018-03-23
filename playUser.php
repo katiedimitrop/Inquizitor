@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 #$finishQuiz = $_SESSION['finishQuiz'];
 $updateQuestionQueryStatement = "SELECT CurrentQuestion FROM projectdatabase3.Sessions WHERE sessionId=" . $_SESSION['sessionId'];
 $currentQuestionQuery = mysqli_query($connect, $updateQuestionQueryStatement);
-$row = mysqli_fetch_array($result, MYSQLI_NUM);
+$row = mysqli_fetch_array($currentQuestionQuery, MYSQLI_NUM);
 echo "The next lines are for the current question" . "<br>";
 echo implode($row[0]);
 echo "<br>";
