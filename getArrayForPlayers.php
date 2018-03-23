@@ -31,7 +31,7 @@ $questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_
 
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
-while ($row = mysqli_fetch_array($result, MYSQL_NUM))
+while ($row = mysqli_fetch_array($result, MYSQLI_NUM))
 {
     $result_array[] = $row;
 }
