@@ -19,8 +19,8 @@
     #Update the values of all the answers in the table according to the array
     foreach ($_SESSION["answerArray"] as $index=>$value)
     {
-        $sql = "UPDATE projectdatabase3.teamAnswer SET answerText='".$value." WHERE teamName='" . $_SESSION['teamName'] . "' AND questionNumber=" . $index;
-        if(!($mysqli -> query($sql)))
+        $sql = "UPDATE projectdatabase3.teamAnswer SET answerText='".$value."' WHERE teamName='" . $_SESSION['teamName'] . "' AND questionNumber=" . $index;
+        if(!($putAnsersIn = mysqli_query($connect,$sql)))
         {
             $error = 1;
         }
