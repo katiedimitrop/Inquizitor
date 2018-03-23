@@ -36,6 +36,7 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die("Unable to 
 $correct_array = array();
 $workTeamAnswerArray = array();
 $scoreArray = array();
+$scoreArray[0] = 0;
 $teamsArray = array();
 # storing the results of the query
 
@@ -102,7 +103,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     {
         echo "am intrat la " .$questionIndex."<br>";
         #Add 5 points to the team's score if the answer is good enough
-        if(levenshtein(implode($correct_array[$questionIndex]), implode($workTeamAnswerArray[$questionIndex])) < 4)
+        if(levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex]) < 4)
         {
             $scoreArray[$currentTeamIndex] += 5;
         }
@@ -148,7 +149,7 @@ $html = "<!DOCTYPE html>
 #append the table and generate it
 $html .= '
 <div class = "form">
-<table style=\"width:100%\">
+<table style="width:100%; color: white">
   <tr>
     <th>Team Name</th>
     <th>Score</th> 
@@ -168,7 +169,11 @@ $html .="</table></div></html>";
 $fileName = $_SESSION['sessionId'] . ".html";
 $htmlFile = fopen($fileName, "w");
 #Put the HTML code in the file
-fwrite($htmlFile, $html); ?>
+fwrite($htmlFile, $html);
+#Go to the leaderboard html page
+#header("Location:".$fileName)
+#exit;
+?>
 </body>
 </html>
 
