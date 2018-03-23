@@ -75,8 +75,9 @@ echo $teamsArrayQueryStatement;
 echo "<br>";
 while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
 {
-    $teamsArray[$teamsArrayIndex] = $teamsArrayRow;
-    $scoreArray[$teamsArray[$teamsArrayIndex]] = 0;
+    $teamsArray[$teamsArrayIndex] = implode($teamsArrayRow);
+    $key = $teamsArray[$teamsArrayIndex];
+    $scoreArray[$key] = 0;
     $teamsArrayIndex++;
 
     echo $questionId;
@@ -157,7 +158,8 @@ for($teamIndex = 0; $teamIndex < $numberOfTeams; $teamIndex++)
 }
 $html .="</table></div></html>";
 #Create an html file according to the sessionID
-$htmlFile = fopen($_SESSION['sessionId'] . ".html", "w");
+$fileName = $_SESSION['sessionId'] . ".html";
+$htmlFile = fopen($fileName, "w");
 #Put the HTML code in the file
 fwrite($htmlFile, $html); ?>
 </body>
