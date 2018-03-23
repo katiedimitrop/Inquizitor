@@ -154,7 +154,7 @@ app.post('/', function(req, res)
     question = req.body + index;
     answer = req.body + index;
     questions.push(question);
-    answers.push(answer)
+    answers.push(answer);
     }
     for (var questionId = 0;questionId < noOfQuestions; questionId++)
     {
