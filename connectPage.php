@@ -84,7 +84,6 @@
                   <input type="radio"  name="isLeader" value=0>
                   <span class="checkmark"></span>
               </label>
-              <br>
             <div class="field-wrap">
               <label>
                 Session Key<span class="req">*</span>
