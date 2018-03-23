@@ -6,6 +6,7 @@
 
 
 <head>
+    <title>innQUIZitor</title>
   <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet"
@@ -89,9 +90,9 @@
                 Session Key<span class="req">*</span>
                   <input type="text" required name="sessionKey" autocomplete="off" />
               </label>
-                <button  type="submit" class="button button-block"/>Join Session</button>
-            </div>
 
+            </div>
+    <div><button  type="submit" class="button button-block">Join Session</button></div>
 
 
 					<!--<script>

@@ -7,6 +7,7 @@
 
 
 <head>
+    <title>innQUIZitor</title>
   <link rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet"
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+
      <div class="topnav">
          <a href="contactPage.php">Contact</a>
          <a href="Logout.php">Log out</a>
