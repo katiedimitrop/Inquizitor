@@ -4,8 +4,6 @@
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/getArrayForPlayers.php" afterPath="$PROJECT_DIR$/getArrayForPlayers.php" />
-      <change beforePath="$PROJECT_DIR$/playerType.php" afterPath="$PROJECT_DIR$/playerType.php" />
-      <change beforePath="$PROJECT_DIR$/submitAnswers.php" afterPath="$PROJECT_DIR$/submitAnswers.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playMaster.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="playMaster.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playMaster.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-779">
@@ -83,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playerType.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="playerType.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playerType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="-206">
               <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
@@ -96,25 +94,25 @@
       <file leaf-file-name="getArrayForPlayers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getArrayForPlayers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="41" />
+            <state relative-caret-position="1054">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#497#578#0#PHP" expanded="true" />
-                <marker date="1521766624824" expanded="true" signature="1277:1327" ph="SELECT fk_Qu... Question" />
-                <marker date="1521766624824" expanded="true" signature="1277:1348" ph="SELECT quest... Question" />
-                <marker date="1521766624824" expanded="true" signature="1277:1372" ph="SELECT quest... Question" />
-                <marker date="1521766624824" expanded="true" signature="1277:1373" ph="SELECT quest... Question" />
-                <marker date="1521766624824" expanded="true" signature="1864:2016" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521766624824" expanded="true" signature="1864:2044" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521766624824" expanded="true" signature="1864:2109" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521766624824" expanded="true" signature="2214:2280" ph="INSERT INTO Connection... " />
-                <marker date="1521766624824" expanded="true" signature="2214:2314" ph="INSERT INTO Connection... " />
-                <marker date="1521766624824" expanded="true" signature="2214:2348" ph="INSERT INTO Connection... " />
-                <marker date="1521766624824" expanded="true" signature="2693:2958" ph="..." />
-                <marker date="1521766624824" expanded="true" signature="2703:2749" ph="..." />
-                <marker date="1521766624824" expanded="true" signature="2703:2958" ph="..." />
-                <marker date="1521766624824" expanded="true" signature="2762:2835" ph="..." />
-                <marker date="1521766624824" expanded="true" signature="2863:2942" ph="..." />
+                <marker date="1521768815270" expanded="true" signature="1154:1204" ph="SELECT fk_Qu... Question" />
+                <marker date="1521768815270" expanded="true" signature="1154:1225" ph="SELECT quest... Question" />
+                <marker date="1521768815270" expanded="true" signature="1154:1249" ph="SELECT quest... Question" />
+                <marker date="1521768815270" expanded="true" signature="1154:1250" ph="SELECT quest... Question" />
+                <marker date="1521768815270" expanded="true" signature="1697:1849" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521768815270" expanded="true" signature="1697:1877" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521768815270" expanded="true" signature="1697:1942" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521768815270" expanded="true" signature="2015:2081" ph="INSERT INTO Connection... " />
+                <marker date="1521768815270" expanded="true" signature="2015:2115" ph="INSERT INTO Connection... " />
+                <marker date="1521768815270" expanded="true" signature="2015:2149" ph="INSERT INTO Connection... " />
+                <marker date="1521768815270" expanded="true" signature="2457:2722" ph="..." />
+                <marker date="1521768815270" expanded="true" signature="2467:2513" ph="..." />
+                <marker date="1521768815270" expanded="true" signature="2467:2722" ph="..." />
+                <marker date="1521768815270" expanded="true" signature="2526:2599" ph="..." />
+                <marker date="1521768815270" expanded="true" signature="2627:2706" ph="..." />
               </folding>
             </state>
           </provider>
@@ -123,7 +121,7 @@
       <file leaf-file-name="playUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1085">
+            <state relative-caret-position="170">
               <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <marker date="1521764170066" expanded="true" signature="1588:1658" ph="SELECT Curre... Sessions" />
@@ -217,9 +215,9 @@
         <option value="$PROJECT_DIR$/loginPage.php" />
         <option value="$PROJECT_DIR$/play.php" />
         <option value="$PROJECT_DIR$/connectPage.php" />
-        <option value="$PROJECT_DIR$/getArrayForPlayers.php" />
         <option value="$PROJECT_DIR$/playerType.php" />
         <option value="$PROJECT_DIR$/submitAnswers.php" />
+        <option value="$PROJECT_DIR$/getArrayForPlayers.php" />
       </list>
     </option>
   </component>
@@ -308,13 +306,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00007" summary="the logos should work now ...pls">
-      <created>1521668766139</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1521668766139</updated>
     </task>
     <task id="LOCAL-00008" summary="removed logos from katie's pages">
       <created>1521669120449</created>
@@ -652,11 +643,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521764873169</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Added a title to every page">
+      <created>1521768762335</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1521768762335</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31431000" />
+    <option name="totallyTimeSpent" value="31501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -836,21 +834,21 @@
           <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="50" />
           <folding>
             <element signature="e#497#578#0#PHP" expanded="true" />
-            <marker date="1521766624824" expanded="true" signature="1277:1327" ph="SELECT fk_Qu... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1348" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1372" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1373" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1864:2016" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="1864:2044" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="1864:2109" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2280" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2314" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2348" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2693:2958" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2703:2749" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2703:2958" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2762:2835" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2863:2942" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="1154:1204" ph="SELECT fk_Qu... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1225" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1249" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1250" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1697:1849" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="1697:1877" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="1697:1942" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2081" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2115" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2149" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2457:2722" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2467:2513" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2467:2722" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2526:2599" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2627:2706" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1151,31 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getArrayForPlayers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <element signature="e#497#578#0#PHP" expanded="true" />
-            <marker date="1521766624824" expanded="true" signature="1277:1327" ph="SELECT fk_Qu... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1348" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1372" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1277:1373" ph="SELECT quest... Question" />
-            <marker date="1521766624824" expanded="true" signature="1864:2016" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="1864:2044" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="1864:2109" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2280" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2314" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2214:2348" ph="INSERT INTO Connection... " />
-            <marker date="1521766624824" expanded="true" signature="2693:2958" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2703:2749" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2703:2958" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2762:2835" ph="..." />
-            <marker date="1521766624824" expanded="true" signature="2863:2942" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quizMasterSession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1277">
@@ -1189,6 +1162,68 @@
             <marker date="1521764170444" expanded="true" signature="3260:3596" ph="..." />
             <marker date="1521764170444" expanded="true" signature="3273:3432" ph="..." />
             <marker date="1521764170444" expanded="true" signature="3487:3585" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitAnswers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <marker date="1521768750952" expanded="true" signature="605:656" ph="UPDATE teamAnswer... " />
+            <marker date="1521768750952" expanded="true" signature="682:683" ph="INSERT INTO Answer... " />
+            <marker date="1521768750952" expanded="true" signature="682:686" ph="INSERT INTO Answer... " />
+            <marker date="1521768750952" expanded="true" signature="682:743" ph="INSERT INTO Answer... " />
+            <marker date="1521768750952" expanded="true" signature="682:832" ph="INSERT INTO Answer... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playMaster.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-779">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <marker date="1521764170272" expanded="true" signature="2075:2159" ph="UPDATE projectdatabase3.Sessions... " />
+            <marker date="1521764170272" expanded="true" signature="2075:2185" ph="UPDATE projectdatabase3.Sessions... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getArrayForPlayers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#497#578#0#PHP" expanded="true" />
+            <marker date="1521768815270" expanded="true" signature="1154:1204" ph="SELECT fk_Qu... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1225" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1249" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1154:1250" ph="SELECT quest... Question" />
+            <marker date="1521768815270" expanded="true" signature="1697:1849" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="1697:1877" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="1697:1942" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2081" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2115" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2015:2149" ph="INSERT INTO Connection... " />
+            <marker date="1521768815270" expanded="true" signature="2457:2722" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2467:2513" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2467:2722" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2526:2599" ph="..." />
+            <marker date="1521768815270" expanded="true" signature="2627:2706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <marker date="1521764170066" expanded="true" signature="1588:1658" ph="SELECT Curre... Sessions" />
+            <marker date="1521764170066" expanded="true" signature="1594:1658" ph="UPDATE projectdatabase3.Sessions... " />
+            <marker date="1521764170066" expanded="true" signature="2364:2382" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1228,46 +1263,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playerType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="-206">
           <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1085">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <marker date="1521764170066" expanded="true" signature="1588:1658" ph="SELECT Curre... Sessions" />
-            <marker date="1521764170066" expanded="true" signature="1594:1658" ph="UPDATE projectdatabase3.Sessions... " />
-            <marker date="1521764170066" expanded="true" signature="2364:2382" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submitAnswers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <marker date="1521768750952" expanded="true" signature="605:656" ph="UPDATE teamAnswer... " />
-            <marker date="1521768750952" expanded="true" signature="682:683" ph="INSERT INTO Answer... " />
-            <marker date="1521768750952" expanded="true" signature="682:686" ph="INSERT INTO Answer... " />
-            <marker date="1521768750952" expanded="true" signature="682:743" ph="INSERT INTO Answer... " />
-            <marker date="1521768750952" expanded="true" signature="682:832" ph="INSERT INTO Answer... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playMaster.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <marker date="1521764170272" expanded="true" signature="2075:2159" ph="UPDATE projectdatabase3.Sessions... " />
-            <marker date="1521764170272" expanded="true" signature="2075:2185" ph="UPDATE projectdatabase3.Sessions... " />
-          </folding>
         </state>
       </provider>
     </entry>

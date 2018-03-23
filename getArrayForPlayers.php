@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $_SESSION["teamName"] = $_POST['teamName'];
 }
 $_SESSION["quizId"] = substr($_SESSION['sessionId'],3);
-echo "this is the session id " .$_SESSION['sessionId'] . "<br>";
-echo "this is the quiz id " .$_SESSION['quizId'] . "<br>";
+
 
 $dbuser = 'master5';
 $dbpass = 'master123';
@@ -46,8 +45,7 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect t
 
 # query will select all questions from Question table
 $questionQuery = "SELECT questionText FROM projectdatabase3.Question WHERE Quiz_idQuiz= '".$_SESSION['quizId']."'";
-echo $questionQuery;
-echo "<br>";
+
 # storing the results of the query
 $result = mysqli_query($connect, $questionQuery);
 while ($row = mysqli_fetch_array($result, MYSQL_NUM))
@@ -58,23 +56,20 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM))
 $_SESSION['result'] = $result_array;
 $_SESSION['error'] = 1;
 $_SESSION['quizIndex'] = 1;
-echo implode($_SESSION['result'][0]);
-echo "<br>";
+#echo implode($_SESSION['result'][0]);
+
 #Insert empty answers into the database
 for($index = 0; $index < sizeof($result); $index++)
 {
     $sql = "INSERT INTO projectdatabase3.teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
     if($initialiseAnswers = mysqli_query($connect, $sql))
         $_SESSION['error'] = $_SESSION['error'] + 1;
-    echo $sql;
-    echo "<br>";
 }
 
 
 $connectionQuery = "INSERT INTO projectdatabase3.Teams (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
 $putTeamInTeamsTable = mysqli_query($connect, $connectionQuery);
-echo $_SESSION['error'];
-echo "<br>";
+
 # close connection
 mysqli_close($connect);
 #check for errors
