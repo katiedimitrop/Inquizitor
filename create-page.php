@@ -437,7 +437,7 @@ var limit = 50;
 /* Scripting to handle cookies. Target the hidden element and insert in it the
 userId so that node.js can retrieve it.*/
 //Default values for testing purposes
-var userId =1
+//var userId =1
 //document.write(''+userId);
 var input = document.getElementById('hiddenInput');
 input.value = userId.toString();
