@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/generateScoreboard.php" afterPath="$PROJECT_DIR$/generateScoreboard.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -310,13 +309,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00025" summary="trying to fix playMaster only showing finish quiz">
-      <created>1521685668211</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1521685668211</updated>
     </task>
     <task id="LOCAL-00026" summary="trying to fix playMaster only showing finish quiz">
       <created>1521685817688</created>
@@ -654,11 +646,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521778676484</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Trying to get the script to generate the scoreboard to work correctly">
+      <created>1521779816066</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1521779816066</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40265000" />
+    <option name="totallyTimeSpent" value="40282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
