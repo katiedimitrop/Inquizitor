@@ -84,7 +84,7 @@ while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
     echo "<br>";
 }
 #Set the number of teams
-$numberOfTeams = $teamsArrayIndex;
+$numberOfTeams = $teamsArrayIndex-1;
 #Loop through the teams
 for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamIndex++)
 {
@@ -103,6 +103,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
         #Add 5 points to the team's score if the answer is good enough
         if(levenshtein(implode($correct_array[$questionIndex]), implode($workTeamAnswerArray[$questionIndex])) < 4)
             $scoreArray[$currentTeamIndex] += 5;
+        $scoreArray[$currentTeamIndex] += 1;
     }
 
 }
