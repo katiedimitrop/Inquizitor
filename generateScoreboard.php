@@ -89,7 +89,7 @@ $numberOfTeams = $teamsArrayIndex - 1;
 for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamIndex++)
 {
     #Get the current team's answers from the teamAnswer table and put it into $workTeamAnswerArray
-    $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName=".$teamsArray[$currentTeamIndex]." AND sessionId=".$_SESSION['sessionId'];
+    $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName='".$teamsArray[$currentTeamIndex]."' AND sessionId=".$_SESSION['sessionId'];
     $workTeamAnswerArrayQuery = mysqli_query($connect, $workTeamAnswerArrayQueryStatement);
     while($workTeamAnswerArrayRow = mysqli_fetch_array($workTeamAnswerArrayQuery,MYSQLI_NUM))
     {
