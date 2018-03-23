@@ -6,7 +6,8 @@
  * Date: 18-Mar-18
  * Time: 9:06 AM
  */
-
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 session_start();
 #Set the quizId
 
@@ -59,8 +60,8 @@ mysqli_close($connect);
 
 #if($error == 0)
 #{
-    header("Location: playUser.php");
-    exit;
+    #header("Location: playUser.php");
+    #exit;
 #}
 #else
 #{
