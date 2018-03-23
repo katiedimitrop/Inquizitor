@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/playMaster.php" afterPath="$PROJECT_DIR$/playMaster.php" />
-      <change beforePath="$PROJECT_DIR$/playUser.php" afterPath="$PROJECT_DIR$/playUser.php" />
-      <change beforePath="$PROJECT_DIR$/quizMasterSession.php" afterPath="$PROJECT_DIR$/quizMasterSession.php" />
+      <change beforePath="$PROJECT_DIR$/generateScoreboard.php" afterPath="$PROJECT_DIR$/generateScoreboard.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,36 +46,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generateScoreboard.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generateScoreboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generateScoreboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="-1679">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding>
-                <marker date="1521771707843" expanded="true" signature="1087:1155" ph="SELECT idQue... Question" />
-                <marker date="1521771707843" expanded="true" signature="1544:1609" ph="SELECT answe... Answer" />
-                <marker date="1521771707843" expanded="true" signature="1909:1959" ph="SELECT teamN... Connection" />
-                <marker date="1521771707843" expanded="true" signature="1909:1968" ph="SELECT teamN... Teams" />
-                <marker date="1521771707843" expanded="true" signature="2607:2673" ph="SELECT answe... teamAnswer" />
-                <marker date="1521771707843" expanded="true" signature="2607:2707" ph="SELECT answe... teamAnswer" />
-                <marker date="1521771707843" expanded="true" signature="2607:2722" ph="SELECT answe... teamAnswer" />
-                <marker date="1521771707843" expanded="true" signature="2607:2723" ph="SELECT answe... teamAnswer" />
-                <marker date="1521771707843" expanded="true" signature="3607:4531" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="3617:4079" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="3672:3743" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="3771:3848" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4087:4531" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4115:4522" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4617:4627" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4629:4687" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4629:4933" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4636:4687" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4792" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4798" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4799" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4848" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4849" ph="..." />
-                <marker date="1521771707843" expanded="true" signature="4781:4895" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="1155:1223" ph="SELECT idQue... Question" />
+                <marker date="1521775896746" expanded="true" signature="1155:1224" ph="SELECT idQue... Question" />
+                <marker date="1521775896746" expanded="true" signature="1155:1258" ph="SELECT idQue... Question" />
+                <marker date="1521775896746" expanded="true" signature="1155:1277" ph="SELECT idQue... Question" />
+                <marker date="1521775896746" expanded="true" signature="1155:1278" ph="SELECT idQue... Question" />
+                <marker date="1521775896746" expanded="true" signature="1885:1950" ph="SELECT answe... Answer" />
+                <marker date="1521775896746" expanded="true" signature="2419:2469" ph="SELECT teamN... Connection" />
+                <marker date="1521775896746" expanded="true" signature="2419:2478" ph="SELECT teamN... Teams" />
+                <marker date="1521775896746" expanded="true" signature="2419:2479" ph="SELECT teamN... Teams" />
+                <marker date="1521775896746" expanded="true" signature="3203:3269" ph="SELECT answe... teamAnswer" />
+                <marker date="1521775896746" expanded="true" signature="3203:3303" ph="SELECT answe... teamAnswer" />
+                <marker date="1521775896746" expanded="true" signature="3203:3318" ph="SELECT answe... teamAnswer" />
+                <marker date="1521775896746" expanded="true" signature="3203:3319" ph="SELECT answe... teamAnswer" />
+                <marker date="1521775896746" expanded="true" signature="4203:5127" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="4213:4675" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="4268:4339" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="4367:4444" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="4683:5127" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="4711:5118" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5213:5223" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5225:5283" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5225:5529" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5232:5283" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5388" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5394" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5395" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5444" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5445" ph="..." />
+                <marker date="1521775896746" expanded="true" signature="5377:5491" ph="..." />
               </folding>
             </state>
           </provider>
@@ -152,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submitAnswers.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="submitAnswers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/submitAnswers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="529">
               <caret line="28" column="69" lean-forward="false" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
               <folding>
                 <marker date="1521774242757" expanded="true" signature="605:656" ph="UPDATE teamAnswer... " />
@@ -211,12 +214,12 @@
         <option value="$PROJECT_DIR$/play.php" />
         <option value="$PROJECT_DIR$/connectPage.php" />
         <option value="$PROJECT_DIR$/playerType.php" />
-        <option value="$PROJECT_DIR$/generateScoreboard.php" />
         <option value="$PROJECT_DIR$/getArrayForPlayers.php" />
         <option value="$PROJECT_DIR$/submitAnswers.php" />
         <option value="$PROJECT_DIR$/playMaster.php" />
         <option value="$PROJECT_DIR$/quizMasterSession.php" />
         <option value="$PROJECT_DIR$/playUser.php" />
+        <option value="$PROJECT_DIR$/generateScoreboard.php" />
       </list>
     </option>
   </component>
@@ -305,13 +308,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00015" summary="putting values from quizMasterSession.php to the table called 'Sessions'">
-      <created>1521675371737</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1521675371737</updated>
     </task>
     <task id="LOCAL-00016" summary="putting values from quizMasterSession.php to the table called 'Sessions'">
       <created>1521675483756</created>
@@ -649,11 +645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521774545850</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="I think the answer submission is working correctly">
+      <created>1521774863436</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1521774863436</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35704000" />
+    <option name="totallyTimeSpent" value="36743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -741,30 +744,35 @@
         <state relative-caret-position="2006">
           <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="37" />
           <folding>
-            <marker date="1521771707843" expanded="true" signature="1087:1155" ph="SELECT idQue... Question" />
-            <marker date="1521771707843" expanded="true" signature="1544:1609" ph="SELECT answe... Answer" />
-            <marker date="1521771707843" expanded="true" signature="1909:1959" ph="SELECT teamN... Connection" />
-            <marker date="1521771707843" expanded="true" signature="1909:1968" ph="SELECT teamN... Teams" />
-            <marker date="1521771707843" expanded="true" signature="2607:2673" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2707" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2722" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2723" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="3607:4531" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3617:4079" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3672:3743" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3771:3848" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4087:4531" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4115:4522" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4617:4627" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4629:4687" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4629:4933" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4636:4687" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4792" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4798" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4799" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4848" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4849" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4895" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="1155:1223" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1224" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1258" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1277" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1278" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1885:1950" ph="SELECT answe... Answer" />
+            <marker date="1521775896746" expanded="true" signature="2419:2469" ph="SELECT teamN... Connection" />
+            <marker date="1521775896746" expanded="true" signature="2419:2478" ph="SELECT teamN... Teams" />
+            <marker date="1521775896746" expanded="true" signature="2419:2479" ph="SELECT teamN... Teams" />
+            <marker date="1521775896746" expanded="true" signature="3203:3269" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3303" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3318" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3319" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="4203:5127" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4213:4675" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4268:4339" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4367:4444" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4683:5127" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4711:5118" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5213:5223" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5225:5283" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5225:5529" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5232:5283" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5388" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5394" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5395" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5444" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5445" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5491" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1155,39 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generateScoreboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <marker date="1521771707843" expanded="true" signature="1087:1155" ph="SELECT idQue... Question" />
-            <marker date="1521771707843" expanded="true" signature="1544:1609" ph="SELECT answe... Answer" />
-            <marker date="1521771707843" expanded="true" signature="1909:1959" ph="SELECT teamN... Connection" />
-            <marker date="1521771707843" expanded="true" signature="1909:1968" ph="SELECT teamN... Teams" />
-            <marker date="1521771707843" expanded="true" signature="2607:2673" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2707" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2722" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="2607:2723" ph="SELECT answe... teamAnswer" />
-            <marker date="1521771707843" expanded="true" signature="3607:4531" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3617:4079" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3672:3743" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="3771:3848" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4087:4531" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4115:4522" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4617:4627" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4629:4687" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4629:4933" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4636:4687" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4792" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4798" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4799" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4848" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4849" ph="..." />
-            <marker date="1521771707843" expanded="true" signature="4781:4895" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playerType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -1249,7 +1224,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/submitAnswers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="529">
           <caret line="28" column="69" lean-forward="false" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
           <folding>
             <marker date="1521774242757" expanded="true" signature="605:656" ph="UPDATE teamAnswer... " />
@@ -1257,6 +1232,44 @@
             <marker date="1521774242757" expanded="true" signature="683:687" ph="INSERT INTO Answer... " />
             <marker date="1521774242757" expanded="true" signature="683:744" ph="INSERT INTO Answer... " />
             <marker date="1521774242757" expanded="true" signature="683:854" ph="INSERT INTO Answer... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generateScoreboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1679">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <marker date="1521775896746" expanded="true" signature="1155:1223" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1224" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1258" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1277" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1155:1278" ph="SELECT idQue... Question" />
+            <marker date="1521775896746" expanded="true" signature="1885:1950" ph="SELECT answe... Answer" />
+            <marker date="1521775896746" expanded="true" signature="2419:2469" ph="SELECT teamN... Connection" />
+            <marker date="1521775896746" expanded="true" signature="2419:2478" ph="SELECT teamN... Teams" />
+            <marker date="1521775896746" expanded="true" signature="2419:2479" ph="SELECT teamN... Teams" />
+            <marker date="1521775896746" expanded="true" signature="3203:3269" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3303" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3318" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="3203:3319" ph="SELECT answe... teamAnswer" />
+            <marker date="1521775896746" expanded="true" signature="4203:5127" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4213:4675" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4268:4339" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4367:4444" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4683:5127" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="4711:5118" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5213:5223" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5225:5283" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5225:5529" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5232:5283" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5388" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5394" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5395" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5444" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5445" ph="..." />
+            <marker date="1521775896746" expanded="true" signature="5377:5491" ph="..." />
           </folding>
         </state>
       </provider>

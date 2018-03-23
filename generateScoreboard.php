@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 /**
  * Created by PhpStorm.
  * User: Paul
@@ -34,31 +36,46 @@ $teamsArray = array();
 # storing the results of the query
 
 #Get the ID of the first question in the quiz
-$firstQuestionQueryStatement = "SELECT idQuestion FROM projectdatabase3.Question WHERE questionText=".$_SESSION['result'][0];
+$firstQuestionQueryStatement = "SELECT idQuestion FROM projectdatabase3.Question WHERE questionText='".implode($_SESSION['result'][0])."' AND Quiz_idQuiz=".$_SESSION['quizId'];
 $firstQuestionQuery = mysqli_query($connect, $firstQuestionQueryStatement);
 $questionIdArray = mysqli_fetch_array($firstQuestionQuery,MYSQLI_NUM);
-$questionId = intval($questionIdArray[0]);
+$questionId = intval(implode($questionIdArray[0]));
 
-
+echo "This is query to get the ID of the first question <br>";
+echo $firstQuestionQueryStatement;
+echo "<br>";
+echo $questionId;
+echo "<br>";
+echo "This is query to get the correct answers from the database <br>";
 #Get the correct answers from the database and put them into $correct_array
 for($index = 0; $index < sizeof($_SESSION['result']); $index++)
 {
     $answerQueryStatement = "SELECT answerText FROM projectdatabase3.Answer WHERE Quiz_idQuiz=" . $questionId;
     $answerQuery = mysqli_query($connect, $answerQueryStatement);
     $row = mysqli_fetch_array($answerQuery, MYSQLI_NUM);
-    $correct_array[$index] = $row[0];
+    $correct_array[$index] = implode($row);
     $questionId++;
-}
 
+    echo $answerQueryStatement;
+    echo "<br>";
+    echo $correct_array[$index];
+    echo "<br>";
+}
+echo "This is query to get the teams from the Teams table<br>";
 #Get the teams from the Connection table and put them into $teamsArray
-$teamsArrayQueryStatement = "SELECT teamName FROM projectdatabase3.Teams WHERE sessionId".$_SESSION['sessionId'];
+$teamsArrayQueryStatement = "SELECT teamName FROM projectdatabase3.Teams WHERE sessionId=".$_SESSION['sessionId'];
 $teamsArrayQuery = mysqli_query($connect, $teamsArrayQueryStatement);
 $teamsArrayIndex = 0;
+echo $teamsArrayQueryStatement;
+echo "<br>";
 while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
 {
     $teamsArray[$teamsArrayIndex] = $teamsArrayRow;
     $scoreArray[$teamsArray[$teamsArrayIndex]] = 0;
     $teamsArrayIndex++;
+
+    echo $questionId;
+    echo "<br>";
 }
 #Set the number of teams
 $numberOfTeams = $teamsArrayIndex - 1;
