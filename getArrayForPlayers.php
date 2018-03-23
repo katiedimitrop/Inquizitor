@@ -50,7 +50,7 @@ for($index = 0; $index < sizeof($result_array); $index++)
 }
 
 
-$connectionQuery = "INSERT INTO projectdatabase3.Teams (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
+$connectionQuery = "INSERT INTO projectdatabase3.Teams (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "')";
 $putTeamInTeamsTable = mysqli_query($connect, $connectionQuery);
 echo $connectionQuery;
 # close connection
@@ -59,8 +59,8 @@ mysqli_close($connect);
 
 #if($error == 0)
 #{
-    #header("Location: playUser.php");
-    #exit;
+    header("Location: playUser.php");
+    exit;
 #}
 #else
 #{

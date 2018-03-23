@@ -94,20 +94,20 @@
       <file leaf-file-name="getArrayForPlayers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getArrayForPlayers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="581">
+              <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
-                <marker date="1521769523648" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
-                <marker date="1521769523648" expanded="true" signature="664:735" ph="SELECT quest... Question" />
-                <marker date="1521769523648" expanded="true" signature="664:759" ph="SELECT quest... Question" />
-                <marker date="1521769523648" expanded="true" signature="664:760" ph="SELECT quest... Question" />
-                <marker date="1521769523648" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521769523648" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521769523648" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
-                <marker date="1521769523648" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
-                <marker date="1521769523648" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
-                <marker date="1521769523648" expanded="true" signature="1531:1665" ph="INSERT INTO Connection... " />
+                <marker date="1521770158018" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
+                <marker date="1521770158018" expanded="true" signature="664:735" ph="SELECT quest... Question" />
+                <marker date="1521770158018" expanded="true" signature="664:759" ph="SELECT quest... Question" />
+                <marker date="1521770158018" expanded="true" signature="664:760" ph="SELECT quest... Question" />
+                <marker date="1521770158018" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521770158018" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521770158018" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
+                <marker date="1521770158018" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
+                <marker date="1521770158018" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
+                <marker date="1521770158018" expanded="true" signature="1531:1662" ph="INSERT INTO Connection... " />
               </folding>
             </state>
           </provider>
@@ -301,13 +301,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00010" summary="putting values from quizMasterSession.php to the table called 'Sessions'">
-      <created>1521674461770</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1521674461770</updated>
     </task>
     <task id="LOCAL-00011" summary="putting values from quizMasterSession.php to the table called 'Sessions'">
       <created>1521674634239</created>
@@ -645,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521768991393</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Trying to fix playUser.php again">
+      <created>1521769533835</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1521769533836</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32201000" />
+    <option name="totallyTimeSpent" value="32830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -830,16 +830,16 @@
           <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="50" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1521769523648" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:735" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:759" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:760" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1665" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:735" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:759" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:760" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1662" ph="INSERT INTO Connection... " />
           </folding>
         </state>
       </provider>
@@ -1237,20 +1237,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getArrayForPlayers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="581">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
-            <marker date="1521769523648" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:735" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:759" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="664:760" ph="SELECT quest... Question" />
-            <marker date="1521769523648" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
-            <marker date="1521769523648" expanded="true" signature="1531:1665" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="664:714" ph="SELECT fk_Qu... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:735" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:759" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="664:760" ph="SELECT quest... Question" />
+            <marker date="1521770158018" expanded="true" signature="1213:1365" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1213:1393" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1213:1458" ph="INSERT INTO teamAnswer... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1597" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1631" ph="INSERT INTO Connection... " />
+            <marker date="1521770158018" expanded="true" signature="1531:1662" ph="INSERT INTO Connection... " />
           </folding>
         </state>
       </provider>
