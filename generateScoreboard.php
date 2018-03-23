@@ -1,3 +1,7 @@
+<html lang="en" >
+<head>
+</head>
+<body>
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
@@ -154,8 +158,9 @@ $html .="</table></div></html>";
 #Create an html file according to the sessionID
 $htmlFile = fopen($_SESSION[sessionId] . ".html", "w");
 #Put the HTML code in the file
-fwrite($htmlFile, $html);
-
+fwrite($htmlFile, $html); ?>
+</body>
+</html>
 
 
 
