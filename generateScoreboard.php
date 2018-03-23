@@ -84,7 +84,7 @@ while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
     echo "<br>";
 }
 #Set the number of teams
-$numberOfTeams = $teamsArrayIndex - 1;
+$numberOfTeams = $teamsArrayIndex;
 #Loop through the teams
 for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamIndex++)
 {
