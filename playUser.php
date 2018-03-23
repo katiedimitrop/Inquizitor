@@ -70,7 +70,7 @@ if($quizIndex < implode($row))
     $quizIndex = $quizIndex + 1;
     $_SESSION['quizIndex'] = $quizIndex;
 }
-
+$fileName = $_SESSION['sessionId'] . ".html";
 ?>
 
 
@@ -86,7 +86,7 @@ if($quizIndex < implode($row))
               <button type="submit" class="button button-block">Submit answers</button>
           </form>
       </div>
-    <form action=<?php echo "/".$_SESSION["sessionID"] . ".html"?> method="post">
+    <form action=<?php echo $fileName?> method="post">
       <button type="submit" class="button button-block"/>Display quiz scores</button>
     </form>
 </div>
