@@ -42,7 +42,7 @@ $_SESSION['quizIndex'] = 1;
 #echo implode($_SESSION['result'][0]);
 
 #Insert empty answers into the database
-for($index = 0; $index < sizeof($result); $index++)
+for($index = 0; $index < sizeof($result_array); $index++)
 {
     $sql = "INSERT INTO projectdatabase3.teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
     if($initialiseAnswers = mysqli_query($connect, $sql))
@@ -52,15 +52,15 @@ for($index = 0; $index < sizeof($result); $index++)
 
 $connectionQuery = "INSERT INTO projectdatabase3.Teams (sessionId, teamName) VALUES ('" . $_SESSION['sessionId'] . "', '" . $_SESSION['teamName'] . "','')";
 $putTeamInTeamsTable = mysqli_query($connect, $connectionQuery);
-
+echo $connectionQuery;
 # close connection
 mysqli_close($connect);
 #check for errors
 
 #if($error == 0)
 #{
-    header("Location: playUser.php");
-    exit;
+    #header("Location: playUser.php");
+    #exit;
 #}
 #else
 #{
