@@ -80,7 +80,7 @@ while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
     $scoreArray[$key] = 0;
     $teamsArrayIndex++;
 
-    echo $questionId;
+    echo $key;
     echo "<br>";
 }
 #Set the number of teams
@@ -95,7 +95,8 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     {
         $workTeamAnswerArray[] = $workTeamAnswerArrayRow;
     }
-
+    echo $workTeamAnswerArrayQueryStatement;
+    echo "<br>";
     #Go through the questions one by one and check if they are similar enough via Levenshtein's Algorithm
     for($questionIndex = 0; $index < sizeof($_SESSION['result']); $index++)
     {
