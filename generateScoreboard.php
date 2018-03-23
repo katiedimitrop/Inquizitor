@@ -44,7 +44,8 @@ $firstQuestionQueryStatement = "SELECT idQuestion FROM projectdatabase3.Question
 $firstQuestionQuery = mysqli_query($connect, $firstQuestionQueryStatement);
 $questionIdArray = mysqli_fetch_array($firstQuestionQuery,MYSQLI_NUM);
 $questionId = intval(implode($questionIdArray));
-
+echo exec('whoami');
+echo "<br>";
 echo "This is query to get the ID of the first question <br>";
 echo $firstQuestionQueryStatement;
 echo "<br>";
