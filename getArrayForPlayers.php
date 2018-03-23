@@ -44,7 +44,7 @@ $_SESSION['quizIndex'] = 1;
 #Insert empty answers into the database
 for($index = 0; $index < sizeof($result_array); $index++)
 {
-    $sql = "INSERT INTO projectdatabase3.teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
+    $sql = "INSERT INTO projectdatabase3.teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . ($index + 1) . "','','".$_SESSION['sessionId']."')";
     if($initialiseAnswers = mysqli_query($connect, $sql))
         $_SESSION['error'] = $_SESSION['error'] + 1;
 }

@@ -77,7 +77,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     for($questionIndex = 0; $index < sizeof($_SESSION['result']); $index++)
     {
         #Add 5 points to the team's score if the answer is good enough
-        if(levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex]) < 4)
+        if(levenshtein(implode($correct_array[$questionIndex]), implode($workTeamAnswerArray[$questionIndex])) < 4)
             $scoreArray[$currentTeamIndex] += 5;
     }
 
