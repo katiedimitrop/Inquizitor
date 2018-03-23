@@ -24,7 +24,9 @@ var answers = new Array(10);
 var quizPK = 0 ;
 var questionPK = 0;
 var userId = 0;
-
+var noOfQuestions = 0;
+var question = '';
+var answer ='';
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -116,6 +118,9 @@ app.post('/', function(req, res)
 {
   userId = req.body.userid;
   console.log(userId);
+
+  noOfQuestions = req.body.noOfQ;
+  console.log(noOfQuestions);
   var con = mysql.createConnection(
   {
     host: "projectdatabase3.cpvnf88ap5ww.eu-west-2.rds.amazonaws.com",
@@ -141,11 +146,17 @@ app.post('/', function(req, res)
       console.log('Inserted quiz no'+quizPK);
     });
 
-
+    for (var index = 1; index <= 50; index++)
+    {
     //Take values from form
-    questions = [req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.q6,req.body.q7,req.body.q8,req.body.q9,req.body.q10]
-    answers = [req.body.a1,req.body.a2,req.body.a3,req.body.a4,req.body.a5,req.body.a6,req.body.a7,req.body.a8,req.body.a9,req.body.a10]
-    for (var questionId = 0;questionId < 10; questionId++)
+    //questions = [req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.q6,req.body.q7,req.body.q8,req.body.q9,req.body.q10,req.body.q11]
+    //answers = [req.body.a1,req.body.a2,req.body.a3,req.body.a4,req.body.a5,req.body.a6,req.body.a7,req.body.a8,req.body.a9,req.body.a10,req.body.a11]
+    question = req.body + index;
+    answer = req.body + index;
+    questions.push(question);
+    answers.push(answer)
+    }
+    for (var questionId = 0;questionId < noOfQuestions; questionId++)
     {
       //Insert a question
       ++questionPK;
