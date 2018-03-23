@@ -98,7 +98,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     echo $workTeamAnswerArrayQueryStatement;
     echo "<br>";
     #Go through the questions one by one and check if they are similar enough via Levenshtein's Algorithm
-    for($questionIndex = 0; $index < sizeof($_SESSION['result']); $index++)
+    for($questionIndex = 0; $questionIndex < sizeof($_SESSION['result']); $questionIndex++)
     {
         echo "am intrat la " .$questionIndex."<br>";
         #Add 5 points to the team's score if the answer is good enough
