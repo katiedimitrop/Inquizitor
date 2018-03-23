@@ -90,7 +90,7 @@
               </label>
 
             </div>
-    <div><button  type="submit" class="button button-block">Join Session</button></div>
+          <button  type="submit" class="button button-block">Join Session</button>
 
 
 					<!--<script>
