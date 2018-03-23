@@ -63,7 +63,7 @@ echo "<br>";
 #Insert empty answers into the database
 for($index = 0; $index < sizeof($result); $index++)
 {
-    $sql = "INSERT INTO teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
+    $sql = "INSERT INTO projectdatabase3.teamAnswer (teamName, questionNumber, answerText, sessionId) VALUES ('" . $_SESSION['teamName'] . "', '" . $index . "','','".$_SESSION['sessionId']."')";
     if($initialiseAnswers = mysqli_query($connect, $sql))
         $_SESSION['error'] = $_SESSION['error'] + 1;
     echo $sql;

@@ -13,10 +13,6 @@ if($_SESSION['isLeader'] == 0) :
 header("Location: getArrayForPlayers.php");
 exit;
 else:
-    echo $_POST['sessionKey'];
-    echo '<br>';
-    echo $_SESSION['sessionKey'];
-    echo '<br>';
 ?>
 <!DOCTYPE html>
 <html lang="en" >
