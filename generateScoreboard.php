@@ -43,7 +43,7 @@ $teamsArray = array();
 $firstQuestionQueryStatement = "SELECT idQuestion FROM projectdatabase3.Question WHERE questionText='".implode($_SESSION['result'][0])."' AND Quiz_idQuiz=".$_SESSION['quizId'];
 $firstQuestionQuery = mysqli_query($connect, $firstQuestionQueryStatement);
 $questionIdArray = mysqli_fetch_array($firstQuestionQuery,MYSQLI_NUM);
-$questionId = intval(implode($questionIdArray[0]));
+$questionId = intval(implode($questionIdArray));
 
 echo "This is query to get the ID of the first question <br>";
 echo $firstQuestionQueryStatement;
@@ -54,7 +54,7 @@ echo "This is query to get the correct answers from the database <br>";
 #Get the correct answers from the database and put them into $correct_array
 for($index = 0; $index < sizeof($_SESSION['result']); $index++)
 {
-    $answerQueryStatement = "SELECT answerText FROM projectdatabase3.Answer WHERE Quiz_idQuiz=" . $questionId;
+    $answerQueryStatement = "SELECT answerText FROM projectdatabase3.Answer WHERE Question_idQuestion=" . $questionId;
     $answerQuery = mysqli_query($connect, $answerQueryStatement);
     $row = mysqli_fetch_array($answerQuery, MYSQLI_NUM);
     $correct_array[$index] = implode($row);
@@ -156,7 +156,7 @@ for($teamIndex = 0; $teamIndex < $numberOfTeams; $teamIndex++)
 }
 $html .="</table></div></html>";
 #Create an html file according to the sessionID
-$htmlFile = fopen($_SESSION[sessionId] . ".html", "w");
+$htmlFile = fopen("/tmp/".$_SESSION['sessionId'] . ".html", "w");
 #Put the HTML code in the file
 fwrite($htmlFile, $html); ?>
 </body>
