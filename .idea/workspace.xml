@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="Added a title to every page">
+    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/connectPage.html" afterPath="$PROJECT_DIR$/connectPage.html" />
       <change beforePath="$PROJECT_DIR$/connectPage.php" afterPath="$PROJECT_DIR$/connectPage.php" />
-      <change beforePath="$PROJECT_DIR$/contactPage.html" afterPath="$PROJECT_DIR$/contactPage.html" />
-      <change beforePath="$PROJECT_DIR$/contactPage.php" afterPath="$PROJECT_DIR$/contactPage.php" />
-      <change beforePath="$PROJECT_DIR$/create-page.html" afterPath="$PROJECT_DIR$/create-page.html" />
-      <change beforePath="$PROJECT_DIR$/create-page.php" afterPath="$PROJECT_DIR$/create-page.php" />
-      <change beforePath="$PROJECT_DIR$/generateScoreboard.php" afterPath="$PROJECT_DIR$/generateScoreboard.php" />
-      <change beforePath="$PROJECT_DIR$/getArrayForPlayers.php" afterPath="$PROJECT_DIR$/getArrayForPlayers.php" />
-      <change beforePath="$PROJECT_DIR$/hostPage.html" afterPath="$PROJECT_DIR$/hostPage.html" />
-      <change beforePath="$PROJECT_DIR$/hostPage.php" afterPath="$PROJECT_DIR$/hostPage.php" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/loginPage.html" afterPath="$PROJECT_DIR$/loginPage.html" />
-      <change beforePath="$PROJECT_DIR$/loginPage.php" afterPath="$PROJECT_DIR$/loginPage.php" />
-      <change beforePath="$PROJECT_DIR$/play.php" afterPath="$PROJECT_DIR$/play.php" />
-      <change beforePath="$PROJECT_DIR$/playMaster.php" afterPath="$PROJECT_DIR$/playMaster.php" />
-      <change beforePath="$PROJECT_DIR$/playUser.php" afterPath="$PROJECT_DIR$/playUser.php" />
-      <change beforePath="$PROJECT_DIR$/playerType.php" afterPath="$PROJECT_DIR$/playerType.php" />
-      <change beforePath="$PROJECT_DIR$/quizMasterSession.php" afterPath="$PROJECT_DIR$/quizMasterSession.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -163,11 +145,11 @@
       <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connectPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+            <state relative-caret-position="306">
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
-                <element signature="e#1018#1019#0#PHP" expanded="true" />
-                <marker date="1521764341052" expanded="true" signature="1633:1682" ph="SELECT first... User" />
+                <element signature="e#962#963#0#PHP" expanded="true" />
+                <marker date="1521764868448" expanded="true" signature="1577:1626" ph="SELECT first... User" />
               </folding>
             </state>
           </provider>
@@ -323,13 +305,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00005" summary="the logos should work now">
-      <created>1521668538399</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1521668538399</updated>
     </task>
     <task id="LOCAL-00006" summary="the logos should work now">
       <created>1521668635332</created>
@@ -667,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521763658079</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Added a title to every page">
+      <created>1521764349259</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1521764349260</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29194000" />
+    <option name="totallyTimeSpent" value="29719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -731,7 +713,8 @@
     <MESSAGE value="trying to fix the radio buttons" />
     <MESSAGE value="trying to fix get array for players" />
     <MESSAGE value="trying to fix playUser.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to fix playUser.php" />
+    <MESSAGE value="Added a title to every page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a title to every page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,8 +821,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="150" lean-forward="false" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
           <folding>
-            <element signature="e#1018#1019#0#PHP" expanded="true" />
-            <marker date="1521764341052" expanded="true" signature="1633:1682" ph="SELECT first... User" />
+            <element signature="e#962#963#0#PHP" expanded="true" />
+            <marker date="1521764868448" expanded="true" signature="1577:1626" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>
@@ -1276,11 +1259,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connectPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+        <state relative-caret-position="306">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="e#1018#1019#0#PHP" expanded="true" />
-            <marker date="1521764341052" expanded="true" signature="1633:1682" ph="SELECT first... User" />
+            <element signature="e#962#963#0#PHP" expanded="true" />
+            <marker date="1521764868448" expanded="true" signature="1577:1626" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>

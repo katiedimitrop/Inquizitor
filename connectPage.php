@@ -17,8 +17,6 @@
 
   <link rel="stylesheet" href="styles/connectPageStyle.css">
 
-  <link rel="stylesheet" href="styles/loginPageStyle.css">
-
 
 </head>
 
