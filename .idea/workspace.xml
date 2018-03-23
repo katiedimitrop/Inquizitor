@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="">
+    <list default="true" id="8940a970-34c0-4fbd-a72d-3f4dd6eac06e" name="Default" comment="trying to fix playUser.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/connectPage.php" afterPath="$PROJECT_DIR$/connectPage.php" />
     </list>
@@ -84,11 +84,11 @@
       <file leaf-file-name="connectPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connectPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+            <state relative-caret-position="542">
+              <caret line="94" column="10" lean-forward="true" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
               <folding>
                 <element signature="e#987#988#0#PHP" expanded="true" />
-                <marker date="1521763493205" expanded="true" signature="1602:1651" ph="SELECT first... User" />
+                <marker date="1521763652828" expanded="true" signature="1602:1651" ph="SELECT first... User" />
               </folding>
             </state>
           </provider>
@@ -312,13 +312,6 @@
       <option name="presentableId" value="Default" />
       <updated>1520688788302</updated>
       <workItem from="1520688790887" duration="1193000" />
-    </task>
-    <task id="LOCAL-00003" summary="more work on logos">
-      <created>1521667885507</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1521667885507</updated>
     </task>
     <task id="LOCAL-00004" summary="the logos should work now">
       <created>1521668106232</created>
@@ -656,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521763386939</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="trying to fix playUser.php">
+      <created>1521763498605</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1521763498606</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28345000" />
+    <option name="totallyTimeSpent" value="28504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -826,7 +826,7 @@
           <caret line="33" column="150" lean-forward="false" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
           <folding>
             <element signature="e#987#988#0#PHP" expanded="true" />
-            <marker date="1521763493205" expanded="true" signature="1602:1651" ph="SELECT first... User" />
+            <marker date="1521763652828" expanded="true" signature="1602:1651" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>
@@ -1255,11 +1255,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connectPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="542">
+          <caret line="94" column="10" lean-forward="true" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
           <folding>
             <element signature="e#987#988#0#PHP" expanded="true" />
-            <marker date="1521763493205" expanded="true" signature="1602:1651" ph="SELECT first... User" />
+            <marker date="1521763652828" expanded="true" signature="1602:1651" ph="SELECT first... User" />
           </folding>
         </state>
       </provider>

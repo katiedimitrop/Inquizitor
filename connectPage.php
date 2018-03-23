@@ -89,10 +89,10 @@
                 Session Key<span class="req">*</span>
                   <input type="text" required name="sessionKey" autocomplete="off" />
               </label>
-
+                <button  type="submit" class="button button-block"/>Join Session</button>
             </div>
 
-          <button  type="submit" class="button button-block"/>Join Session</button>
+
 
 					<!--<script>
 				function myFunction()
