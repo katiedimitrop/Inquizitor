@@ -86,11 +86,11 @@
             <div class="field-wrap">
               <label>
                 Session Key<span class="req">*</span>
-                  <input type="text" required name="sessionKey" autocomplete="off" />
               </label>
-
+              <input type="text" required name="sessionKey" autocomplete="off" />
             </div>
-    <div><button  type="submit" class="button button-block">Join Session</button></div>
+
+          <button  type="submit" class="button button-block">Join Session</button>
 
 
 					<!--<script>
