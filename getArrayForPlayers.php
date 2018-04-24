@@ -60,8 +60,8 @@ mysqli_close($connect);
 
 #if($error == 0)
 #{
-    #header("Location: playUser.php");
-    #exit;
+    header("Location: playUser.php");
+    exit;
 #}
 #else
 #{
