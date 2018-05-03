@@ -90,20 +90,45 @@ $numberOfTeams = $teamsArrayIndex-1;
 for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamIndex++)
 {
     #Get the current team's answers from the teamAnswer table and put it into $workTeamAnswerArray
+    /*
     $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName='".$teamsArray[$currentTeamIndex]."' AND sessionId=".$_SESSION['sessionId'];
     $workTeamAnswerArrayQuery = mysqli_query($connect, $workTeamAnswerArrayQueryStatement);
     while($workTeamAnswerArrayRow = mysqli_fetch_array($workTeamAnswerArrayQuery,MYSQLI_NUM))
     {
         $workTeamAnswerArray[] = $workTeamAnswerArrayRow;
+    }*/
+
+
+    $questionNumber = 1;
+    for($questionNumber = 1; $questionNumber <= 10; $questionNumber++)
+    {
+        $questionNumber = 1;
+        $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName='" . $teamsArray[$currentTeamIndex] . "' AND sessionId=" . $_SESSION['sessionId'] . " AND  questionNumber=" . $questionNumber;
+        $workTeamAnswerArrayQuery = mysqli_query($connect, $workTeamAnswerArrayQueryStatement);
+        $row = mysqli_fetch_array($workTeamAnswerArrayQuery, MYSQLI_NUM);
+        $workTeamAnswerArray[$questionNumber - 1] = implode($row);
+
+        echo $workTeamAnswerArrayQueryStatement;
+        echo "<br>";
+        echo $workTeamAnswerArray[$questionNumber - 1];
     }
-    echo $workTeamAnswerArrayQueryStatement;
-    echo "<br>";
+
+
+
     #Go through the questions one by one and check if they are similar enough via Levenshtein's Algorithm
     for($questionIndex = 0; $questionIndex < sizeof($_SESSION['result']); $questionIndex++)
     {
         echo "am intrat la " .$questionIndex."<br>";
+        $correctAnswer = "";
+        $teamAnswer = "";
+        $correctAnswer = $correct_array[$questionIndex];
+        $teamAnswer = $workTeamAnswerArray[$questionIndex];
+        echo $correctAnswer;
+        echo "   ** vs **   ";
+        echo $teamAnswer;
+        echo "<br>";
         #Add 5 points to the team's score if the answer is good enough
-        if(levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex]) < 4)
+        if(levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex]) < 2)
         {
             $scoreArray[$currentTeamIndex] += 5;
         }

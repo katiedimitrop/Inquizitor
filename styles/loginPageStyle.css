@@ -12,7 +12,21 @@ body {
     overflow:hidden;
     background-color: #212121;
 }
-
+th, td {
+    padding: 15px;
+}
+tr:nth-child(even) {
+    background-color: #FFC107;
+    color: black;
+}
+table,th, td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+    font-size: 18px;
+    line-height: 30px;
+}
 /* Style the topnav links */
 .topnav a {
     float: right;
