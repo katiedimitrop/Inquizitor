@@ -102,7 +102,6 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     $questionNumber = 1;
     for($questionNumber = 1; $questionNumber <= 10; $questionNumber++)
     {
-        $questionNumber = 1;
         $workTeamAnswerArrayQueryStatement = "SELECT answerText FROM projectdatabase3.teamAnswer WHERE teamName='" . $teamsArray[$currentTeamIndex] . "' AND sessionId=" . $_SESSION['sessionId'] . " AND  questionNumber=" . $questionNumber;
         $workTeamAnswerArrayQuery = mysqli_query($connect, $workTeamAnswerArrayQueryStatement);
         $row = mysqli_fetch_array($workTeamAnswerArrayQuery, MYSQLI_NUM);
