@@ -195,8 +195,8 @@ $htmlFile = fopen($fileName, "w");
 #Put the HTML code in the file
 fwrite($htmlFile, $html);
 #Go to the leaderboard html page
-#header("Location:".$fileName)
-#exit;
+header("Location:".$fileName);
+exit;
 ?>
 </body>
 </html>
