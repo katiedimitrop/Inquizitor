@@ -180,7 +180,7 @@ $html .= '
   </tr>';
 echo $numberOfTeams;
 echo "<br>";
-for($teamIndex = 0; $teamIndex < $numberOfTeams; $teamIndex++)
+for($teamIndex = 0; $teamIndex <= $numberOfTeams; $teamIndex++)
 {
     $html .=
         "<tr>
