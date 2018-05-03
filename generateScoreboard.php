@@ -45,14 +45,14 @@ $firstQuestionQueryStatement = "SELECT idQuestion FROM projectdatabase3.Question
 $firstQuestionQuery = mysqli_query($connect, $firstQuestionQueryStatement);
 $questionIdArray = mysqli_fetch_array($firstQuestionQuery,MYSQLI_NUM);
 $questionId = intval(implode($questionIdArray));
-echo exec('whoami');
-echo "<br>";
-echo "This is query to get the ID of the first question <br>";
-echo $firstQuestionQueryStatement;
-echo "<br>";
-echo $questionId;
-echo "<br>";
-echo "This is query to get the correct answers from the database <br>";
+#echo exec('whoami');
+#echo "<br>";
+#echo "This is query to get the ID of the first question <br>";
+#echo $firstQuestionQueryStatement;
+#echo "<br>";
+#echo $questionId;
+#echo "<br>";
+#echo "This is query to get the correct answers from the database <br>";
 #Get the correct answers from the database and put them into $correct_array
 for($index = 0; $index < sizeof($_SESSION['result']); $index++)
 {
@@ -62,18 +62,18 @@ for($index = 0; $index < sizeof($_SESSION['result']); $index++)
     $correct_array[$index] = implode($row);
     $questionId++;
 
-    echo $answerQueryStatement;
-    echo "<br>";
-    echo $correct_array[$index];
-    echo "<br>";
+    #echo $answerQueryStatement;
+    #echo "<br>";
+    #echo $correct_array[$index];
+    #cho "<br>";
 }
-echo "This is query to get the teams from the Teams table<br>";
+#echo "This is query to get the teams from the Teams table<br>";
 #Get the teams from the Connection table and put them into $teamsArray
 $teamsArrayQueryStatement = "SELECT teamName FROM projectdatabase3.Teams WHERE sessionId=".$_SESSION['sessionId'];
 $teamsArrayQuery = mysqli_query($connect, $teamsArrayQueryStatement);
 $teamsArrayIndex = 0;
-echo $teamsArrayQueryStatement;
-echo "<br>";
+#echo $teamsArrayQueryStatement;
+#echo "<br>";
 while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
 {
     $teamsArray[$teamsArrayIndex] = implode($teamsArrayRow);
@@ -81,8 +81,8 @@ while ($teamsArrayRow = mysqli_fetch_array($teamsArrayQuery,MYSQLI_NUM))
     $scoreArray[$key] = 0;
     $teamsArrayIndex++;
 
-    echo $key;
-    echo "<br>";
+    #echo $key;
+    #echo "<br>";
 }
 #Set the number of teams
 $numberOfTeams = $teamsArrayIndex-1;
@@ -107,9 +107,9 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
         $row = mysqli_fetch_array($workTeamAnswerArrayQuery, MYSQLI_NUM);
         $workTeamAnswerArray[$questionNumber - 1] = implode($row);
 
-        echo $workTeamAnswerArrayQueryStatement;
-        echo "<br>";
-        echo $workTeamAnswerArray[$questionNumber - 1];
+        #echo $workTeamAnswerArrayQueryStatement;
+        #echo "<br>";
+        #echo $workTeamAnswerArray[$questionNumber - 1];
     }
 
 
@@ -117,15 +117,15 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     #Go through the questions one by one and check if they are similar enough via Levenshtein's Algorithm
     for($questionIndex = 0; $questionIndex < sizeof($_SESSION['result']); $questionIndex++)
     {
-        echo "am intrat la " .$questionIndex."<br>";
+        #echo "am intrat la " .$questionIndex."<br>";
         $correctAnswer = "";
         $teamAnswer = "";
-        $correctAnswer = $correct_array[$questionIndex];
+        $correctAnswer = $correct_array[$questionIndex - 1];
         $teamAnswer = $workTeamAnswerArray[$questionIndex];
-        echo $correctAnswer;
-        echo "   ** vs **   ";
-        echo $teamAnswer;
-        echo "<br>";
+        #echo $correctAnswer;
+        #echo "   ** vs **   ";
+        #echo $teamAnswer;
+        #echo "<br>";
         #Add 5 points to the team's score if the answer is good enough
         if(levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex]) < 2)
         {
@@ -178,8 +178,8 @@ $html .= '
     <th>Team Name</th>
     <th>Score</th> 
   </tr>';
-echo $numberOfTeams;
-echo "<br>";
+#echo $numberOfTeams;
+#echo "<br>";
 for($teamIndex = 0; $teamIndex <= $numberOfTeams; $teamIndex++)
 {
     $html .=
