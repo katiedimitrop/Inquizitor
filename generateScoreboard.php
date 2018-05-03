@@ -113,7 +113,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
     }
 
 
-
+    $scoreHTML="";
     #Go through the questions one by one and check if they are similar enough via Levenshtein's Algorithm
     for($questionIndex = 0; $questionIndex < sizeof($_SESSION['result']); $questionIndex++)
     {
@@ -131,6 +131,7 @@ for($currentTeamIndex = 0; $currentTeamIndex <= $numberOfTeams; $currentTeamInde
         {
             $scoreArray[$currentTeamIndex] += 5;
         }
+        $scoreHTML.= "<p>".$teamsArray[$currentTeamIndex]." answered ".$teamAnswer." and the answer was ".$correctAnswer." levenshtein returned ".levenshtein($correct_array[$questionIndex], $workTeamAnswerArray[$questionIndex])."</p><br>";
         $scoreArray[$currentTeamIndex] += 1;
     }
 
@@ -188,7 +189,8 @@ for($teamIndex = 0; $teamIndex <= $numberOfTeams; $teamIndex++)
             <td>".$scoreArray[$teamIndex]."</td>
          </tr>";
 }
-$html .="</table></div></html>";
+#$html .="</table></div></html>";
+$html.="</table>".$scoreHTML."</div></html>";
 #Create an html file according to the sessionID
 $fileName = $_SESSION['sessionId'] . ".html";
 $htmlFile = fopen($fileName, "w");
